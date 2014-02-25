@@ -1,0 +1,286 @@
+.tinyCarouselSlider{
+	@panelWith:90%;
+	@panelHeight:16em;
+	@imageWith:200px;
+	@imageHeight:132px;
+	@imageMarginLeft:0;
+	@imageMarginRight:18px;
+	text-align: center;
+
+	width: 100%;
+	position: relative;
+
+	.buttonLeft{
+		display: inline-block;
+//		margin: 30px 10px 0 0;
+//		background-position: 0 -38px;
+		background-image: url("../images/common/icon_tinycarousel_left_disable.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		float: left;
+		width: 4.99%;
+		min-width: 15px;
+		height: 85px;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		position: relative;
+
+		&:focus{
+			border:none;
+		}
+		&:hover, &:focus{
+			background-image: url("../images/common/icon_tinycarousel_left.png");
+		}
+		&.disable{
+			background-image: url("../images/common/icon_tinycarousel_left_disable.png");
+			cursor: default;
+		}
+	}
+
+	.buttonRight{
+		.buttonLeft;
+		background-image: url("../images/common/icon_tinycarousel_right_disable.png");
+		background-position: center;
+		float: right;
+		padding-right: 0px;
+		&:hover, &:focus{
+			background-image: url("../images/common/icon_tinycarousel_right.png");
+		}
+		&.disable{
+			background-image: url("../images/common/icon_tinycarousel_right_disable.png");
+		}
+	}
+
+	.tinyCarouselContainer{
+		height: auto;
+		width: @panelWith;
+		margin:auto;
+		display: inline-block;
+		margin-bottom: 50px;
+		position: relative;
+		overflow: hidden;
+
+		.viewport{
+			height: @panelHeight;
+			width: auto;
+			overflow: hidden;
+			float: left;
+
+			.viewportList{
+				position: absolute;
+				width: 1800px;
+				margin:0;
+				padding-top: 6px;
+				padding-left: 6px;
+
+				li{
+					width: @imageWith;
+					min-height: @imageHeight;
+					margin-right: @imageMarginRight;
+					margin-left: @imageMarginLeft;
+					display: block;
+					float: left;
+					.imagePanel{
+						width: 100%;
+
+						.imagePanelBtn{
+							display: block;
+							-webkit-box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+							-moz-box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+							box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+							filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+							border: 6px solid @background_primary_color;
+							border-right: 8px solid @background_primary_color;
+							&:hover, &:focus{
+								border: 6px solid @rollover_border_secondary_color;
+								border-right: 8px solid @rollover_border_secondary_color;
+							}
+						}
+						.carouselImageContainer{
+							-webkit-box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+								-moz-box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+								box-shadow: 0px 1px 5px 0px @drop_shadow_primary_color;
+								filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+								border: 6px solid @background_primary_color;
+								border-right: 8px solid @background_primary_color;
+								margin-bottom: 20px;
+
+							.imagePanelHoverButton{
+								display: block;
+								width: auto;
+								height:auto;
+								cursor: default;
+							}
+
+						}
+						img{
+							width: auto;
+							height: @imageHeight;
+							border: 1px solid @border_primary_color;
+						}
+
+						.slideTitle{
+							text-align: center;
+							color:@feature_primary_color;
+							font-size: 0.875em;
+							//text-transform: uppercase;
+
+						}
+					}
+					.overlay{
+						display: none;
+						top:7px;
+						position: absolute;
+						text-align: center;
+						width: 	@imageWith;
+						height: @imageHeight;
+						padding: 6px;
+						//background-image: url("../images/common/bg_tinyCarousel_overlay.png");
+						.overlayInner-block{
+							background-image: url("../images/common/bg_tinyCarousel_overlay.png");
+							height: 101px;
+							width: 188px;
+							padding-top: 32px;
+						}
+						.overlayInner{
+							margin: auto;
+							width: 50%;
+							//margin-top: 15%;
+							
+							a{
+								display: block;
+								color: @text_secondary_color;
+								background-color: @feature_primary_color;
+								text-decoration: none;
+								font-size:	0.875em;
+								font-style: normal;
+								text-align: center;
+								line-height: 2.429em;
+								margin: 0 auto 10px auto;
+								text-transform: uppercase;
+								width: 6.7em;
+								height:2.35em;
+
+								&:hover,&:focus{
+									background-color: @rollover_feature_primary_color;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// ------------- media queries ----------------
+	.max-width-480 {
+
+	}
+
+	.max-width-640 {
+		@btnWidth : 30px;
+		@space:5px;
+		.buttonLeft{
+			width:@btnWidth;
+			left:5px;
+		}
+		.buttonRight{
+			width:@btnWidth;
+			right:5px;
+		}
+	}
+
+	.max-width-1023 {
+	}
+
+	.phone-portrait {
+	}
+
+	.tablet-portrait {
+
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.max-width-1023;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.tablet-portrait;
+	}
+
+	@media only screen and (max-width: 640px) {
+		.max-width-640;
+	}
+
+	@media only screen and (max-width: 480px) {
+		.max-width-480;
+	}
+
+	@media only screen and (max-width: 400px) {
+		.phone-portrait;
+	}
+
+	/* iPad in landscape */
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: landscape) {
+		/* No special treatment. Should look like desktop */
+	}
+
+	// iPad in portrait
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+	}
+
+	// iPhone 5 in landscape
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)
+	and (orientation: landscape) {
+		.max-width-1023;
+		.tablet-portrait;
+	}
+
+	/// iPhone 5 in portrait
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+		.phone-portrait;
+	}
+
+	// iPhone 2G-4S in landscape
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (orientation: landscape) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+	}
+
+	// iPhone 2G-4S in portrait
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+		.phone-portrait;
+	}
+
+
+}
+
+
