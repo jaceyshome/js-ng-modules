@@ -1,6 +1,6 @@
 var jsNgModulesCtrl;
 
-angular.module("myApp.js-ng-modules", ["ui.state", "titleService"]).config(function($stateProvider) {
+angular.module("myApp.js-ng-modules", ["ui.state"]).config(function($stateProvider) {
   return $stateProvider.state("js-ng-modules", {
     url: "/js-ng-modules",
     views: {

@@ -1,6 +1,5 @@
 angular.module("myApp.js-ng-modules", [
 		"ui.state"
-		"titleService"
 ]).config(($stateProvider) ->
 		$stateProvider.state "js-ng-modules",
 				url: "/js-ng-modules"

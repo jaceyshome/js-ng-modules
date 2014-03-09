@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="update js-icon folder name&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-google-search-bar/assets/images/google_web.png" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/assets/images/google_web.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-google-search-bar/assets/images/icon_google_search_btn.png" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/assets/images/icon_google_search_btn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-google-search-bar/js-google-search-bar.coffee" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-google-search-bar/js-google-search-bar.less" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-icon-button/js-icon-button.coffee" afterPath="$PROJECT_DIR$/src/common/js-icon-button/js-icon-button.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-icon-button/js-icon-button.less" afterPath="$PROJECT_DIR$/src/common/js-icon-button/js-icon-button.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-modal-service/js-modal-service.coffee" afterPath="$PROJECT_DIR$/src/common/js-modal-service/js-modal-service.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-modal-service/js-modal-service.less" afterPath="$PROJECT_DIR$/src/common/js-modal-service/js-modal-service.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-moment-service/js-moment-service.coffee" afterPath="$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-no-tab/js-no-tab.js" afterPath="$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js-print/js-print.js" afterPath="$PROJECT_DIR$/src/common/js-print/js-print.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/js-ngmodules.iml" afterPath="$PROJECT_DIR$/.idea/js-ngmodules.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js" afterPath="$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js" />
+    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" afterPath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" afterPath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/main.less" afterPath="$PROJECT_DIR$/src/less/main.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="js-ngmodules.iws" />
@@ -43,64 +33,16 @@
       <file leaf-file-name="js-tiny-carousel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="18" selection-start="132" selection-end="132" vertical-scroll-proportion="-1.4339622" vertical-offset="0" max-vertical-offset="7315">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js-print.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/js-print/js-print.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-3.0357144" vertical-offset="2148" max-vertical-offset="2508">
+            <state line="4" column="18" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="7277">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="js-no-tab.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js">
+      <file leaf-file-name="js-ng-modules.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="60" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/less/main.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="22" selection-start="1568" selection-end="1568" vertical-scroll-proportion="-12.892858" vertical-offset="570" max-vertical-offset="1368">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/less/global.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="1653">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="variables.less" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/less/variables.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5103093" vertical-offset="182" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grid.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/less/grid.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="-14.25" vertical-offset="0" max-vertical-offset="513">
+            <state line="7" column="45" selection-start="209" selection-end="209" vertical-scroll-proportion="0.31971154" vertical-offset="0" max-vertical-offset="416">
               <folding />
             </state>
           </provider>
@@ -133,16 +75,16 @@
         <option value="$PROJECT_DIR$/src/app/home/home.tpl.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/home/home.less" />
-        <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
         <option value="$PROJECT_DIR$/src/app/home/home.coffee" />
         <option value="$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.tpl.html" />
         <option value="$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.coffee" />
         <option value="$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js" />
         <option value="$PROJECT_DIR$/src/common/js-print/js-print.js" />
         <option value="$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js" />
-        <option value="$PROJECT_DIR$/src/less/main.less" />
         <option value="$PROJECT_DIR$/src/less/global.less" />
         <option value="$PROJECT_DIR$/src/less/variables.less" />
+        <option value="$PROJECT_DIR$/src/less/main.less" />
+        <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
       </list>
     </option>
   </component>
@@ -226,91 +168,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-tiny-carousel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-print" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-no-tab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,6 +187,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-ng-modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -416,7 +278,15 @@
       <created>1394346307443</created>
       <updated>1394346307443</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="clean up modules&#10;">
+      <created>1394347463182</created>
+      <updated>1394347463182</updated>
+    </task>
+    <task id="LOCAL-00006" summary="save files&#10;">
+      <created>1394347495745</created>
+      <updated>1394347495745</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,23 +295,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19752066" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -460,12 +330,63 @@
     <MESSAGE value="add: google search bar&#10;icon button&#10;modal service&#10;moment service&#10;&#10;" />
     <MESSAGE value="update js-icon folder name&#10;" />
     <MESSAGE value="clean up js-tiny-carousel.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up js-tiny-carousel.js" />
+    <MESSAGE value="clean up modules&#10;" />
+    <MESSAGE value="save files&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="save files&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="6802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-print/js-print.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="22" selection-start="1568" selection-end="1568" vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="1349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/grid.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="0.030063292" vertical-offset="0" max-vertical-offset="632" />
@@ -473,122 +394,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nodetools/csv.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="895">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="895" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/global-media-query.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="114" selection-end="114" vertical-scroll-proportion="0.69435215" vertical-offset="0" max-vertical-offset="1919">
-          <folding />
-        </state>
+        <state line="11" column="1" selection-start="114" selection-end="114" vertical-scroll-proportion="0.69435215" vertical-offset="0" max-vertical-offset="1919" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/model/utils-model.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="68" selection-end="68" vertical-scroll-proportion="0.23100305" vertical-offset="0" max-vertical-offset="329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="68" selection-end="68" vertical-scroll-proportion="0.23100305" vertical-offset="0" max-vertical-offset="329" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.9370861" vertical-offset="498" max-vertical-offset="1273">
-          <folding />
-        </state>
+        <state line="56" column="0" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.9370861" vertical-offset="498" max-vertical-offset="1273" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/home.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="209">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="388" selection-end="388" vertical-scroll-proportion="0.3908228" vertical-offset="0" max-vertical-offset="632">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="209" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/home.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.42088607" vertical-offset="0" max-vertical-offset="632">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.42088607" vertical-offset="0" max-vertical-offset="632" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="9" selection-start="638" selection-end="638" vertical-scroll-proportion="0.69205296" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="22" column="9" selection-start="638" selection-end="638" vertical-scroll-proportion="0.69205296" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/templates-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="132" selection-end="132" vertical-scroll-proportion="-1.4339622" vertical-offset="0" max-vertical-offset="7315">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js-print/js-print.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-3.0357144" vertical-offset="2148" max-vertical-offset="2508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="60" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/grid.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="-14.25" vertical-offset="0" max-vertical-offset="513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="22" selection-start="1568" selection-end="1568" vertical-scroll-proportion="-12.892858" vertical-offset="570" max-vertical-offset="1368">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/global.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="1653">
+        <state line="21" column="0" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="513">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/variables.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5103093" vertical-offset="182" max-vertical-offset="646">
+        <state line="15" column="30" selection-start="351" selection-end="351" vertical-scroll-proportion="0.77868855" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.04896907" vertical-offset="95" max-vertical-offset="1653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="160" selection-end="160" vertical-scroll-proportion="0.045673076" vertical-offset="133" max-vertical-offset="760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="33" selection-start="877" selection-end="877" vertical-scroll-proportion="0.73278236" vertical-offset="133" max-vertical-offset="1368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-no-tab/js-no-tab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="280" selection-end="280" vertical-scroll-proportion="0.045673076" vertical-offset="171" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-print/js-print.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="0.78125" vertical-offset="2069" max-vertical-offset="2508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-tiny-carousel/js-tiny-carousel.js">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="7277">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="45" selection-start="209" selection-end="209" vertical-scroll-proportion="0.31971154" vertical-offset="0" max-vertical-offset="416">
           <folding />
         </state>
       </provider>
