@@ -12,11 +12,20 @@
 	<body>
 
 		<header>
-			<h1>JS-Modules</h1>
-			<p>It is Jake and Stacey's modules library</p>
+			<ul>
+				<li data-ui-route="/home" data-ng-class="{active:$uiRoute}">
+					<a href="#/home">Home</a>
+				</li>
+				<li data-ui-route="/about" data-ng-class="{active:$uiRoute}">
+					<a href="#/js-ng-modules">
+						Ng Modules
+					</a>
+				</li>
+			</ul>
 		</header>
 
 		<div class="container" data-ui-view="main"></div>
+
 		<footer>
 		</footer>
 

@@ -10,7 +10,7 @@ angular.module("myApp.home", ["ui.state", "Utils"]).config(function($stateProvid
       }
     },
     data: {
-      pageTitle: 'OZ365'
+      pageTitle: 'js modules home'
     }
   });
 }).controller("HomeCtrl", HomeCtrl = function($scope) {});

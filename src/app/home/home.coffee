@@ -9,6 +9,6 @@ angular.module("myApp.home", [
 								controller: "HomeCtrl"
 								templateUrl: "home/home.tpl.html"
 				data:
-						pageTitle: 'OZ365'
+						pageTitle: 'js modules home'
 
 ).controller "HomeCtrl", HomeCtrl = ($scope) ->
