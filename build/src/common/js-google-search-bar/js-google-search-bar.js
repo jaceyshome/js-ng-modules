@@ -13,7 +13,7 @@ angular.module("jsGoogleSearchBar", []).directive("jsGoogleSearchBar", function(
     template: '<div class="googleSearchBar" >\
 					<div class="container">\
 						<img src="" data-ng-src="{{imageUrl}}" alt="google logo"/>\
-						<label for="googleSearchBarDeskInput">Google search input</label>\
+						<label for="googleSearchBarDeskInput" >Google search input</label>\
 						<input id="googleSearchBarDeskInput" class="desktopInput"\
 										type="text" 	data-ng-model="query"/>\
 						<label for="googleSearchBarMobileInput">Google search input</label>\

@@ -18,7 +18,15 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
 
 angular.module("js-ng-modules/js-ng-modules.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("js-ng-modules/js-ng-modules.tpl.html",
-    "<div data-ng-cloak class=\"jsNgModules\">\n" +
+    "<div data-ng-cloak class=\"container jsNgModules\">\n" +
+    "	<div class=\"inner-container\">\n" +
+    "		<h1>Js Ng-modules</h1>\n" +
+    "	</div>\n" +
+    "\n" +
+    "	<div class=\"inner-container\">\n" +
+    "		<h2>Google search bar</h2>\n" +
+    "		<div data-js-google-search-bar ></div>\n" +
+    "	</div>\n" +
     "\n" +
     "</div>\n" +
     "");

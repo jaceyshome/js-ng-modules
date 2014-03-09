@@ -3437,12 +3437,28 @@ input[type="submit"].btn.btn-mini {
  */
 
 h1 {
+  padding: 0 30px 0 30px;
   margin: 0;
+  margin-top: 1em;
+  margin-bottom: 1.2em;
+  font-size: 2.375em;
+  color: #090909;
+}
+
+h2 {
+  padding: 0 30px 0 30px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.969em;
   color: #090909;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 1.125em;
+}
+
+p {
+  font-size: 1em;
 }
 
 .screenReaderText {
@@ -3569,6 +3585,354 @@ footer p {
  * TODO: In a later version of this boilerplate, I'd like to automate this.
  */
 
+.googleSearchBar {
+  width: 100%;
+  margin: auto;
+  background-color: #f0f0f0;
+  /* iPad in landscape */
+
+}
+
+.googleSearchBar .container {
+  width: 80%;
+  max-width: 1024px;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  text-align: center;
+}
+
+.googleSearchBar .container img {
+  display: inline;
+}
+
+.googleSearchBar .container label {
+  display: none;
+}
+
+.googleSearchBar .container input {
+  width: 60%;
+  height: 1.5em;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 1em;
+  border: 1px solid #4b488b;
+}
+
+.googleSearchBar .container .desktopInput {
+  display: inline;
+}
+
+.googleSearchBar .container .mobileInput {
+  display: none;
+}
+
+.googleSearchBar .container .searchButton {
+  display: inline-block;
+  width: 6em;
+  height: 2em;
+  margin-left: 5px;
+  font-size: 0.875em;
+  line-height: 26px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4b488b;
+}
+
+.googleSearchBar .container .searchButton:hover,
+.googleSearchBar .container .searchButton:focus {
+  background-color: #3f3f7e;
+}
+
+.googleSearchBar .max-width-480 .container {
+  margin-left: 0;
+}
+
+.googleSearchBar .max-width-480 .container .searchButton {
+  width: 30px;
+  background-image: url("images/icon_google_search_btn.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.googleSearchBar .max-width-480 .container .searchButton span {
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: 100px;
+}
+
+.googleSearchBar .max-width-480 .container .mobileInput {
+  width: 80%;
+}
+
+.googleSearchBar .max-width-640 .container .mobileInput {
+  width: 73%;
+  margin-left: 1em;
+}
+
+.googleSearchBar .tablet-portrait .container {
+  width: 100%;
+  margin: 0;
+  margin-left: 1em;
+}
+
+.googleSearchBar .tablet-portrait .container .searchButton {
+  float: left;
+}
+
+.googleSearchBar .tablet-portrait .container img {
+  display: none;
+}
+
+.googleSearchBar .tablet-portrait .container .desktopInput {
+  display: none	;
+}
+
+.googleSearchBar .tablet-portrait .container .mobileInput {
+  display: inline;
+  float: left;
+  width: 80%;
+  margin-left: 1em;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .googleSearchBar .container .mobileInput {
+    width: 73%;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .googleSearchBar .container {
+    margin-left: 0;
+  }
+  .googleSearchBar .container .searchButton {
+    width: 30px;
+    background-image: url("images/icon_google_search_btn.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .googleSearchBar .container .searchButton span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: 100px;
+  }
+  .googleSearchBar .container .mobileInput {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container {
+    margin-left: 0;
+  }
+  .googleSearchBar .container .searchButton {
+    width: 30px;
+    background-image: url("images/icon_google_search_btn.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .googleSearchBar .container .searchButton span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: 100px;
+  }
+  .googleSearchBar .container .mobileInput {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container {
+    margin-left: 0;
+  }
+  .googleSearchBar .container .searchButton {
+    width: 30px;
+    background-image: url("images/icon_google_search_btn.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .googleSearchBar .container .searchButton span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: 100px;
+  }
+  .googleSearchBar .container .mobileInput {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  .googleSearchBar .container {
+    width: 100%;
+    margin: 0;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container .searchButton {
+    float: left;
+  }
+  .googleSearchBar .container img {
+    display: none;
+  }
+  .googleSearchBar .container .desktopInput {
+    display: none	;
+  }
+  .googleSearchBar .container .mobileInput {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-left: 1em;
+  }
+  .googleSearchBar .container {
+    margin-left: 0;
+  }
+  .googleSearchBar .container .searchButton {
+    width: 30px;
+    background-image: url("images/icon_google_search_btn.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .googleSearchBar .container .searchButton span {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: 100px;
+  }
+  .googleSearchBar .container .mobileInput {
+    width: 80%;
+  }
+}
+
 .homePage {
   /* iPad in landscape */
 
@@ -3612,4 +3976,53 @@ footer p {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
   
+}
+
+.jsNgModules {
+  /* iPad in landscape */
+
+}
+
+@media only screen and (max-width: 1023px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 480px) {
+  
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  
+}
+
+html body {
+  font-size: 100%;
 }
