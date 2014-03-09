@@ -3437,7 +3437,6 @@ input[type="submit"].btn.btn-mini {
  */
 
 h1 {
-  padding: 0 30px 0 30px;
   margin: 0;
   margin-top: 1em;
   margin-bottom: 1.2em;
@@ -3446,7 +3445,6 @@ h1 {
 }
 
 h2 {
-  padding: 0 30px 0 30px;
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1.969em;
@@ -3454,7 +3452,6 @@ h2 {
 }
 
 h3 {
-  padding: 0 30px 0 30px;
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1.125em;
@@ -3462,7 +3459,6 @@ h3 {
 }
 
 p {
-  padding: 0 30px 0 30px;
   font-size: 1em;
 }
 
@@ -3508,6 +3504,8 @@ header ul li a:focus {
 
 .inner-container {
   width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
   margin: auto;
 }
 
@@ -3938,6 +3936,91 @@ footer p {
   }
 }
 
+.quickLink {
+  display: inline-block;
+  width: auto;
+  /* iPad in landscape */
+
+}
+
+.quickLink a {
+  display: block;
+  width: 8em;
+  height: 100%;
+  padding-top: 1em;
+  margin: auto;
+  font-size: 1em;
+  text-align: center;
+}
+
+.quickLink a .thumb {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  margin-bottom: 0.2em;
+  background-image: url("images/i-hot-sprite.png");
+  background-repeat: no-repeat;
+}
+
+.quickLink a .title {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8em;
+  color: #004a6f;
+  text-align: center;
+}
+
+.quickLink a:hover,
+.quickLink a:focus {
+  background-color: #ececec;
+}
+
+.quickLink a:hover .title,
+.quickLink a:focus .title {
+  color: #005380;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 480px) {
+  
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  
+}
+
 .homePage {
   /* iPad in landscape */
 
@@ -3986,6 +4069,14 @@ footer p {
 .jsNgModules {
   /* iPad in landscape */
 
+}
+
+.jsNgModules .googleSearchContainer {
+  padding: 0;
+}
+
+.jsNgModules .googleSearchContainer h2 {
+  padding-left: 30px;
 }
 
 @media only screen and (max-width: 1023px) {

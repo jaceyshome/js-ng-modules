@@ -1,4 +1,10 @@
 .quickLink {
+	//variables:
+	@iconPlaceHolder:"images/i-hot-sprite.png";
+	@bgHoverColor: #ececec;
+	@linkFontColor: #004a6f;
+	@linkFontColorHover: #005380;
+
 	display: inline-block;
 	width: auto;
 
@@ -9,7 +15,7 @@
 		margin:auto;
 		text-align: center;
 		padding-top: 1em;
-		font-size: 16px;
+		font-size: 1em;
 
 		.thumb{
 			display: block;
@@ -17,7 +23,7 @@
 			height: 48px;
 			margin: auto;
 			margin-bottom: 0.2em;
-			background-image: url("images/i-hot-sprite.png");
+			background-image: url(@iconPlaceHolder);
 			background-repeat: no-repeat;
 		}
 
@@ -26,101 +32,101 @@
 			width: 100%;
 			text-align: center;
 			margin-bottom: 0.8em;
-			color:#004a6f;
+			color: @linkFontColor;
 		}
 
-		&:hover{
-			background-color: @bgColor1st;
+		&:hover, &:focus{
+			background-color: @bgHoverColor;
+			.title{
+				color:@linkFontColorHover;
+			}
 		}
 	}
 
-}
+	.max-width-480 {
+	}
 
-.quickLink-max-width-480 {
-}
+	.max-width-1023 {
+	}
 
-.quickLink-max-width-1023 {
-}
+	.phone-portrait {
+	}
 
-.quickLink-phone-portrait {
-	.quickLink {
+	.tablet-portrait {
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.max-width-1023;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.tablet-portrait;
 
 	}
-}
 
-.quickLink-tablet-portrait {
-}
+	@media only screen and (max-width: 480px) {
+		.max-width-480;
+	}
 
-@media only screen and (max-width: 1023px) {
-	.quickLink-max-width-1023;
-}
+	@media only screen and (max-width: 400px) {
+		.phone-portrait;
+	}
 
-@media only screen and (max-width: 768px) {
-	.quickLink-tablet-portrait;
+	/* iPad in landscape */
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: landscape) {
+	}
 
-}
+	// iPad in portrait
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+	}
 
-@media only screen and (max-width: 480px) {
-	.quickLink-max-width-480;
-}
+	// iPhone 5 in landscape
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)
+	and (orientation: landscape) {
+		.max-width-1023;
+		.tablet-portrait;
+	}
 
-@media only screen and (max-width: 400px) {
-	.quickLink-phone-portrait;
-}
+	/// iPhone 5 in portrait
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+		.phone-portrait;
+	}
 
-/* iPad in landscape */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: landscape) {
-}
+	// iPhone 2G-4S in landscape
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (orientation: landscape) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+	}
 
-// iPad in portrait
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: portrait) {
-	.quickLink-max-width-1023;
-	.quickLink-tablet-portrait;
-}
+	// iPhone 2G-4S in portrait
+	@media only screen
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (orientation: portrait) {
+		.max-width-1023;
+		.tablet-portrait;
+		.max-width-480;
+		.phone-portrait;
+	}
 
-// iPhone 5 in landscape
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (orientation: landscape) {
-	.quickLink-max-width-1023;
-	.quickLink-tablet-portrait;
-}
-
-/// iPhone 5 in portrait
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (orientation: portrait) {
-	.quickLink-max-width-1023;
-	.quickLink-tablet-portrait;
-	.quickLink-max-width-480;
-	.quickLink-phone-portrait;
-}
-
-// iPhone 2G-4S in landscape
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (orientation: landscape) {
-	.quickLink-max-width-1023;
-	.quickLink-tablet-portrait;
-	.quickLink-max-width-480;
-}
-
-// iPhone 2G-4S in portrait
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (orientation: portrait) {
-	.quickLink-max-width-1023;
-	.quickLink-tablet-portrait;
-	.quickLink-max-width-480;
-	.quickLink-phone-portrait;
 }

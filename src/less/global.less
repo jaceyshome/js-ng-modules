@@ -7,7 +7,6 @@ h1{
 	margin-bottom:1.2em;
 	color: @fontColor2nd;
 	font-size:2.375em;
-	padding: 0 @paddingLeft 0 @paddingRight;
 }
 
 h2{
@@ -15,7 +14,6 @@ h2{
 	margin-top: 1em;
 	margin-bottom:1em;
 	font-size:1.969em;
-	padding: 0 @paddingLeft 0 @paddingRight;
 }
 
 h3{
@@ -23,13 +21,10 @@ h3{
 	color: @fontColor2nd;
 	margin-top: 1em;
 	margin-bottom:1em;
-	padding: 0 @paddingLeft 0 @paddingRight;
-
 }
 
 p{
 	font-size:1em;
-	padding: 0 @paddingLeft 0 @paddingRight;
 }
 
 .screenReaderText {
@@ -74,6 +69,8 @@ header{
 .inner-container{
 	width:100%;
 	margin: auto;
+	padding-left: @paddingLeft;
+	padding-right: @paddingRight;
 
 	.inner-block{
 		max-width:800px;
@@ -94,3 +91,5 @@ footer{
 		color: @fontColor1st;
 	}
 }
+
+
