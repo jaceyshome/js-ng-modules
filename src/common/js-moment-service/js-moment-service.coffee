@@ -1,15 +1,16 @@
+#	require moment.js
+# npm install moment
+# deal with the IE8 problem
+
 angular.module("jsMomentService", [])
 .factory "jsMomentService", () ->
 		momentService = {
-				convertUTCToLocalDateTime:(input, utcFormat, localFormat)->
-						unless angular.isDefined utcFormat
-								utcFormat = "YYYY-MM-DD HH:mm:ss"
+				UTCToLocal:(input, utcFormat, localFormat)->
+						_utcFormat = utcFormat or "YYYY-MM-DD HH:mm:ss"
+						_localFormat = localFormat or "hh:mm A DD/MM/YYYY"
 
-						unless angular.isDefined localFormat
-								utcFormat = "hh:mm A DD/MM/YYYY"
-
-						time = moment.utc(input, format).local()
-						timeStamp = time.format(utcFormat)
+						time = moment.utc(input, _utcFormat).local()
+						timeStamp = time.format(_localFormat)
 						return timeStamp.toString()
 		}
 

@@ -1,6 +1,7 @@
 angular.module("myApp.js-ng-modules", [
 		"ui.state"
 		"jsGoogleSearchBar"
+		"jsMomentService"
 ]).config(($stateProvider) ->
 		$stateProvider.state "js-ng-modules",
 				url: "/js-ng-modules"
@@ -11,5 +12,7 @@ angular.module("myApp.js-ng-modules", [
 				data:
 						pageTitle: 'js-ng-modules'
 
-).controller "jsNgModulesCtrl", jsNgModulesCtrl = ($scope) ->
-
+).controller "jsNgModulesCtrl", jsNgModulesCtrl = ($scope,jsMomentService) ->
+		$scope.utcTimeExample = "2014-03-08 00:00:56"
+		$scope.localTimeExample = jsMomentService.UTCToLocal($scope.utcTimeExample)
+		console.log "localTimeExample", $scope.localTimeExmaple

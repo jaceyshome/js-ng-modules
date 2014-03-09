@@ -1,6 +1,6 @@
 var jsNgModulesCtrl;
 
-angular.module("myApp.js-ng-modules", ["ui.state", "jsGoogleSearchBar"]).config(function($stateProvider) {
+angular.module("myApp.js-ng-modules", ["ui.state", "jsGoogleSearchBar", "jsMomentService"]).config(function($stateProvider) {
   return $stateProvider.state("js-ng-modules", {
     url: "/js-ng-modules",
     views: {
@@ -13,4 +13,8 @@ angular.module("myApp.js-ng-modules", ["ui.state", "jsGoogleSearchBar"]).config(
       pageTitle: 'js-ng-modules'
     }
   });
-}).controller("jsNgModulesCtrl", jsNgModulesCtrl = function($scope) {});
+}).controller("jsNgModulesCtrl", jsNgModulesCtrl = function($scope, jsMomentService) {
+  $scope.utcTimeExample = "2014-03-08 00:00:56";
+  $scope.localTimeExample = jsMomentService.UTCToLocal($scope.utcTimeExample);
+  return console.log("localTimeExample", $scope.localTimeExmaple);
+});

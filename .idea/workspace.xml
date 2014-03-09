@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" afterPath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.config.js" afterPath="$PROJECT_DIR$/build.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/global.less" afterPath="$PROJECT_DIR$/src/less/global.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee" afterPath="$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/src/common/js-moment-service/js-moment-service.js" afterPath="$PROJECT_DIR$/build/src/common/js-moment-service/js-moment-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" afterPath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/templates-app.js" afterPath="$PROJECT_DIR$/build/templates-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -26,7 +34,44 @@
     <favorites_list name="js-ngmodules" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="js-ng-modules.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="17" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1767">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="js-moment-service.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="18" selection-start="166" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="js-ng-modules.tpl.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="42" selection-start="215" selection-end="215" vertical-scroll-proportion="0.32839507" vertical-offset="0" max-vertical-offset="456">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -61,13 +106,16 @@
         <option value="$PROJECT_DIR$/src/app/home/home.tpl.html" />
         <option value="$PROJECT_DIR$/src/app/home/home.less" />
         <option value="$PROJECT_DIR$/src/less/variables.less" />
-        <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
         <option value="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/less/global.less" />
         <option value="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less" />
+        <option value="$PROJECT_DIR$/build.config.js" />
         <option value="$PROJECT_DIR$/src/less/main.less" />
+        <option value="$PROJECT_DIR$/src/less/global.less" />
         <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" />
+        <option value="$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee" />
+        <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
       </list>
     </option>
   </component>
@@ -173,24 +221,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,28 +381,32 @@
       <created>1394357436296</created>
       <updated>1394357436296</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="save project">
+      <created>1394357557452</created>
+      <updated>1394357557453</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1233" height="805" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3019727" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18512397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19586776" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -403,7 +437,8 @@
     <MESSAGE value="build simple page layout" />
     <MESSAGE value="clean up project structure codes and clean up google search bar directive" />
     <MESSAGE value="clean google search bar less file" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean google search bar less file" />
+    <MESSAGE value="save project" />
+    <option name="LAST_COMMIT_MESSAGE" value="save project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -600,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="74" selection-end="74" vertical-scroll-proportion="0.087759815" vertical-offset="0" max-vertical-offset="433">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="717" selection-end="717" vertical-scroll-proportion="0.5160494" vertical-offset="228" max-vertical-offset="779">
@@ -628,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="226" selection-end="226" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="361">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="855">
@@ -648,16 +669,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+    <entry file="file://$PROJECT_DIR$/src/less/global.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="2.7679012" vertical-offset="0" max-vertical-offset="1482">
+        <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.4691358" vertical-offset="0" max-vertical-offset="1938">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/global.less">
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="153" selection-end="153" vertical-scroll-proportion="0.5160494" vertical-offset="0" max-vertical-offset="1805">
+        <state line="69" column="21" selection-start="2032" selection-end="2032" vertical-scroll-proportion="3.2839506" vertical-offset="0" max-vertical-offset="1482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="491" column="8" selection-start="13198" selection-end="13198" vertical-scroll-proportion="0.2886836" vertical-offset="9223" max-vertical-offset="12749">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="17" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="1767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/js-moment-service/js-moment-service.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="166" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="42" selection-start="215" selection-end="215" vertical-scroll-proportion="0.32839507" vertical-offset="0" max-vertical-offset="456">
           <folding />
         </state>
       </provider>

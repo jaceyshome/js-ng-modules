@@ -3454,10 +3454,15 @@ h2 {
 }
 
 h3 {
+  padding: 0 30px 0 30px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: 1.125em;
+  color: #090909;
 }
 
 p {
+  padding: 0 30px 0 30px;
   font-size: 1em;
 }
 

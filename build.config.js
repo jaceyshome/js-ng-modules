@@ -67,7 +67,8 @@ module.exports = {
 			'vendor/angular-resource/angular-resource.js',
 			'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
 			'vendor/angular-ui-router/release/angular-ui-router.js',
-			'vendor/angular-ui-utils/modules/route/route.js'
+			'vendor/angular-ui-utils/modules/route/route.js',
+			'vendor/momentjs/moment.js'
 		],
 		css: [
 		],

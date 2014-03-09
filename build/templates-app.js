@@ -28,7 +28,12 @@ angular.module("js-ng-modules/js-ng-modules.tpl.html", []).run(["$templateCache"
     "		<div data-js-google-search-bar ></div>\n" +
     "	</div>\n" +
     "\n" +
-    "\n" +
+    "	<div class=\"inner-container\">\n" +
+    "		<h2>MomentJs Services</h2>\n" +
+    "		<p>Convert UTS time to user local time (IE8, Firefox)</p>\n" +
+    "		<p>UTS time (YYYY-MM-DD HH:mm:ss): {{utcTimeExample}} </p>\n" +
+    "		<p>Local time: {{localTimeExample}} </p>\n" +
+    "	</div>\n" +
     "\n" +
     "</div>\n" +
     "");
