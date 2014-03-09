@@ -3,6 +3,7 @@ angular.module("myApp.js-ng-modules", [
 		"jsGoogleSearchBar"
 		"jsMomentService"
 		"jsIconButton"
+		"jsNoTab"
 ]).config(($stateProvider) ->
 		$stateProvider.state "js-ng-modules",
 				url: "/js-ng-modules"
