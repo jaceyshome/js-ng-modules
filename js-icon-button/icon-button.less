@@ -1,0 +1,126 @@
+.quickLink {
+	display: inline-block;
+	width: auto;
+
+	a{
+		display: block;
+		width: 8em;
+		height:100%;
+		margin:auto;
+		text-align: center;
+		padding-top: 1em;
+		font-size: 16px;
+
+		.thumb{
+			display: block;
+			width:48px;
+			height: 48px;
+			margin: auto;
+			margin-bottom: 0.2em;
+			background-image: url("images/i-hot-sprite.png");
+			background-repeat: no-repeat;
+		}
+
+		.title{
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 0.8em;
+			color:#004a6f;
+		}
+
+		&:hover{
+			background-color: @bgColor1st;
+		}
+	}
+
+}
+
+.quickLink-max-width-480 {
+}
+
+.quickLink-max-width-1023 {
+}
+
+.quickLink-phone-portrait {
+	.quickLink {
+
+	}
+}
+
+.quickLink-tablet-portrait {
+}
+
+@media only screen and (max-width: 1023px) {
+	.quickLink-max-width-1023;
+}
+
+@media only screen and (max-width: 768px) {
+	.quickLink-tablet-portrait;
+
+}
+
+@media only screen and (max-width: 480px) {
+	.quickLink-max-width-480;
+}
+
+@media only screen and (max-width: 400px) {
+	.quickLink-phone-portrait;
+}
+
+/* iPad in landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+}
+
+// iPad in portrait
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+	.quickLink-max-width-1023;
+	.quickLink-tablet-portrait;
+}
+
+// iPhone 5 in landscape
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: landscape) {
+	.quickLink-max-width-1023;
+	.quickLink-tablet-portrait;
+}
+
+/// iPhone 5 in portrait
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: portrait) {
+	.quickLink-max-width-1023;
+	.quickLink-tablet-portrait;
+	.quickLink-max-width-480;
+	.quickLink-phone-portrait;
+}
+
+// iPhone 2G-4S in landscape
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (orientation: landscape) {
+	.quickLink-max-width-1023;
+	.quickLink-tablet-portrait;
+	.quickLink-max-width-480;
+}
+
+// iPhone 2G-4S in portrait
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (orientation: portrait) {
+	.quickLink-max-width-1023;
+	.quickLink-tablet-portrait;
+	.quickLink-max-width-480;
+	.quickLink-phone-portrait;
+}

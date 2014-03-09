@@ -1,0 +1,201 @@
+.googleSearchBar{
+
+	width: 100%;
+	margin:auto;
+	background-color: #f0f0f0;
+
+	.container{
+		width: 80%;
+		max-width: 1024px;
+		text-align: center;
+		padding-top: 1.6em;
+		padding-bottom: 1.6em;
+		img{
+			display: inline;
+		}
+		label{
+			display: none;
+		}
+		input{
+			width: 60%;
+			height: 1.5em;
+			border: 1px solid @color1st;
+			font-size: 16px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		.desktopInput{
+			display: inline;
+		}
+		.mobileInput{
+			display: none;
+		}
+		.searchButton{
+			display: inline-block;
+			margin-left: 5px;
+			width: 6em;
+			height: 2em;
+			text-decoration: none;
+			background-color: @color1st;
+			color: #fff;
+			text-align: center;
+			font-size: 14px;
+			line-height: 26px;
+
+			&:hover, &:focus{
+				background-color: @color1stHover;
+			}
+		}
+	}
+
+}
+
+.googleSearchBar-max-width-480 {
+	.googleSearchBar{
+
+		.container{
+			margin-left: 0;
+
+			.searchButton{
+				width: 30px;
+				background-image: url("images/icon_google_search_btn.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				span{
+					display: block;
+					height: 1px;
+					width: 1px;
+					overflow: hidden;
+					text-indent: 100px;
+				}
+			}
+
+			.mobileInput{
+				width:80%;
+			}
+		}
+	}
+
+}
+
+.googleSearchBar-max-width-640 {
+	.googleSearchBar{
+		.container{
+			.mobileInput{
+				margin-left: 1em;
+				width:73%;
+			}
+		}
+	}
+}
+
+.googleSearchBar-max-width-1023 {
+
+}
+
+.googleSearchBar-phone-portrait {
+}
+
+.googleSearchBar-tablet-portrait {
+	.googleSearchBar{
+		.container{
+			margin:0;
+			width: 100%;
+			margin-left: 1em;
+			.searchButton{
+				float: left;
+			}
+
+			img{
+				display: none;
+			}
+			.desktopInput{
+				display: none	;
+			}
+			.mobileInput{
+				display: inline;
+				float: left;
+				margin-left: 1em;
+				width:80%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.googleSearchBar-max-width-1023;
+}
+
+@media only screen and (max-width: 768px) {
+	.googleSearchBar-tablet-portrait;
+}
+
+@media only screen and (max-width: 640px) {
+	.googleSearchBar-max-width-640;
+}
+
+@media only screen and (max-width: 480px) {
+	.googleSearchBar-max-width-480;
+}
+
+@media only screen and (max-width: 400px) {
+	.googleSearchBar-phone-portrait;
+}
+
+/* iPad in landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+}
+
+// iPad in portrait
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+	.googleSearchBar-max-width-1023;
+	.googleSearchBar-tablet-portrait;
+}
+
+// iPhone 5 in landscape
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: landscape) {
+	.googleSearchBar-max-width-1023;
+	.googleSearchBar-tablet-portrait;
+}
+
+/// iPhone 5 in portrait
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: portrait) {
+	.googleSearchBar-max-width-1023;
+	.googleSearchBar-tablet-portrait;
+	.googleSearchBar-max-width-480;
+	.googleSearchBar-phone-portrait;
+}
+
+// iPhone 2G-4S in landscape
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (orientation: landscape) {
+	.googleSearchBar-max-width-1023;
+	.googleSearchBar-tablet-portrait;
+	.googleSearchBar-max-width-480;
+}
+
+// iPhone 2G-4S in portrait
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (orientation: portrait) {
+	.googleSearchBar-max-width-1023;
+	.googleSearchBar-tablet-portrait;
+	.googleSearchBar-max-width-480;
+	.googleSearchBar-phone-portrait;
+}
