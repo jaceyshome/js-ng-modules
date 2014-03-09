@@ -1,7 +1,13 @@
 .googleSearchBar{
+	//variables
+	@bgColor: #f0f0f0;
+	@inputBorderColor: #4B488B;
+	@searchBtnBgColor: #4B488B;
+	@searchBtnBgHoverColor: #3F3F7E;
+
 	width: 100%;
 	margin:auto;
-	background-color: #f0f0f0;
+	background-color: @bgColor;
 
 	.container{
 		width: 80%;
@@ -18,7 +24,7 @@
 		input{
 			width: 60%;
 			height: 1.5em;
-			border: 1px solid @color1st;
+			border: 1px solid @inputBorderColor;
 			font-size: 1em;
 			padding-left: 5px;
 			padding-right: 5px;
@@ -36,14 +42,14 @@
 			width: 6em;
 			height: 2em;
 			text-decoration: none;
-			background-color: @color1st;
+			background-color: @searchBtnBgColor;
 			color: #fff;
 			text-align: center;
 			font-size: 0.875em;
 			line-height: 26px;
 
 			&:hover, &:focus{
-				background-color: @color1stHover;
+				background-color: @searchBtnBgHoverColor;
 			}
 		}
 	}
@@ -109,7 +115,7 @@
 			display: inline;
 			float: left;
 			margin-left: 1em;
-			width:80%;
+			width: 80%;
 		}
 	}
 }
