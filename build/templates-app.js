@@ -28,6 +28,8 @@ angular.module("js-ng-modules/js-ng-modules.tpl.html", []).run(["$templateCache"
     "		<div data-js-google-search-bar ></div>\n" +
     "	</div>\n" +
     "\n" +
+    "\n" +
+    "\n" +
     "</div>\n" +
     "");
 }]);

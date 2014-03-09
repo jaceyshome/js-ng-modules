@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="clean up goog">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" afterPath="$PROJECT_DIR$/build/assets/OZ001-0.3.1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/global.less" afterPath="$PROJECT_DIR$/src/less/global.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/src/common/js-google-search-bar/js-google-search-bar.js" afterPath="$PROJECT_DIR$/build/src/common/js-google-search-bar/js-google-search-bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less" afterPath="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" afterPath="$PROJECT_DIR$/build/src/app/js-ng-modules/js-ng-modules.js" />
+    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" afterPath="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/main.less" afterPath="$PROJECT_DIR$/src/less/main.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/templates-app.js" afterPath="$PROJECT_DIR$/build/templates-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,59 +26,7 @@
     <favorites_list name="js-ngmodules" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="js-ng-modules.tpl.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/less/global.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="153" selection-end="153" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1805">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js-google-search-bar.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="21" selection-start="639" selection-end="639" vertical-scroll-proportion="0.5612009" vertical-offset="194" max-vertical-offset="855">
-              <folding>
-                <marker date="1394355302073" expanded="true" signature="269:911" placeholder="..." />
-                <marker date="1394355302073" expanded="true" signature="299:900" placeholder="..." />
-                <marker date="1394355302073" expanded="true" signature="502:548" placeholder="..." />
-                <marker date="1394355302073" expanded="true" signature="688:754" placeholder="..." />
-                <marker date="1394355302073" expanded="true" signature="785:888" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/less/main.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="28" selection-start="2012" selection-end="2012" vertical-scroll-proportion="-8.357142" vertical-offset="1058" max-vertical-offset="1482">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="js-google-search-bar.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="3781">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -126,9 +64,9 @@
         <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
         <option value="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/less/global.less" />
         <option value="$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less" />
         <option value="$PROJECT_DIR$/src/less/main.less" />
-        <option value="$PROJECT_DIR$/src/less/global.less" />
         <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html" />
       </list>
     </option>
@@ -253,28 +191,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-google-search-bar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,12 +339,24 @@
       <created>1394354420546</created>
       <updated>1394354420546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="clean up project structure codes and clean up google search bar directive">
+      <created>1394357050009</created>
+      <updated>1394357050009</updated>
+    </task>
+    <task id="LOCAL-00010" summary="clean google search bar less file">
+      <created>1394357354745</created>
+      <updated>1394357354745</updated>
+    </task>
+    <task id="LOCAL-00011" summary="clean google search bar less file">
+      <created>1394357436296</created>
+      <updated>1394357436296</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1233" height="805" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -436,7 +364,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18512397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18512397" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -473,7 +401,9 @@
     <MESSAGE value="save files&#10;" />
     <MESSAGE value="init project" />
     <MESSAGE value="build simple page layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="build simple page layout" />
+    <MESSAGE value="clean up project structure codes and clean up google search bar directive" />
+    <MESSAGE value="clean google search bar less file" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean google search bar less file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -587,7 +517,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/templates-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416" />
+        <state line="0" column="0" selection-start="0" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/grid.less">
@@ -682,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.6785714" vertical-offset="0" max-vertical-offset="3781">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/global-media-query.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.19843341" vertical-offset="0" max-vertical-offset="1919">
@@ -696,37 +621,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+    <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="28" selection-start="2012" selection-end="2012" vertical-scroll-proportion="-8.357142" vertical-offset="1058" max-vertical-offset="1482">
+        <state line="199" column="0" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.67160493" vertical-offset="3509" max-vertical-offset="3914">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/global.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="153" selection-end="153" vertical-scroll-proportion="-7.464286" vertical-offset="0" max-vertical-offset="1805">
+        <state line="10" column="2" selection-start="226" selection-end="226" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="361">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/common/js-google-search-bar/js-google-search-bar.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="639" selection-end="639" vertical-scroll-proportion="0.5612009" vertical-offset="194" max-vertical-offset="855">
+        <state line="17" column="33" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="855">
           <folding>
-            <marker date="1394355302073" expanded="true" signature="269:911" placeholder="..." />
-            <marker date="1394355302073" expanded="true" signature="299:900" placeholder="..." />
-            <marker date="1394355302073" expanded="true" signature="502:548" placeholder="..." />
-            <marker date="1394355302073" expanded="true" signature="688:754" placeholder="..." />
-            <marker date="1394355302073" expanded="true" signature="785:888" placeholder="..." />
+            <marker date="1394355302073" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394355302073" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394355302073" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394355302073" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1394355302073" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="2.7679012" vertical-offset="0" max-vertical-offset="1482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="153" selection-end="153" vertical-scroll-proportion="0.5160494" vertical-offset="0" max-vertical-offset="1805">
+          <folding />
         </state>
       </provider>
     </entry>
