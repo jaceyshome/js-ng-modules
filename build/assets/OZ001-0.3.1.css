@@ -1,0 +1,208 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+/**
+ * This is our main variables file. It in turn imports the `variables` file from
+ * Twitter Bootstrap. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+/**
+ * These are the variables used throughout the application. This is where 
+ * overwrites that are not specific to components should be maintained.
+ */
+
+/**
+ * Typography-related.
+ */
+
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+
+/**
+ * Typography
+ */
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.screenReaderText {
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-indent: 100px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+header {
+  width: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  background-color: #4b488b;
+  border-bottom: 5px solid #73cee1;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+header p {
+  display: inline-block;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+}
+
+.inner-container {
+  width: 100%;
+  margin: auto;
+}
+
+.inner-container .inner-block {
+  max-width: 1024px;
+  margin: auto;
+}
+
+footer {
+  width: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  background-color: #4b488b;
+  border-top: 5px solid #73cee1;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.global-max-width-480 .inner-container .inner-block {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 480px) {
+  .inner-container .inner-block {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+/* iPad in landscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  .inner-container .inner-block {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  .inner-container .inner-block {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  .inner-container .inner-block {
+    width: 100%;
+  }
+}
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using.
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+.homePage {
+  /* iPad in landscape */
+
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
+
+@media only screen and (max-width: 480px) {
+  
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  
+}

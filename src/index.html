@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" data-ng-controller="AppCtrl">
+	<head>
+		<meta charset="utf-8">
+		<title data-ng-bind="pageTitle">JS-Modules</title>
+		<!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+		<link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+		<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+		<script type="text/javascript" src="<%= file %>"></script><% }); %>
+	</head>
+	<body>
+
+		<header>
+			<h1>JS-Modules</h1>
+			<p>It is Jake and Stacey's modules library</p>
+		</header>
+
+		<div class="container" data-ui-view="main"></div>
+		<footer>
+		</footer>
+
+	</body>
+</html>
+
+
