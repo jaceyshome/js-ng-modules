@@ -1,4 +1,4 @@
-ngular.module("jsTinyCarousel", []).directive("jsTinyCarousel", function() {
+angular.module("jsTinyCarousel", []).directive("jsTinyCarousel", function() {
 	return {
 		scope: {
 			interval: "=",

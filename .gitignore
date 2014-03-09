@@ -1,2 +1,8 @@
+*.sw*
+*~
+bin/
 .idea/
-
+.idea/*
+idea/
+node_modules/
+vendor/
