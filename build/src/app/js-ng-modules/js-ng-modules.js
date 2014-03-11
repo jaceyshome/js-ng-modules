@@ -1,6 +1,6 @@
 var jsNgModulesCtrl;
 
-angular.module("myApp.js-ng-modules", ["ui.state", "jsGoogleSearchBar", "jsMomentService", "jsIconButton"]).config(function($stateProvider) {
+angular.module("myApp.js-ng-modules", ["ui.state", "jsGoogleSearchBar", "jsMomentService", "jsIconButton", "jsNoTab"]).config(function($stateProvider) {
   return $stateProvider.state("js-ng-modules", {
     url: "/js-ng-modules",
     views: {
