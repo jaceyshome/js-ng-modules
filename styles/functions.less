@@ -1,9 +1,34 @@
-@containerBoxShadowColor: rgba(0,0,0, 0.3);
-@containerBoxShadowY: 5px;
-@containerBoxShadowBlur: 15px;
-
 .setContainerTopAndBottomShadow(){
+  @containerBoxShadowColor: rgba(0,0,0, 0.3);
+  @containerBoxShadowY: 5px;
+  @containerBoxShadowBlur: 15px;
   -webkit-box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
   -moz-box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
   box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
+}
+
+//Functions
+.setOpacity(@percentage:1){
+  @actualValue: (@percentage * 100);
+  /* IE 8 */
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{percentage})";
+  /* IE 5-7 */
+  filter: ~"alpha(opacity=@{percentage})";
+  /* Netscape */
+  -moz-opacity: @percentage;
+  /* Safari 1.x */
+  -khtml-opacity: @percentage;
+  /* Good browsers */
+  opacity: @percentage;
+}
+
+.setBgImageCenter(@bgImageUrl){
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{bgImageUrl}', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{bgImageUrl}', sizingMethod='scale')";
 }

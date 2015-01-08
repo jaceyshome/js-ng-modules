@@ -1,277 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="start js no tab">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontello.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontello.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontello.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-bold.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semibold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semibold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semibold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semiboldit.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semiboldit.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semiboldit.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-italic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-italic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-lightitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-lightitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-lightitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibolditalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibolditalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibolditalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-lightitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-lightitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-lightitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normal.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normal.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normal.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normalitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normalitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normalitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibolditalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibolditalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibolditalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/appendstyle/appendstyle.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/aus_map.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/aus_map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/badge/badge.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/badge/badge.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/badge/badge.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/text/directive.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/video/directive.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/elemental.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/eve.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontello.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/fonts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/footer/footer.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/footer/footer.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/footer/footer.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/helper/helper.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/japan_map_part1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/japan_map_part1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/japan_map_part2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/japan_map_part2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/japan_map_part3.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/japan_map_part3.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/location2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/timecode/test/main-spec.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/autofillfix/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bgimage/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/buttonscrolltop/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/captions/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/click/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/navigation/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/notab/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/pagination/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/text/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/tntprint/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/captions/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/video/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontainer/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontrols/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videooverlaybutton/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/analytics/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animatefade/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animatescroll/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animateslide/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animatespark/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/preloader/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/timecode/main.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/buttonscrolltop/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/captions/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/navigation/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/pagination/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/captions/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/video/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontainer/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontrols/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videooverlaybutton/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/buttonscrolltop/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/captions/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/captions/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/video/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontainer/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videocontrols/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/videooverlaybutton/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-bold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semibold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/myriadpro-semiboldit.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-italic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-lightitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-semibolditalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popup.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popup.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupimage/popupimage.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupimage/popupimage.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupimage/popupimage.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupyoutuvideo/popupyoutuvideo.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupyoutuvideo/popupyoutuvideo.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/popup/popupyoutuvideo/popupyoutuvideo.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/rappar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-bold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-lightitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-normalitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/sansasoftpro-semibolditalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/assessments/service.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/text/service.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/video/video/service.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgbutton/settings_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgimage/settings_template.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousels/tinycarousel_group/slide/slide.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/svg_location2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/jsons/svg_waves.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/rappar/svgs/svg_waves.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgbutton/svgbutton-directive.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgbutton/svgbutton.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgbutton/svgbutton.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgbutton/svgbutton.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgimage/svgimage-directive.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgimage/svgimage.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgimage/svgimage.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgimage/svgimage.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgmap/svgmap-directive.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgmap/svgmap-service.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgmap/svgmap.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgmap/svgmap.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeModules/svgmap/svgmap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousels/tinycarousel_group/tinycarousel.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousels/tinycarousel_group/tinycarousel.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousels/tinycarousel_group/tinycarousel.less" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\.bowerrc" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build.config.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\OZ001-0.3.1.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\boostrap_button_close.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\boostrap_button_close_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\google_web.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\i-hot-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\icon_google_search_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\side-button-down.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\assets\images\side-button-up.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\app.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\home\home.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\js-ng-modules\js-ng-modules.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\model\utils-model.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\service\data-service.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\app\service\util-service.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-google-search-bar\js-google-search-bar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-icon-button\js-icon-button.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-modal-service\js-modal-service.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-moment-service\js-moment-service.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-no-tab\js-no-tab.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-print\js-print.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\src\common\js-tiny-carousel\js-tiny-carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\templates-app.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\build\templates-common.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\changelog.tpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\karma\karma-unit.tpl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\module.prefix" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\module.suffix" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\nodetools\csv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\nodetools\csvtojson.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\app.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\app.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\home\home.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\home\home.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\home\home.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\home\home.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\js-ng-modules\js-ng-modules.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\js-ng-modules\js-ng-modules.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\js-ng-modules\js-ng-modules.tpl.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\model\utils-model.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\service\data-service.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\app\service\util-service.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\boostrap_button_close.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\boostrap_button_close_hover.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\google_web.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\i-hot-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\icon_google_search_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\side-button-down.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\assets\images\side-button-up.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-google-search-bar\assets\images\google_web.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-google-search-bar\assets\images\icon_google_search_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-google-search-bar\js-google-search-bar.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-google-search-bar\js-google-search-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-icon-button\assets\images\i-hot-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-icon-button\js-icon-button.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-icon-button\js-icon-button.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-modal-service\js-modal-service.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-moment-service\js-moment-service.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-no-tab\js-no-tab.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-print\js-print.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-tiny-carousel\js-tiny-carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-tiny-carousel\js-tiny-carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\elements.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\global-media-query.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\global.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\grid.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\main.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\src\less\variables.less" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\tools.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\js-ngmodules\vendor.zip" afterPath="" />
-      <change type="MOVED" beforePath="C:\xampp\htdocs\js-ngmodules\src\common\js-modal-service\js-modal-service.less" afterPath="$PROJECT_DIR$/styles/functions.less" />
+    <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/generator_config.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/fonts.less" afterPath="$PROJECT_DIR$/styles/fonts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/functions.less" afterPath="$PROJECT_DIR$/styles/functions.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="js-ngmodules.iws" />
@@ -298,7 +95,16 @@
       <file leaf-file-name="functions.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/functions.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="1" selection-start="647" selection-end="647" vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="418">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.75" vertical-offset="161" max-vertical-offset="741">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fonts.less" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/fonts.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.31206897" vertical-offset="85" max-vertical-offset="1349">
               <folding />
             </state>
           </provider>
@@ -322,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slide.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="slide.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/carousels/tinycarousel_group/slide/slide.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
               <folding />
             </state>
           </provider>
@@ -379,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/styles/functions.less" />
+        <option value="$PROJECT_DIR$/styles/fonts.less" />
       </list>
     </option>
   </component>
@@ -465,6 +272,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-ngmodules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-ngmodules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -517,6 +338,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-ngmodules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js-ngmodules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -533,10 +368,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\js-ngmodules\fonts" />
       <recent name="C:\xampp\htdocs\js-ngmodules\modules\carousels" />
       <recent name="C:\xampp\htdocs\js-ngmodules\nodeModules" />
       <recent name="C:\xampp\htdocs\js-ngmodules\styles" />
-      <recent name="C:\xampp\htdocs\js-ngmodules\fonts" />
       <recent name="C:\xampp\htdocs\js-ngmodules\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -655,15 +490,20 @@
       <created>1394362331930</created>
       <updated>1394362331930</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="restructure">
+      <created>1420718426932</created>
+      <updated>1420718426932</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29477197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29477197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -679,7 +519,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -713,7 +552,8 @@
     <MESSAGE value="clean momentJs service" />
     <MESSAGE value="clean js small icon" />
     <MESSAGE value="start js no tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="start js no tab" />
+    <MESSAGE value="restructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -860,23 +700,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/fonts.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1254">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/youtubevideo/main.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/functions.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="647" selection-end="647" vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="418">
           <folding />
         </state>
       </provider>
@@ -898,6 +724,20 @@
     <entry file="file://$PROJECT_DIR$/modules/carousels/tinycarousel_group/slide/slide.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/functions.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.75" vertical-offset="161" max-vertical-offset="741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/fonts.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.31206897" vertical-offset="85" max-vertical-offset="1349">
           <folding />
         </state>
       </provider>
