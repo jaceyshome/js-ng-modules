@@ -1,0 +1,11 @@
+ul.pagination
+  li(data-ng-class="{disabled:index == 0 || displayPages.length == 0}")
+    a(href="JavaScript:void(0);", data-ng-click="first()") &laquo;
+  li(data-ng-class="{disabled:index == 0 || displayPages.length == 0}")
+    a(href="JavaScript:void(0);", data-ng-click="previous()") &lt;
+  li(data-ng-repeat="page in displayPages", data-ng-class="{active:page.current}")
+    a(href="JavaScript:void(0);", data-ng-click="goPage(page)") {{page.index+1}}
+  li(data-ng-class="{disabled:index >= lastPage.first || displayPages.length == 0}")
+    a(href="JavaScript:void(0);", data-ng-click="next()") &gt;
+  li(data-ng-class="{disabled:index >= lastPage.first || displayPages.length == 0}")
+    a(href="JavaScript:void(0);", data-ng-click="last()") &raquo;

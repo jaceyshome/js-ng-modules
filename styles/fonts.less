@@ -1,0 +1,37 @@
+@fontBaseUrl : '../../assets/fonts';
+
+.setFontFace(@fontId, @fontName:@fontId, @fontWeight: normal, @fontStyle: normal){
+  @font-face {
+    font-family: @fontId;
+//    src: url('@{fontBaseUrl}/@{fontName}.eot');
+//    src: url('@{fontBaseUrl}/@{fontName}.eot?#iefix') format('embedded-opentype'),
+    src: url('@{fontBaseUrl}/@{fontName}.woff') format('woff'),
+    url('@{fontBaseUrl}/@{fontName}.ttf') format('truetype'),
+    url('@{fontBaseUrl}/@{fontName}.svg#@{fontId}') format('svg');
+    font-weight: @fontWeight;
+    font-style: @fontStyle;
+  }
+}
+
+.setFontFace('OpenSansItalic','opensans-italic');
+.setFontFace('OpenSansRegular','opensans-regular');
+.setFontFace('OpenSansSemiboldItalic','opensans-semibolditalic');
+.setFontFace('OpenSansSemibold','opensans-semibold');
+.setFontFace('OpenSansLight','opensans-light');
+.setFontFace('OpenSansLightItalic','opensans-lightitalic');
+
+.setFontFace('SansaSoftProBold','sansasoftpro-bold');
+.setFontFace('SansaSoftProLight','sansasoftpro-light');
+.setFontFace('SansaSoftProLightItalic','sansasoftpro-lightitalic');
+.setFontFace('SansaSoftProNormal','sansasoftpro-normal');
+.setFontFace('SansaSoftProNormalItalic','sansasoftpro-normalitalic');
+.setFontFace('SansaSoftProSemiBold','sansasoftpro-semibold');
+.setFontFace('SansaSoftProSemiBoldItalic','sansasoftpro-semibolditalic');
+
+.setFontFace('MyriadproRegular','myriadpro-regular');
+.setFontFace('MyriadProSemibold','myriadpro-semibold');
+
+//special fonts - ticker for navigation side bar
+.setFontFace('fontello','fontello');
+
+

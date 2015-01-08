@@ -1,0 +1,45 @@
+.block-container.module-content-container.assessment(data-topic-marker, id="{{settings.id}}", data-config="{'settings': settings}")
+  div.flipcard(data-ng-if="!settings.completed")
+    .row.assessment-title(data-ng-style="{color:Module.currentModule.color}")
+      .col-md-12.text-center
+        span.subtitle quiz {{settings.currentQuestionIndex+1}}
+        h2(data-ng-style="{color:Module.currentModule.color}") {{data.name}}
+
+    div(data-ng-repeat="question in data.questions", data-ng-if="question == currentQuestion")
+      .row
+        .col-md-12
+          p.question-title {{question.title}}
+      div.row.text-center
+        ul.flip-list-container
+          li.col-md-3.flip-list(data-ng-repeat="option in question.options",
+          data-ng-class="setFlipItemContainerClass(question,option)")
+            a.flipper(tnt-click, data-ng-click="selectOption(option)")
+              table.face.front(data-ng-style="{'border-color':Module.currentModule.color}")
+                tr(data-ng-style="setCardFrontStyle(option)")
+                  td
+                    table.text-title(data-ng-class="{'hasImage':option.front.image}")
+                      tr
+                        td.content {{option.front.text}}
+              table.face.back(data-ng-style="setCardBackStyle(option)")
+                tr.title-container
+                  td
+                    span.text-title(data-ng-if="option.correct") CORRECT
+                      span.textBorder(data-ng-style="setTextBorderStyle(option)")
+                    span.text-title(data-ng-if="!option.correct") INCORRECT
+                      span.textBorder(data-ng-style="setTextBorderStyle(option)")
+                tr.feedback-container(data-ng-if="option.back.feedback")
+                  td
+                    span.feedback {{option.back.feedback}}
+
+      .row.assessment-bottom.text-center
+        .col-md-12.text-center.button-holder
+          a.assessment-button-next(tnt-click, data-ng-click="handleNext()",data-ng-show="currentQuestion.completed")
+            span.button-mask-holder
+              span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
+            span.text Next
+
+        ul.indicator.text-center
+          li(data-ng-repeat="question in data.questions", data-ng-style="Assessment.setIndicatorStyle(settings.currentQuestionIndex, $index)")
+
+
+  div(data-ng-if="settings.completed", data-assessment-badge, data-settings="data.badge")

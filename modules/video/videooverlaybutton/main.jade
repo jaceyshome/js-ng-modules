@@ -1,0 +1,7 @@
+div.videoOverlayBtnContainer
+  a.videoOverlayBtn( data-ng-click="playPause()" href="Javascript:void(0)")
+    div.buttonHolder
+      span.spriteBigIcons.pauseFill.animate-spark(data-ng-if="currentButton=='pause'")
+      span.screenReaderText(data-ng-if="currentButton=='pause'") pause
+      span.spriteBigIcons.playFill.animate-spark(data-ng-if="currentButton=='play'")
+      span.screenReaderText(data-ng-if="currentButton=='play'") play

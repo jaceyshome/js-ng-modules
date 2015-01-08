@@ -1,0 +1,45 @@
+.assessment-badge{
+  text-align: center;
+  .assessment-title{
+    font-family: @fontBodyDefaultBold;
+    h2{
+      margin-bottom: 10px;
+    }
+    margin-bottom: 40px;
+  }
+  .image-container{
+    margin-bottom: 40px;
+    .shape{
+      @size: 128px;
+      margin:auto;
+      width: @size;
+      height: @size;
+      background: #FFFFFF;
+      -moz-border-radius: @size/2;
+      -webkit-border-radius: @size/2;
+      border-radius: @size/2;
+    }
+  }
+  .bottom-container{
+    font-size: 1.375em;
+  }
+  .assessment-bottom{
+    .assessment-button-next{
+      .text{
+        margin-left: -27px;
+      }
+      .button-mask-holder{
+        .sprite-ui{
+          .ui-back_btn_mask;
+        }
+      }
+      &:hover,&:focus{
+        .button-mask-holder{
+          .sprite-ui{
+            .ui-back_btn_hover_mask;
+          }
+        }
+      }
+    }
+  }
+}

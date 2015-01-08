@@ -1,0 +1,15 @@
+.assessment-badge
+  .row
+    .col-md-12.assessment-title
+      h2(data-ng-style="{color:Module.currentModule.color}") CONGRATULATIONS!
+      p {{settings.textTitle}}
+    .col-md-12.image-container
+      .shape(data-ng-style="{background:Module.currentModule.color}")
+        img(data-ng-src="{{settings.image}}", alt="badge image for {{settings.textTitle}}")
+
+    .row.assessment-bottom.text-center
+      .col-md-12.button-holder
+        a.assessment-button-next(tnt-click, data-ng-click="handleReview()")
+          span.button-mask-holder
+            span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
+          span.text Review

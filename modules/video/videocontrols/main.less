@@ -1,0 +1,104 @@
+
+.videoControls{
+  background-color: @bg5thColor;
+//  min-height: 2.250em;
+  min-height: @videoControlHeight;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+
+  .ctrlBtnGroup{
+    position: relative;
+    top: 20px;
+    min-height: @videoControlHeight;
+    .typoGraphyMainUI{
+      &:before{
+        background: url('@{imageBaseUrl}/sprite_video_control_btn_group.png') no-repeat;
+        content: '';
+        width: 14px;
+        position: absolute;
+        left: 0;
+      }
+      position: absolute;
+      font-size: 1em;
+      padding: 12px 10px 8px 19px;
+      text-align: left;
+      line-height: 1;
+      color: @font1stColor;
+      text-transform: uppercase;
+      display: inline-block;
+
+      @iconPlayHeight: 14px;
+      @iconReplayHeight: 16px;
+      @iconPauseHeight: 11px;
+      @iconSoundHeight: 13px;
+      @iconSubTitleHeight: 11px;
+
+      &.skip{
+        margin-left: 20.2%;
+      }
+
+      &.btnPlay{
+        margin-left: 48.2%;
+        &:before{
+          height: @iconPlayHeight;
+        }
+      }
+      &.btnReplay{
+        margin-left: 46.3%;
+        &:before{
+          height: @iconReplayHeight;
+          background-position: center -@iconPlayHeight;
+        }
+      }
+      &.btnPause{
+        margin-left: 47.5%;
+        &:before{
+          top: 14px;
+          height: @iconPauseHeight;
+          background-position: center -(@iconPlayHeight+@iconReplayHeight);
+        }
+      }
+      &.btnSoundOn{
+        right: 0;
+        &:before{
+          top: 14px;
+          height: @iconSoundHeight;
+          background-position: center -(@iconPlayHeight + @iconReplayHeight + @iconPauseHeight);
+        }
+      }
+      &.btnSoundOff{
+        right: 0;
+        &:before{
+          top: 14px;
+          height: @iconSoundHeight;
+          background-position: center -(@iconPlayHeight + @iconReplayHeight + @iconPauseHeight + @iconSoundHeight);
+        }
+      }
+      &.btnSubTitlesOn{
+        right: 5.5em;
+        &:before{
+          top: 14px;
+          height: @iconSubTitleHeight;
+          background-position: center -(@iconPlayHeight + @iconReplayHeight + @iconPauseHeight + @iconSoundHeight*2);
+        }
+      }
+      &.btnSubTitlesOff{
+        right: 5.5em;
+        &:before{
+          top: 14px;
+          left: -6px;
+          height: @iconSubTitleHeight;
+          background-position: center -(@iconPlayHeight + @iconReplayHeight + @iconPauseHeight + @iconSoundHeight*2);
+        }
+      }
+
+    }
+  }
+
+}
+
+@import "../mediaslider/main";
+@import "../videooverlaybutton/main";

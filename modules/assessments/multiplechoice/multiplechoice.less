@@ -1,0 +1,185 @@
+.multiplechoice{
+  @borderDefaultColor:#676767;
+  @addonSide: 27px;
+  @optionPadding: 12px;
+  overflow: hidden;
+  position: relative;
+  &.hideQuestion{
+    min-height: @badgePanelMinHeight;
+  }
+  .question-holder{
+    min-height: 388px;
+    position: relative;
+  }
+  .question-container{
+    position: absolute;
+    width:100%;
+    margin:auto;
+  }
+  .question-title{
+    margin-bottom: 30px;
+    line-height: 1.5;
+    min-height: 62px;
+  }
+  .radio-button-group{
+    vertical-align: top;
+    min-height: 160px;
+    .setOptionCorrectMarker(){
+      .setFontelloOk();
+      &:before{
+        color:#FFFFFF;
+        line-height: @addonSide;
+      }
+    }
+    .setOptionIncorrectMarker(){
+      .setFontelloCancel();
+      &:before{
+        line-height: @addonSide;
+      }
+    }
+    .option-button{
+      margin:0;
+      padding: 0;
+      line-height: 1;
+      label{
+        margin:0;
+        padding-top: @optionPadding;
+        padding-bottom: @optionPadding;
+        width: 100%;
+        cursor: pointer;
+        &:hover, &:focus{
+          background-color: @colorButtonBgHover;
+        }
+      }
+      .option-marker{
+        position: relative;
+        &:before{
+          content: ' ';
+          display: block;
+          position: absolute;
+          color: #000000;
+          left: -20px;
+        }
+        &.selected{
+          &.correct{
+            .setOptionCorrectMarker();
+            &:before{
+              color: #000000;
+            }
+          }
+          &.incorrect{
+            .setOptionIncorrectMarker();
+          }
+        }
+      }
+      .option-holder{
+        position: relative;
+      }
+      .option-add-on{
+        position: relative;
+        &:before{
+          content: ' ';
+          display: block;
+          position: absolute;
+          width: @addonSide;
+          height: @addonSide;
+          border: 3px solid @borderDefaultColor;
+          line-height: @addonSide;
+          background-color: @colorPageDefault;
+        }
+      }
+      .option-text{
+        margin:0;
+        display: block;
+        line-height: @addonSide;
+        padding-left: 30px+@addonSide;
+      }
+      &.correct{
+        .option-marker{
+          .setOptionCorrectMarker();
+          &:before{
+            color: #FFFFFF !important;
+          }
+        }
+        .option-add-on{
+          &:before{
+            border-width: 5px;
+          }
+        }
+        input, label{
+          cursor: default;
+        }
+        .option-text{
+          color: #FFFFFF;
+        }
+      }
+      &.incorrect{
+        .option-marker{
+          .setOptionIncorrectMarker();
+          &:before{
+            color: #FFFFFF !important;
+          }
+        }
+        .option-add-on{
+          &:before{
+            border-width: 5px;
+            border-color: @borderDefaultColor;
+          }
+        }
+        .option-text{
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .tryagain-text{
+    position: absolute;
+    margin: auto;
+    line-height: @addonSide;
+    color:#FFFFFF;
+    left: 50%;
+    margin-left: -45px;
+  }
+  .feedback-text{
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: @containerInnerSpace;
+    margin-bottom: @containerInnerSpace;
+    font-family: @fontBodyDefaultItalic;
+    min-height: 66px;
+  }
+  .assessment-bottom{
+    margin-top: 0;
+    min-height: 142px;
+    .button-holder{
+      min-height: 98px;
+    }
+  }
+
+  //------------- responsive style --------------------
+  .multiplechoice-tablet-portrait{
+    .tryagain-text{
+      right: 0;
+      left: inherit;
+      margin-left: 0;
+    }
+    .feedback-text{
+      padding-left: 12%;
+      padding-right: 12%;
+      margin-bottom: @containerInnerSpace*1.5;
+    }
+  }
+
+  @media only screen and (max-width: 930px){
+    .multiplechoice-tablet-portrait;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .multiplechoice-tablet-portrait;
+  }
+
+}

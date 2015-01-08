@@ -1,0 +1,13 @@
+.sidebar
+  .sidebar-panel.animate-fade(data-ng-show="showPanel")
+    a.toggleMenuBtn(tnt-click, data-ng-click="showMenu($event)", title="toggle menu")
+      span.sr-only show menu
+      span.sprite-ui.ui-open_menu
+      span.sprite-ui.ui-open_menu_rollover
+    ul.topics-markers-container(data-ng-class="{'gapLarger': Module.topicMarkers.length <= 6}")
+      li.marker-holder(data-ng-repeat="topic in Module.topicMarkers")
+        a(data-ng-click="handleClickTopic(topic)", tnt-click)
+          span.sr-only scroll to topic
+          span.marker(id="marker_{{topic.id}}", data-ng-class="setSpecialType(topic)",
+          data-ng-style="checkTopicCompleted(topic)")
+            span.default-text(data-ng-class="topic.viewState", data-ng-style="topic.viewStyle") •

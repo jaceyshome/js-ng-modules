@@ -1,0 +1,69 @@
+.youtuvideo{
+  @btnDefaultSizePx: 180px;
+  @btnDefaultSize: 180;
+  @btnSizeLarge: 168;
+  @btnSizeMedium: 102;
+  @btnSizeSmall: 84;
+  @glowRate: 0.1;
+  margin: auto;
+  margin-top: 13px;
+  margin-bottom: @containerInnerSpace;
+  position: relative;
+  max-width: @videoMaxWidth;
+  .setContainerSize(@btnSize:@btnSizeMedium, @rate:0){
+    .videoplayer-playbtnicon{
+      .transition(@animateDurationDefault);
+      @scale: (@btnSize/@btnDefaultSize)+@rate;
+      .transform(scale(@scale, @scale));
+    }
+  }
+  .videoplayer-playbtnicon{
+    background-image: url("@{imageBaseUrl}/videoplayer_playicon.png");
+    .cover-bg;
+    display: block;
+    width: @btnDefaultSizePx;
+    height: @btnDefaultSizePx;
+  }
+  .setContainerSize(@btnSizeMedium);
+  a{
+    display: block;
+    position: relative;
+    margin:auto;
+  }
+  img{
+    width: 100%;
+  }
+  .buttonHolder{
+    position: absolute;
+    left: 50%;
+    margin-left: -@btnDefaultSizePx/2;
+    top: 50%;
+    margin-top: -@btnDefaultSizePx/2;
+    .videoplayer-playbtnicon{
+      margin: auto;
+      display: block;
+    }
+  }
+  .videoPlayer{
+    background-color: #000000;
+    position: absolute;
+  }
+  &.medium{
+    .setContainerSize(@btnSizeMedium);
+    &:hover,&:focus{
+      .setContainerSize(@btnSizeMedium, @glowRate);
+    }
+  }
+  &.large{
+    .setContainerSize(@btnSizeLarge);
+    &:hover,&:focus{
+      .setContainerSize(@btnSizeLarge, @glowRate);
+    }
+  }
+  &.small{
+    .setContainerSize(@btnSizeSmall);
+    &:hover,&:focus{
+      .setContainerSize(@btnSizeSmall, @glowRate);
+    }
+  }
+}

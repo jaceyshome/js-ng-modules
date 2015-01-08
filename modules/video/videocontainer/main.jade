@@ -1,0 +1,4 @@
+div.videoContainer
+  div.videoPlayer(data-tnt-video, data-control="Video", data-buffer-fill="assets/video/black.mp4")
+  div.captions(data-tnt-captions, data-src="Video.captions", data-ng-show="Video.captionsVisible" data-current-time="Video.currentTime")
+  div.videoControlsContainer(data-tnt-video-controls data-ng-show="Scenario.scenario.currentState == Scenario.STATE.VIDEO")

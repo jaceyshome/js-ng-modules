@@ -1,0 +1,34 @@
+div(tnt-video-overlay-button  data-ng-show="Scenario.scenario.currentState == Scenario.STATE.VIDEO" )
+div.videoControls
+  div(data-tnt-media-slider data-current-time="currentTime" data-duration="duration"
+  data-buffered-percent="bufferedPercent" data-seek="seek" data-ng-show="Scenario.scenario.currentState == Scenario.STATE.VIDEO")
+  div.ctrlBtnGroup
+    a.typoGraphyMainUI(href="JavaScript:void(0);" data-ng-click="restartScenario()" ) RESTART
+
+    a.typoGraphyMainUI.btnPlay(href="JavaScript:void(0);" data-ng-click="playPause()"
+    data-ng-show="Scenario.scenario.currentState == Scenario.STATE.VIDEO"
+    data-ng-class="{btnPause: videoIsPlaying(), btnPlay: !videoIsPlaying()}") {{videoOverlayBtnText}}
+
+    a.typoGraphyMainUI.btnReplay(href="JavaScript:void(0);" data-ng-click="replay()"
+    data-ng-keydown="setFocusOnBtn('.btnPause')"
+    data-ng-hide="Scenario.scenario.currentState == Scenario.STATE.VIDEO") REPLAY SECTION
+
+    //a.btn.btn-default(href="JavaScript:void(0);" data-ng-click="requestFullScreen()" data-ng-hide="isFullscreen") Fullscreen
+
+    a.typoGraphyMainUI.btnSubTitlesOn(href="JavaScript:void(0);" data-ng-click="showCaptions()"
+    data-ng-show="!captionsVisible && Scenario.scenario.currentState == Scenario.STATE.VIDEO"
+    data-ng-keydown="setFocusOnBtn('.btnSubTitlesOff')" ) SHOW SUBTITLES
+
+    a.typoGraphyMainUI.btnSubTitlesOff(href="JavaScript:void(0);" data-ng-click="hideCaptions()"
+    data-ng-show="captionsVisible && Scenario.scenario.currentState == Scenario.STATE.VIDEO"
+    data-ng-keydown="setFocusOnBtn('.btnSubTitlesOn')" ) HIDE SUBTITLES
+
+    a.typoGraphyMainUI.btnSoundOn(href="JavaScript:void(0);" data-ng-click="mute()"
+    data-ng-show="!muted && Scenario.scenario.currentState == Scenario.STATE.VIDEO"
+    data-ng-keydown="setFocusOnBtn('.btnSoundOn')" ) SOUND OFF
+
+    a.typoGraphyMainUI.btnSoundOff(href="JavaScript:void(0);" data-ng-click="unmute()"
+    data-ng-show="muted && Scenario.scenario.currentState == Scenario.STATE.VIDEO"
+    data-ng-keydown="setFocusOnBtn('.btnSoundOff')" ) SOUND ON
+
+  //span(data-ng-if="false") {{currentTime*1000 | timecode}}/{{duration*1000 | timecode}}

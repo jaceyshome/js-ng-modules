@@ -1,0 +1,44 @@
+.block-container.module-content-container.assessment(data-topic-marker, id="{{settings.id}}", data-config="{'settings': settings}",
+data-ng-class="{'showBadge': showBadgePanel()}")
+  div.multiplechoice(data-ng-class="{'hideQuestion':!showBadgePanel()}")
+    .row.assessment-title(data-ng-style="{color:Module.currentModule.color}")
+      .col-md-12.text-center
+        span.subtitle quiz {{settings.currentQuestionIndex+1}}
+        h2(data-ng-style="{color:Module.currentModule.color}") {{data.name}}
+
+    .question-holder
+      div.question-container.animate-left(data-ng-repeat="question in data.questions",
+      data-ng-if="question == currentQuestion",
+      data-ng-class="{'animate-left': !($index == data.questions.length-1 && question.completed)}")
+        .row
+          .col-md-12
+            p.question-title {{question.title}}
+        ul.radio-button-group
+          li.option-button(data-ng-repeat="option in question.options",
+          data-ng-class="handleOptionResult(question,option)")
+            label(for="{{settings.id}}_q_{{$parent.$index}}_opt_{{$index}}",
+              data-ng-style="handleOptionStyleResult(question,option)",
+              data-ng-click="selectedOption(question,option)"
+            )
+              .row.option-marker(data-ng-class="handleSelectedOptionMarker(option)")
+                .col-md-12.option-holder.option-add-on(data-ng-class="handleOptionAddOnStyle(question,option)")
+                  p.tryagain-text(data-ng-if="$index == question.selectedIndex && !option.correct") TRY AGAIN
+                  p.option-text {{option.text}}
+                  input.sr-only(id="{{settings.id}}_q_{{$parent.$index}}_opt_{{$index}}",
+                  data-ng-model="question.selectedIndex",
+                  name="question_{{$parent.$index}}_option_{{$index}}",
+                  data-ng-value="{{$index}}", type="radio",
+                  tnt-no-tab="{{$index == question.selectedIndex}}")
+        .row.text-center
+          .col-md-12.feedback-text {{currentQuestion.currentOption.feedback}}
+
+    .row.assessment-bottom.text-center
+      .col-md-12.button-holder
+        a.assessment-button-next(tnt-click, data-ng-click="handleNext()",data-ng-show="currentQuestion.completed")
+          span.button-mask-holder
+            span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
+          span.text Next
+      ul.indicator.text-center
+        li(data-ng-repeat="question in data.questions", data-ng-style="Assessment.setIndicatorStyle(settings.currentQuestionIndex, $index)")
+
+    div.assessment-badge-container(data-ng-class="{'showPanel':showBadgePanel()}", data-assessment-badge, data-settings="data.badge")

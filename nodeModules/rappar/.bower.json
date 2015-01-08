@@ -1,0 +1,14 @@
+{
+  "name": "rappar",
+  "homepage": "https://github.com/DmitryBaranovskiy/rappar",
+  "_release": "9a7a52d405",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9a7a52d40590ae70c9efdc2b79eae44c3f9859b0"
+  },
+  "_source": "https://github.com/DmitryBaranovskiy/rappar.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/DmitryBaranovskiy/rappar.git",
+  "_direct": true
+}

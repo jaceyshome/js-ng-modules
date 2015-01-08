@@ -1,0 +1,219 @@
+.tinyCarousel{
+  ul{
+    padding:0;
+    margin:0;
+    list-style: none;
+  }
+  li{
+    display: inline-block;
+  }
+  @panelWith:845px;
+  @panelHeight:22em;
+  @imageWith:192px;
+  @imageHeight:153px;
+  @imageMarginLeft:0;
+  @imageMarginRight:18px;
+  @navButtonTop: 60px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  height: @panelHeight;
+  .buttonholder{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 32px;
+    height: 60px;
+    top: 49px;
+    line-height: 6;
+    &:hover,&:focus{
+      top: 51px;
+    }
+    &.left{
+      float: left;
+      left: 0;
+      top: @navButtonTop;
+      .sprite-ui{
+        display: block;
+        .ui-icon_tinycarousel_left_disable;
+      }
+      &:hover,&:focus{
+        .sprite-ui {
+          .ui-icon_tinycarousel_left;
+        }
+      }
+    }
+    &.right{
+      float: right;
+      right: 0;
+      top: @navButtonTop;
+      .sprite-ui {
+        display: block;
+        .ui-icon_tinycarousel_right_disable;
+      }
+      &:hover,&:focus{
+        .sprite-ui {
+          .ui-icon_tinycarousel_right;
+        }
+      }
+    }
+  }
+  .tinyCarouselContainer{
+    height: auto;
+    min-height: 290px;
+    width: @panelWith;
+    margin:auto;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    .viewport{
+      height: @panelHeight;
+      width: auto;
+      overflow: hidden;
+      float: left;
+      .viewportList{
+        position: absolute;
+        margin:0;
+        li{
+          width: @imageWith;
+          height: @imageHeight;
+          margin-right: @imageMarginRight;
+          margin-left: @imageMarginLeft;
+          display: block;
+          float: left;
+          background-position: center;
+          background-repeat: no-repeat;
+          .imagePanel{
+            width: 100%;
+            height: @panelHeight;
+            .imagePanelBtn{
+              display: block;
+              width: @imageWith;
+              height: @imageHeight;
+              img{
+                width:100%;
+                height: 100%;
+                background-color: black;
+              }
+            }
+            .slide-title{
+              font-family: @fontBodyDefaultBoldItalic;
+              text-align: left;
+            }
+            .slide-text{
+              text-align: left;
+            }
+          }
+          .carouselImageContainer{
+            margin-bottom: 20px;
+          }
+          @speed: 600ms;
+          -webkit-transition: all @speed ease-in;
+          -moz-transition: all @speed ease-in;
+          -o-transition: all @speed ease-in;
+          -ms-transition: all @speed ease-in;
+          transition: all @speed ease-in;
+        }
+      }
+    }
+  }
+
+  // ------------- media queries ----------------
+//  .tinycarousel-max-width-480{
+//
+//  }
+
+//  .tinycarousel-tablet-portrait {
+//    .buttonholder{
+//      .transform(scale(0.6, 0.6));
+//    }
+//  }
+
+//  .tinycarousel-max-width-1023 {
+//  }
+//
+//  .tinycarousel-phone-portrait {
+//  }
+//
+//  .tinycarousel-tablet-portrait {
+//
+//  }
+
+//  @media only screen and (max-width: 1023px) {
+////    .tinycarousel-max-width-1023;
+//  }
+//
+//  @media only screen and (max-width: 768px) {
+//    .tinycarousel-tablet-portrait;
+//  }
+
+//  @media only screen and (max-width: 480px) {
+////    .tinycarousel-max-width-480;
+//  }
+//
+//  @media only screen and (max-width: 400px) {
+////    .tinycarousel-phone-portrait;
+//  }
+//
+//  /* iPad in landscape */
+//  @media only screen
+//  and (min-device-width: 768px)
+//  and (max-device-width: 1024px)
+//  and (orientation: landscape) {
+//    /* No special treatment. Should look like desktop */
+//  }
+//
+  // iPad in portrait
+//  @media only screen
+//  and (min-device-width: 768px)
+//  and (max-device-width: 1024px)
+//  and (orientation: portrait) {
+////    .tinycarousel-max-width-1023;
+//    .tinycarousel-tablet-portrait;
+//  }
+//
+//  // iPhone 5 in landscape
+//  @media only screen
+//  and (min-device-width: 320px)
+//  and (max-device-width: 568px)
+//  and (orientation: landscape) {
+////    .tinycarousel-max-width-1023;
+////    .tinycarousel-tablet-portrait;
+//  }
+//
+//  /// iPhone 5 in portrait
+//  @media only screen
+//  and (min-device-width: 320px)
+//  and (max-device-width: 568px)
+//  and (orientation: portrait) {
+////    .tinycarousel-max-width-1023;
+////    .tinycarousel-tablet-portrait;
+////    .tinycarousel-max-width-480;
+////    .tinycarousel-phone-portrait;
+//  }
+//
+//  // iPhone 2G-4S in landscape
+//  @media only screen
+//  and (min-device-width: 320px)
+//  and (max-device-width: 480px)
+//  and (orientation: landscape) {
+////    .tinycarousel-max-width-1023;
+////    .tinycarousel-tablet-portrait;
+////    .tinycarousel-max-width-480;
+//  }
+//
+//  // iPhone 2G-4S in portrait
+//  @media only screen
+//  and (min-device-width: 320px)
+//  and (max-device-width: 480px)
+//  and (orientation: portrait) {
+////    .tinycarousel-max-width-1023;
+////    .tinycarousel-tablet-portrait;
+////    .tinycarousel-max-width-480;
+////    .tinycarousel-phone-portrait;
+//  }
+
+}
+

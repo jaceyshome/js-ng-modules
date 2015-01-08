@@ -1,0 +1,7 @@
+.youtuvideo(data-ng-class="currentSize")
+  div.videoPlayer(data-ng-show="videoPlay")
+  a.animate-fade(tnt-click,data-ng-click="handleClick()", data-ng-hide="videoPlay")
+    span.sr-only play video
+    div.buttonHolder
+      span.videoplayer-playbtnicon
+    img.video-placeholder-bg.img-responsive.left(src='', data-ng-src="{{settings.thumb}}", alt='{{settings.alt}}')

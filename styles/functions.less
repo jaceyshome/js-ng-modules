@@ -1,0 +1,9 @@
+@containerBoxShadowColor: rgba(0,0,0, 0.3);
+@containerBoxShadowY: 5px;
+@containerBoxShadowBlur: 15px;
+
+.setContainerTopAndBottomShadow(){
+  -webkit-box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
+  -moz-box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
+  box-shadow: 0 -@containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor, 0 @containerBoxShadowY @containerBoxShadowBlur 0 @containerBoxShadowColor;
+}

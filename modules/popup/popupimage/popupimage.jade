@@ -1,0 +1,7 @@
+.popup.popupimage.animate-fade(data-ng-if="image")
+  .content-container
+    a.btnclose(tnt-click,data-ng-click="close()")
+      span.sr-only close image
+      span.sprite-ui.ui-buttonclose
+    .imageHolder
+      img(data-ng-src="{{image.src}}", alt="{{image.alt}}")

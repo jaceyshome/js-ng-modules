@@ -1,0 +1,18 @@
+.tinyCarousel
+  a.buttonholder.left(href="javascript:void(0)", onclick="return false;", data-ng-click="onClickButtonBack($event)", title="previous group",
+  data-ng-class="{disable:carouselPanelX >= 0}")
+    span.sprite-ui
+    span.sr-only back
+  .tinyCarouselContainer
+    .viewport
+      ul.viewportList
+        li.imagePanelContainer(data-ng-repeat="slide in slides", class="{{slide.name}}", carousel-slide, data-slide="slide", data-ng-class="handleCenterImage($index)")
+          div.imagePanel
+            a.imagePanelBtn(href="javascript:void(0)", onclick="return false;", data-ng-click="onClickImageBtnPanel(slide)")
+              img
+            p: strong.slide-title {{slide.title}}
+            p.slide-text {{slide.text}}
+
+  a.buttonholder.right(href="javascript:void(0)", onclick="return false;", data-ng-click="onClickButtonNext($event)", title="next image")
+    span.sprite-ui
+    span.sr-only next

@@ -1,0 +1,16 @@
+.videoContainer{
+  //video will follow size rules of this container, expanding width to fit and scaling height to match video ratio
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  &.showingVideo{
+    background-color: @bg5thColor;
+  }
+}
+@import "../videocontrols/main";
+@import "../video/main";
+@import "../captions/main";

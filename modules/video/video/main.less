@@ -1,0 +1,39 @@
+.videoPlayer{
+  position: absolute;
+  left: -1000%;
+
+}
+.hiddenVideo{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#videoOverlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.vjs-default-skin {
+  .vjs-play-progress, .vjs-volume-level {
+    background-image: none;
+    background-color: #00a5ff;
+  }
+  .vjs-big-play-button {
+    display: none;
+  }
+  overflow: hidden;
+}
+.vjs-control-bar{
+  display: none;
+}
+

@@ -1,0 +1,107 @@
+.assessment{
+  position: relative;
+  z-index: @zindexAssessment;
+  background-color: @colorQuizBg;
+  min-height: @assessmentPanelMinHeight;
+  &.showBadge{
+    .transition(200ms);
+    height: @badgePanelMinHeight;
+    min-height: @badgePanelMinHeight;
+    overflow: hidden;
+  }
+  p{
+    font-weight: normal;
+  }
+  ul{
+    padding:0;
+    margin:0;
+    list-style: none;
+  }
+  .assessment-title{
+    text-transform: uppercase;
+    .subtitle{
+      font-size: 1.375em;
+    }
+  }
+  .question-title{
+    font-family: @fontBodyDefaultItalic;
+    font-size: 1.500em;
+    margin-top: 0;
+  }
+  .assessment-bottom{
+    margin-top: @containerInnerSpace*2;
+    min-height: 106px;
+    .button-holder{
+      min-height: 81px;
+    }
+    .assessment-button-next{
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      width:200px;
+      margin-bottom: @containerInnerSpace;
+      .button-mask-holder{
+        display: block;
+        width: 200px;
+        height: 78px;
+        overflow: hidden;
+        margin: auto;
+        .sprite-ui{
+          .ui-next_btn_mask;
+          margin-top: -2px;
+          margin-left: -3px;
+        }
+      }
+      .text{
+        position: absolute;
+        display: block;
+        height: auto;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        margin-top: -0.8em;
+        margin-left: -21px;
+        font-family: @fontBodyDefaultItalic;
+        color: #000000;
+      }
+      &:hover,&:focus{
+        .button-mask-holder{
+          .sprite-ui{
+            .ui-next_btn_hover_mask;
+          }
+        }
+        .text{
+          color:@fontDefaultColor;
+        }
+      }
+    }
+    .indicator{
+      li{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin-right: 10px;
+        border: 3px solid;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .assessment-badge-container{
+    min-height: @badgePanelMinHeight;
+    position: absolute;
+    top: @assessmentPanelMinHeight;
+    width: 100%;
+    background-color: @colorQuizBg;
+    &.showPanel{
+      top:0;
+      .transition(400ms);
+    }
+  }
+}
+
+@import 'badge/badge';
+@import 'flipcard/flipcard';
+@import 'multiplechoice/multiplechoice';

@@ -1,0 +1,117 @@
+.sidenavigation-overlay{
+  width:100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.3);
+  z-index: (@zindexNavigationPanel)-1;
+}
+.sidenavigation{
+  position: fixed;
+  @menuPanelWidth: 26.3em;
+  width: @sideBarWidth;
+  height: 100%;
+  z-index: @zindexNavigationPanel;
+  .navigation-menu-container{
+    position: relative;
+    width: 26.3em;
+    background-color: @colorSideNavigation;
+    padding-top: 38px;
+    padding-bottom: 40px;
+    box-shadow: 5px 2px 15px -4px rgba(7, 24, 30, 0.8);
+    height: 100%;
+    &.showMenu{
+      transition: 1s;
+      left: (@sideBarWidth)-2px;
+    }
+    &.hideMenu{
+      transition: 1s;
+      left: -26em;
+    }
+    ul{
+      padding:0;
+      list-style-type: none;
+      display: block;
+      li{
+        display: block;
+      }
+    }
+    a{
+      display: block;
+      color:@colorBtnDefaultState;
+      text-transform: uppercase;
+      line-height: 2;
+      text-decoration: none;
+      .transition(@animateDurationDefault);
+      &:hover,&:focus{
+        color: @fontDefaultColor;
+      }
+      &.current{
+        color:@fontDefaultColor;
+        cursor: default;
+        &:hover,&:focus{
+          color:@fontDefaultColor;
+        }
+      }
+    }
+    .btnclose{
+      text-decoration: none;
+      font-size: 1.75em;
+      display: block;
+      position: absolute;
+      text-align: right;
+      right: 10px;
+      top:10px;
+      line-height: 1;
+      width: 22px;
+      height: 22px;
+      .sprite-ui{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .transition(@animateDurationDefault);
+        &.ui-close_menu{
+          opacity: 1;
+        }
+        &.ui-close_menu_rollover{
+          opacity: 0;
+        }
+      }
+      &:hover,&:focus{
+        .sprite-ui{
+          &.ui-close_menu{
+            opacity: 0;
+          }
+          &.ui-close_menu_rollover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .module-title{
+      font-family: @fontBodyDefaultBold;
+      font-size: 1.25em;
+      line-height: 3.45;
+      .badgeImg{
+        width:auto;
+        float: right;
+        margin-top: 12px;
+      }
+    }
+    .module-list-container{
+      padding-left: 38px;
+      padding-right: 20px;
+      .nav-module-container{
+        position: relative;
+      }
+    }
+    .nav-topics-container{
+      padding-left: 12px;
+      margin-bottom: 20px;
+      margin-top: -10px;
+      .topic-title{
+        font-size: 0.875em;
+      }
+    }
+  }
+}
