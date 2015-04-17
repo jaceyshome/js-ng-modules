@@ -3,6 +3,8 @@
   z-index: @zindexAssessment;
   background-color: @colorQuizBg;
   min-height: @assessmentPanelMinHeight;
+  padding-top: 50px;
+  padding-bottom:50px;
   &.showBadge{
     .transition(200ms);
     height: @badgePanelMinHeight;
@@ -36,20 +38,43 @@
     }
     .assessment-button-next{
       position: relative;
-      display: inline-block;
       text-align: center;
+      display: inline-block;
+      .opacity(0);
       width:200px;
-      margin-bottom: @containerInnerSpace;
+      height: 73px;
+      margin-bottom: 20px;
+      cursor: default;
+      .transition(@animationDurationDefault);
+      &.showing{
+        .transition(@animationDurationDefault);
+        display: inline-block;
+        .opacity(1);
+        cursor: pointer;
+      }
       .button-mask-holder{
+        position: absolute;
         display: block;
         width: 200px;
-        height: 78px;
+        height: 73px;
         overflow: hidden;
         margin: auto;
+        .transition(@animationDurationDefault);
         .sprite-ui{
-          .ui-next_btn_mask;
-          margin-top: -2px;
+          margin-top: -3px;
           margin-left: -3px;
+        }
+        &.default{
+          .opacity(1);
+          .sprite-ui{
+            .ui-next_btn_mask;
+          }
+        }
+        &.activated{
+          .opacity(0);
+          .sprite-ui{
+            .ui-next_btn_hover_mask;
+          }
         }
       }
       .text{
@@ -59,24 +84,30 @@
         text-align: center;
         left: 50%;
         top: 50%;
-        margin-top: -0.8em;
+        margin-top: -0.6em;
         margin-left: -21px;
         font-family: @fontBodyDefaultItalic;
         color: #000000;
       }
       &:hover,&:focus{
         .button-mask-holder{
-          .sprite-ui{
-            .ui-next_btn_hover_mask;
+          .transition(@animationDurationDefault);
+          &.default{
+            .opacity(0);
+          }
+          &.activated{
+            .opacity(1);
           }
         }
         .text{
+          .transition(@animationDurationDefault);
           color:@fontDefaultColor;
         }
       }
     }
     .indicator{
       li{
+        .transition(@animationDurationDefault);
         display: inline-block;
         width: 20px;
         height: 20px;

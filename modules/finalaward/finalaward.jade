@@ -1,0 +1,17 @@
+.block-container.module-content-container.finalaward(data-topic-marker, data-config="{'settings': topicMarkerSettings}")
+  .row
+    .before-completed(data-ng-if="!Module.currentModule.completed")
+      .col-md-12
+        h2.text-center(data-ng-style="{color:Module.currentModule.color}") Up for a challenge?
+        p.text-center {{settings.before.text}}
+      .col-md-12.text-center
+        .sprite-ui.ui-empty_badge(data-ng-if="!Module.currentModule.badge.largeDefault")
+        img(data-ng-src="{{Module.currentModule.badge.largeDefault}}",
+        alt="final award default badge for {{Module.currentModule.name}}",
+        data-ng-if="Module.currentModule.badge.largeDefault")
+    .after-completed(data-ng-if="Module.currentModule.completed")
+      .col-md-12
+        h2.text-center(data-ng-style="{color:Module.currentModule.color}") Congratulations!
+        p.text-center {{settings.after.text}}
+      .col-md-12.text-center
+        img(data-ng-src="{{Module.currentModule.badge.large}}", alt="final award badge for {{Module.currentModule.name}}")

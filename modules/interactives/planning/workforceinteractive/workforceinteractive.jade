@@ -1,0 +1,86 @@
+.block-container.module-content-container.interactive.workforce-interactive-container.scenario-decision-interactive-container.interactive-container(data-topic-marker)
+  .row
+    .col-md-12
+      h2.text-center(data-ng-style="{'color': Module.currentModule.color}") {{dataset.title}}
+
+  //- introduction text
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentQuestion",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{dataset.text}}
+
+    .text-panel.animate-left(data-ng-if="currentQuestion == dataset.questions[0]",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center(data-ng-bind-html="bindHtmlSoruce(dataset.questions[0].introduction)")
+
+    .text-panel.animate-left(data-ng-if="currentQuestion == dataset.questions[1]",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center(data-ng-bind-html="bindHtmlSoruce(dataset.questions[1].introduction)")
+
+  //- case studies buttons
+  .row.questions-button-container
+    .row
+      .col-md-12
+        .button-container.open
+          a.show-next-button.bg-2nd(data-ng-repeat="question in dataset.questions",
+          data-tnt-click, data-ng-click="selectQuestion(question)",
+          data-ng-class="getQuestionButtonClass(question)",
+          data-ng-style="getQuestionButtonStyle(question)") {{question.name}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg overlay
+          .chart.c0.show
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+          //- introduction images container
+          .chart.introduction-container.select-two-image-container.animate-fade(data-ng-if="!currentQuestion")
+            .introduction-image-holder.left
+              a.hover-container.image-button-hover-shadow(tnt-click,data-ng-click="selectQuestion(dataset.questions[0])")
+                span.sr-only {{dataset.questions[0].name}}
+                img(data-ng-src="{{dataset.questions[0].interfaceImage}}", alt="image for {{dataset.questions[0].name}}")
+                div.hover-cover.inner
+                div.hover-cover.outer
+            .introduction-image-holder.right
+              a.hover-container.image-button-hover-shadow(tnt-click,data-ng-click="selectQuestion(dataset.questions[0])")
+                span.sr-only {{dataset.questions[1].name}}
+                img(data-ng-src="{{dataset.questions[1].interfaceImage}}", alt="image for {{dataset.questions[1].name}}")
+                div.hover-cover.inner
+                div.hover-cover.outer
+
+          //- left side topic
+          .chart.question-container.animate-fade(data-ng-if="currentQuestion == dataset.questions[0]")
+            img(data-ng-src="{{dataset.questions[0].image}}", alt="image for {{dataset.questions[0].name}}")
+            .text-side-panel.left
+              .side-title-holder
+                span.drop-shadow-text-panel {{dataset.questions[0].sidePanel.title}}
+              .drop-shadow-text-panel
+                p {{dataset.questions[0].sidePanel.text}}
+
+          //- right side topic
+          .chart.question-container.animate-fade(data-ng-if="currentQuestion == dataset.questions[1]")
+            img(data-ng-src="{{dataset.questions[1].image}}", alt="image for {{dataset.questions[1].name}}")
+            .text-side-panel.left
+              .side-title-holder
+                span.drop-shadow-text-panel {{dataset.questions[1].sidePanel.title}}
+              .drop-shadow-text-panel
+                p {{dataset.questions[1].sidePanel.text}}
+
+  .row.reset-button-container.animate-fade(data-ng-if="dataset.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.bg-2nd.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

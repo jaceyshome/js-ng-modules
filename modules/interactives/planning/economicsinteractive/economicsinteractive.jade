@@ -1,0 +1,72 @@
+.block-container.module-content-container.interactive.planning-economics-interactive-container.scenario-decision-interactive-container.interactive-container(data-topic-marker)
+  .row
+    .col-md-12
+      h2.text-center(data-ng-style="{'color': Module.currentModule.color}") {{dataset.title}}
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    .text-panel.animate-left(
+    data-ng-repeat="step in dataset.steps",
+    data-ng-class="{'topContainerFirstElement': $index==0}"
+    data-ng-if="$index == currentStepIndex",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}"
+    )
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{step.text}}
+          .button-container.open(data-ng-if="step.btnText")
+            a.show-next-button.bg-2nd(data-tnt-click, data-ng-click="nextStep($index+1)",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") {{step.btnText}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.show
+            img(data-ng-src="assets/images/planning/interactives/economics/bg.png")
+
+          .chart.profit-box-container(data-ng-class="{'show': currentStepIndex >= 1}")
+            .profit-box(data-ng-class="{'step1': currentStepIndex >= 1, 'step2':currentStepIndex == 2}")
+              img(data-ng-src="assets/images/planning/interactives/economics/profit_box_shape.png")
+
+          .chart.step2-duffield-expenses-container.animate-fade(data-ng-if="currentStepIndex == 2", data-anim-in-delay="900", data-anim-out-delay="100", data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(data-ng-src="assets/images/planning/interactives/economics/step2_expenses_layer.png")
+
+          .chart
+            img(data-ng-src="assets/images/planning/interactives/economics/curve_bg.png")
+          .chart
+            img(data-ng-src="assets/images/planning/interactives/economics/duffield_gold_mine_box.png")
+
+          .chart.mine-loss-box-container(data-ng-class="{'show': currentStepIndex == 2}")
+            .mask-holder
+              .mine-loss-box(data-ng-class="{'slideDown': currentStepIndex == 2}")
+                img(data-ng-src="assets/images/planning/interactives/economics/mine_loss_shape.png")
+
+          .chart.curve-indicator-container(data-ng-class="{'show': currentStepIndex >= 1}")
+            .curve-indicator(data-ng-class="{'step1': currentStepIndex >= 1, 'step2':currentStepIndex == 2}")
+              img(data-ng-src="assets/images/planning/interactives/economics/yellow_indicator.png")
+
+          .chart.tooltips-container
+            .step1-tooltip.thtTooltip.overlay-tooltip.left.animate-fade(data-ng-if="currentStepIndex == 1", data-anim-in-delay="1200", data-anim-easing="easeOutCubic", data-anim-duration="600")
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(dataset.steps[1].tooltipText)")
+            .step2-tooltip.thtTooltip.overlay-tooltip.left.animate-fade(data-ng-if="currentStepIndex == 2", data-anim-in-delay="1200", data-anim-easing="easeOutCubic", data-anim-duration="600")
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(dataset.steps[2].tooltipText)")
+
+          .chart.curve-text-container
+            .step1-label-text.animate-fade(data-ng-if="currentStepIndex == 1", data-anim-in-delay="900", data-anim-out-delay="100", data-anim-easing="easeOutCubic", data-anim-duration="600")
+              img(data-ng-src="assets/images/planning/interactives/economics/step1_profit_box_text.png")
+            .step2-label-text.animate-fade(data-ng-if="currentStepIndex == 2", data-anim-in-delay="900", data-anim-easing="easeOutCubic", data-anim-duration="600")
+              img(data-ng-src="assets/images/planning/interactives/economics/step2_box_text.png")
+
+  .row.reset-button-container.animate-fade(data-ng-if="currentStepIndex + 1 == dataset.steps.length")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()",
+        class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

@@ -1,0 +1,248 @@
+.operation-geotechnical-decision-container{
+  .top-interactive-container{
+    .text-panel{
+      z-index: 10;
+    }
+  }
+
+  .option-buttons-container{
+    .transition(padding-top 400ms ease-in-out);
+    position: absolute;
+    z-index: 20;
+    margin: auto;
+    width: 100%;
+    .button-container{
+      &.open{
+        height: 60px;
+      }
+      .show-next-button{
+        margin-bottom: 0;
+        &:first-child{
+          margin-right: 2%;
+        }
+        &:last-child{
+          margin-left:  2%;
+        }
+      }
+    }
+  }
+
+  .svg-container-wrapper-container{
+    .svg-container-wrapper{
+      .image-container{
+        //==================== main body  =======================
+
+        img{
+          width: auto;
+        }
+        .chart-container{
+          overflow: hidden;
+          .chart{
+            width: auto;
+            height: 100%;
+            img{
+              width: auto;
+              height: 100%;
+            }
+            &.c0{
+              height: 100%;
+              width: auto;
+              img{
+                width: 100%;
+              }
+            }
+            &.geotechnical-chart{
+              .transition(margin-left 800ms ease-in-out);
+              margin-left: -37%;
+            }
+            &.summary-cover-image{
+              img{
+                width: 101%;
+              }
+            }
+          }
+        }
+
+        //------------------- steps ---------------------
+        .chart-container{
+          &.question1{
+            .chart{
+              &.geotechnical-chart{
+                margin-left: -1%;
+              }
+            }
+          }
+          &.question2{
+            .chart{
+              &.geotechnical-chart{
+                margin-left: -68%;
+              }
+            }
+          }
+          .tooltips-container{
+            .thtTooltip{
+              position: relative;
+            }
+            @top:27%;
+            .question1-tooltip{
+              top:@top;
+              &.tt1{
+                left: 5%;
+              }
+              &.tt2{
+                top: 22.5%;
+                left: 143%;
+              }
+              &.tt3{
+                left: 88%;
+              }
+            }
+
+            &.question2-container{
+              right: 0;
+              left: auto;
+              .question2-tooltip{
+                top:@top;
+                left: auto;
+                &.tt1{
+                  right: 5%;
+                }
+                &.tt2{
+                  top: 22.5%;
+                  right: 143%;
+                }
+                &.tt3{
+                  right: 64%;
+                }
+              }
+            }
+
+            &.summary-tooltip1-container{
+              .summary-tooltip{
+                top: 30%;
+                right: auto;
+                left: 3%;
+              }
+            }
+
+            &.summary-tooltip2-container{
+              right: 0;
+              left: auto;
+              .summary-tooltip{
+                top: 30%;
+                left: auto;
+                right: 6%;
+              }
+            }
+
+            &.question2-container, &.summary-tooltip2-container{
+              .thtTooltip {
+                &.bottom {
+                  .tipContentBorder{
+                    &:after{
+                      left: 81px;
+                    }
+                  }
+                }
+              }
+              .thtTooltip {
+                &.bottom {
+                  .tipContent{
+                    &:after{
+                      left: 83px;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+
+        //----------------------- end main body ----------------------
+      }
+    }
+  }
+
+
+
+  //================================== responsive style ===============================
+  .operation-geotechnical-scenario-tablet-landscape{
+    .svg-container-wrapper-container{
+      .svg-container-wrapper{
+        .image-container{
+          //==================== main body  =======================
+          .chart-container{
+            .tooltips-container{
+              @top:25%;
+              .question1-tooltip{
+                top:@top;
+                &.tt1{
+                  left: 3%;
+                }
+                &.tt2{
+                  top: 18.9%;
+                }
+              }
+
+              &.question2-container{
+                .question2-tooltip{
+                  top:@top;
+                  &.tt1{
+                    right: 3%;
+                  }
+                  &.tt2{
+                    top: 18.9%;
+                  }
+                }
+              }
+
+              &.summary-tooltip1-container{
+                .summary-tooltip{
+                  top:28%;
+                }
+              }
+
+              &.summary-tooltip2-container{
+                .summary-tooltip{
+                  top: 28%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .operation-geotechnical-scenario-tablet-portrait{
+    .chart-container{
+
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .operation-geotechnical-scenario-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .operation-geotechnical-scenario-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .operation-geotechnical-scenario-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .operation-geotechnical-scenario-tablet-portrait;
+  }
+
+}

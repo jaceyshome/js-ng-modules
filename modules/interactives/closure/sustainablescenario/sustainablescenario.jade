@@ -1,0 +1,139 @@
+.scenario-decision-interactive-container.closure-sustainable-decision-container
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    //- -------------------------- introduction -------------------------
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.introduction}}
+          .button-container.open.option-button-container
+            a.show-next-button.s-button(data-ng-repeat="option in settings.options", data-ng-click="setCurrentOption(option)",
+            data-ng-mouseenter="settings.hoverOption = option", data-ng-mouseleave="settings.hoverOption = null",
+            data-ng-focus="settings.hoverOption = option", data-ng-blur="settings.hoverOption = null"
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") Review {{option.name}}
+
+    //- ------------------------- the current option text --------------------------------
+    .text-panel.animate-left(data-ng-if="currentOption && !currentOption.selected", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center
+              b {{currentOption.name}} :
+              =' '
+              span {{currentOption.text}}
+
+    //- ---------------------- option feedback ------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in settings.options",
+    data-ng-if="option == currentOption && option.selected && !settings.completed", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+       span.sr-only feedback:
+       span {{option.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed(data-ng-if="option.correct")
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{option.feedback}}
+          .introduction-text-body(data-ng-if="!option.correct", data-ng-style="")
+            p.text-center {{option.feedback}}
+
+    //FIXME: duplicate code
+    //- ------------------------- completed step --------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in settings.options",
+    data-ng-if="option == currentOption && option.selected && settings.completed", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row(data-ng-style="{'margin-bottom': '6px'}")
+        .col-md-12
+          .introduction-text-holder.completed(data-ng-if="option.correct")
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{option.feedback}}
+
+    //- ------------------------ current option buttons container --------------------------
+    .option-buttons-container.animate-fade(data-ng-style="getOptionButtonsContainerStyle()",
+    data-ng-if="currentOption && !settings.completed", data-anim-easing="easeOutCubic")
+      .row
+        .col-md-12
+          .button-container.open
+            a.show-next-button(data-ng-click="answerCurrentOption()",
+            data-ng-class="setCurrentOptionBtnClass()",
+            data-ng-style="setCurrentOptionBtnStyle()") SELECT {{currentOption.name}}
+            a.show-next-button(data-ng-click="goBackToFirstScreen()",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") REVIEW OTHER SITES
+
+  //- ----------------------------- image containers ---------------------------------------
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- fixed frame
+          .chart.c0.invisible
+            img(src="assets/images/interactive_blank_bg.png", alt="invisible image")
+
+          .chart
+            img(src="assets/images/closure/scenarios/sustainable/11.18_bg.jpg")
+
+          //- =============== bg layer ===========================
+          .chart.bg-world-map-container(data-ng-class="getCurrentOptionZoomInForWorldMapClass()")
+            img(src="assets/images/closure/scenarios/sustainable/11.18_world_map.png", alt="bg image")
+
+          //- =============== site maps container state ============
+          .chart.site-map-container(data-ng-repeat="option in settings.options",
+          class="{{option.className}}",
+          data-ng-class="getSiteMapContainerClasses(option)")
+            .site-map-container-inner
+              img.structure-image(src="assets/images/interactive_blank_bg.png")
+              img.site-map-image.default(data-ng-src="{{option.defaultImage}}")
+              img.site-map-image.completed(data-ng-src="{{option.completedImage}}")
+
+          //- ================= labels layer ===================
+          .chart.animate-fade(data-ng-show="!currentZoomInOption",
+          data-anim-duration="400", data-anim-in-delay="1600")
+            img(src="assets/images/closure/scenarios/sustainable/labels.png")
+
+          //- ================= svg buttons layer ==============
+          .chart.svgMainContainer(id="svgButtonLayerContainer")
+
+          //- ================= text panel =====================
+          .chart.text-box-layer.defaultBg.animate-fade(data-ng-repeat="option in settings.options",
+          data-ng-if="option == currentZoomInOption", data-anim-in-delay="800",
+          data-anim-duration="400")
+            img.animate-fade(data-ng-src="{{option.textBoxLayers.defaultBg}}", data-ng-if="!option.selected")
+
+          .chart.text-box-layer.completedBg.animate-fade(data-ng-repeat="option in settings.options",
+          data-ng-if="option == currentZoomInOption", data-anim-in-delay="800",
+          data-anim-duration="400")
+            img.animate-fade(data-ng-src="{{option.textBoxLayers.completedBg}}", data-ng-if="option.selected")
+
+          .chart.text-box-layer.textPanel.animate-fade(data-ng-repeat="option in settings.options",
+          data-ng-if="option == currentZoomInOption", data-anim-in-delay="800",
+          data-anim-duration="400")
+            img(data-ng-src="{{option.textBoxLayers.textPanel}}")
+
+          //- ================= disable overlay ==================
+          .chart(data-ng-if="settings.completed && !currentQuestion")
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()",
+        class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+        data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

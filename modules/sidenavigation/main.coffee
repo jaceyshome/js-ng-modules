@@ -34,6 +34,7 @@ define [
         return Structure.appendStyles.navigationLabelStyles[moduleKey]
 
       $scope.goTo = (moduleKey)->
+        $rootScope.$broadcast('closeSideNavigation')
         Module.goToModule moduleKey
 
       $scope.goToTopic = (topic)->
@@ -42,8 +43,9 @@ define [
         else
           config =
             element: topic.element
-            runtime: AnimateScroll.calculateScrollRunTime(topic.element.offset().top)
+            duration: AnimateScroll.calculateScrollRunTime(topic.element.offset().top)
           AnimateScroll.scrollToElementTop config
+        $rootScope.$broadcast('closeSideNavigation')
 
       $scope.getModuleBadge = (key)->
         module = $scope.data.modules[key]

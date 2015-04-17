@@ -1,0 +1,90 @@
+.operation-processing-decision-container.scenario-decision-interactive-container
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    //- ------------------------------- introduction -----------------------------------------------
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentOption && !settings.completed", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          p.text-center {{settings.introduction}}
+
+    //- -------------------------------- option feedback -------------------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in settings.options",
+    data-ng-if="option == currentOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row(data-ng-style="{'margin-bottom':'6px'}")
+        .col-md-12
+          .introduction-text-holder.completed(data-ng-if="option.correct")
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{option.feedback}}
+          .introduction-text-body(data-ng-if="!option.correct")
+            p.text-center {{option.feedback}}
+
+  //- ---------------------------------------- image containers ------------------------------------------
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.invisible
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+          .chart
+            img(data-ng-src="assets/images/operation/scenarios/processing/bg.jpg")
+
+          .chart.processing-options-container
+            p.text-currentGoldPrice.module-font-colour-operation
+              span.current-gold-price-label Current Gold Price:
+              =' '
+              span $1350 per ounce
+            .option-button-holder(data-ng-repeat="option in settings.options")
+              a.module-font-colour-operation.module-font-hover-colour-operation.option-button(data-tnt-click,
+              data-ng-click="selectOption(option)",
+              data-ng-class="{'inCorrect': !option.correct, 'selected': option.selected}")
+                img.option-overlay-image(src="assets/images/2x2_bg_overlay.png", alt="overlay image")
+                .module-behind-shape-holder
+                  .module-bg-colour-operation.option-behind-shape
+                .module-behind-inner-shadow-holder
+                  .module-behind-inner-shadow.level2
+                .module-behind-inner-shadow-holder
+                  .module-behind-inner-shadow.level1
+                img.normal-state-cover(data-ng-src="{{option.images.normal}}", alt="normal state cover image")
+                .option-button-text-holder
+                  span.optionName &nbsp;&nbsp;{{option.name}}
+                  span Gold Recovery
+                .module-outer-shadow-holder
+                  .module-outer-shadow.level4
+                .module-outer-shadow-holder
+                  .module-outer-shadow.level3
+                .module-outer-shadow-holder
+                  .module-outer-shadow.level2
+                .module-outer-shadow-holder
+                  .module-outer-shadow.level1
+              .option-price-container
+                img.normal-state-cover-shadow(src="assets/images/operation/scenarios/processing/normal_bg_image_shadow.png", alt="image for normal state image shadow")
+                .option-price-text-holder
+                  span.module-font-colour-operation Processing Cost:
+                  span.option-price-text {{option.costProcessing}} per ounce
+                  span.module-font-colour-operation Mining Cost:
+                  span.option-price-text {{option.costMining}} per ounce
+                  span.module-font-colour-operation.option-result.animate-fade(
+                  data-ng-class="{'inCorrect': !option.correct}", data-ng-if="option.selected",
+                  data-anim-easing="easeOutCubic", data-anim-duration="600") {{option.result}}
+
+          .chart(data-ng-if="settings.completed && !currentQuestion")
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

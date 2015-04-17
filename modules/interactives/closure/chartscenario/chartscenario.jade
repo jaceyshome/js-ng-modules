@@ -1,0 +1,117 @@
+.scenario-decision-interactive-container.closure-chart-scenario-container
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    //- ============================ text     ==============================
+    .text-panel.animate-left(data-ng-repeat="step in settings.steps",
+    data-key="{{settings.dataKey}}", data-ng-if="step == currentStep && !selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600",
+    data-ng-class="{'topContainerFirstElement': $index==0}")
+      .row
+        .col-md-12
+          //- profile icon with text
+          div.icon-profile-container(data-ng-if="step.profileIcon")
+            span.sprite-ui(class="{{step.profileIcon}}")
+          div.profile-text-container(data-ng-if="step.profileIcon")
+            div
+              p.text-left(data-ng-bind-html="bindHtmlSoruce(step.text)")
+
+          //- normal text
+          .introduction-text-body(data-ng-if="!step.profileIcon")
+            p.text-center(data-ng-bind-html="bindHtmlSoruce(step.text)")
+
+          //- button container
+          .button-container.open(data-ng-if="step.btnText")
+            a.show-next-button(data-tnt-click, data-ng-click="goToStepByIndex($index+1)", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}")
+              | {{step.btnText}}
+
+    //- ============================ options feedback ==============================
+    .text-panel.animate-left(data-ng-repeat="option in settings.steps[3].options",
+    data-key="{{settings.dataKey}}", data-ng-if="option == selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row
+        //- feedback
+        .col-md-12(data-ng-if="!settings.completed")
+          .introduction-text-body
+            p.text-center(data-ng-bind-html="bindHtmlSoruce(option.feedback)")
+
+        //- completed text
+        .col-md-12(data-ng-if="settings.completed")
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left(data-ng-bind-html="bindHtmlSoruce(option.feedback)")
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- ================ background layer ====================
+          .chart.c0.invisible
+            img(src="assets/images/interactive_blank_bg.png")
+
+          .chart
+            img(src="assets/images/closure/share/11.07_11.12_grid_bg.jpg")
+
+          .chart.animate-fade(data-ng-if="currentStepIndex == 0")
+            img(data-ng-src="{{settings.introBgImage}}")
+
+          //- ================== curve layers ============================
+          .chart.curve-container(data-ng-class="{'show':currentStepIndex == 1, 'next':currentStepIndex == 2}")
+            .curve-inner-container
+              img.curve-image(data-ng-src="{{settings.curveImage}}")
+
+          .chart.curve-labels-container(data-ng-class="{'show':currentStepIndex == 1, 'next':currentStepIndex == 2}")
+            img.curve-label(src="assets/images/closure/share/curve_label.png")
+
+          .chart.animate-fade(data-ng-if="currentStepIndex == 1")
+            img(src="assets/images/closure/share/chart_axis.png")
+
+          //- ================== options text container ==================
+          .chart.options-panel-container.animate-fade(data-ng-if="currentStepIndex == 2")
+            .option-panel.left
+              .icon-container
+                img(data-ng-src="{{settings.steps[2].textPanels[0].icon}}")
+              .text-panel
+                p.text-panel-label {{settings.steps[2].textPanels[0].label}}
+                .text-panel-holder(data-ng-bind-html="bindHtmlSoruce(settings.steps[2].textPanels[0].text)")
+            .option-panel.right
+              .icon-container
+                img(data-ng-src="{{settings.steps[2].textPanels[1].icon}}")
+              .text-panel
+                p.text-panel-label {{settings.steps[2].textPanels[1].label}}
+                .text-panel-holder(data-ng-bind-html="bindHtmlSoruce(settings.steps[2].textPanels[1].text)")
+
+          //- ================== option buttons container =================
+          .chart.question-options-container.animate-fade(data-ng-if="currentStepIndex == 3")
+            .option-panel(data-ng-repeat="option in settings.steps[3].options",
+            data-ng-class="{'selected': option.selected, 'result-correct': option.selected && option.correct, 'result-incorrect': option.selected && !option.correct, 'incorrect-option-completed': !option.correct && settings.completed }")
+              .option-button-holder
+                a.option-button(data-ng-click="selectOption(option)")
+                  img.invisible(src="assets/images/closure/share/option_button_glass_overlay_border.png")
+                  img.state.normal(src="assets/images/closure/share/11.07_11.12_clear_circle_324x324.png")
+                  img.state.hover(src="assets/images/closure/share/11.07_11.12_clear_circle_hover324x324.png")
+                  img.state.result-correct(src="assets/images/closure/share/11.07_11.12_correct324x324.png")
+                  img.state.result-incorrect(src="assets/images/closure/share/11.07_11.12_incorrect324x324.png")
+                  img.state.result-incorrect(src="assets/images/closure/share/11.07_11.12_incorrect324x324.png")
+                  .button-text-holder(data-ng-bind-html="bindHtmlSoruce(option.text)")
+              .option-shadow
+                img(src="assets/images/closure/share/option_button_shadow.png")
+              .brief-feedback-container
+                .brief-feedback-text(data-ng-bind-html="bindHtmlSoruce(option.briefFeedback)")
+
+          //- ================= disable overlay ==================
+          .chart(data-ng-if="settings.completed")
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

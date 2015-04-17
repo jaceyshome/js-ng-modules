@@ -2,73 +2,129 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60056a0c-bfef-4d66-a361-553eee71ddaa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/dense-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-bold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-medium.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/edmondsans-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/generator_config.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/geneva.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/hambh.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-black.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-blackitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bold.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-bolditalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairline.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-hairlineitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-italic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-light.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-lightitalic.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/fonts.less" afterPath="$PROJECT_DIR$/styles/fonts.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animatebarprogress/animatebarprogress.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/appendstyle/appendstyle.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bindhtmlcompile/bindhtmlcompile.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousel/carousel.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousel/carousel.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/carousel/carousel.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/chartscenario/chartscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/chartscenario/chartscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/chartscenario/chartscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/curtbutton/curtbutton.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillingdecision/drillingdecision.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillingdecision/drillingdecision.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillingdecision/drillingdecision.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillinginteractive/drillinginteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillinginteractive/drillinginteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/drillinginteractive/drillinginteractive.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsinteractive/economicsinteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsinteractive/economicsinteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsinteractive/economicsinteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsinteractive/economicsinteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsinteractive/economicsinteractive.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsinteractive/economicsinteractive.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsscenario/economicsscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsscenario/economicsscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsscenario/economicsscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsscenario/economicsscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/economicsscenario/economicsscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/economicsscenario/economicsscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/finalaward/finalaward.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/finalaward/finalaward.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/finalaward/finalaward.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistry/geochemistry.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistry/geochemistry.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistry/geochemistry.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistryinteractive/geochemistryinteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistryinteractive/geochemistryinteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geochemistryinteractive/geochemistryinteractive.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geophysics/geophysics.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geophysics/geophysics.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/exploration/geophysics/geophysics.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/geotechnicalscenario/geotechnicalscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/geotechnicalscenario/geotechnicalscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/geotechnicalscenario/geotechnicalscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/imagebutton/imagebutton.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/imagebutton/imagebutton.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/imagebutton/imagebutton.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/impactscenario/impactscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/impactscenario/impactscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/impactscenario/impactscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/infrastructure/infrastructure.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/infrastructure/infrastructure.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/infrastructure/infrastructure.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/interactives.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/videoimage/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animateleft/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animateleftinrightout/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animateprogress/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animateright/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services/animations/animaterightinleftout/main.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/videoimage/main.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/notab/notab.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/opensans-bold.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processinginteractive/processinginteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processinginteractive/processinginteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processinginteractive/processinginteractive.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processingscenario/processingscenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processingscenario/processingscenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/processingscenario/processingscenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/progressbarspanel/progressbarspanel.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/progressbarspanel/progressbarspanel.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/progressbarspanel/progressbarspanel.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/stepcharts/stepcharts.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/stepcharts/stepcharts.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/stepcharts/stepcharts.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/sustainablescenario/sustainablescenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/sustainablescenario/sustainablescenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/closure/sustainablescenario/sustainablescenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/tooltip/tooltip.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/tooltip/tooltip.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/tooltip/tooltip.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/topicmarker/topicmarker.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/wastescenario/wastescenario.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/wastescenario/wastescenario.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/operation/wastescenario/wastescenario.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforce/workforce.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforce/workforce.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforce/workforce.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforceinteractive/workforceinteractive.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforceinteractive/workforceinteractive.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/interactives/planning/workforceinteractive/workforceinteractive.less" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/animations/animatespark/main.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/appendstyle/appendstyle.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/badge/badge.jade" afterPath="$PROJECT_DIR$/modules/assessments/badge/badge.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/badge/badge.less" afterPath="$PROJECT_DIR$/modules/assessments/badge/badge.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.coffee" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.jade" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.less" afterPath="$PROJECT_DIR$/modules/assessments/flipcard/flipcard.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/footer/footer.coffee" afterPath="$PROJECT_DIR$/modules/footer/footer.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/footer/footer.jade" afterPath="$PROJECT_DIR$/modules/footer/footer.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/functions.less" afterPath="$PROJECT_DIR$/styles/functions.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/helper/helper.coffee" afterPath="$PROJECT_DIR$/services/helper/helper.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/buttonscrolltop/main.coffee" afterPath="$PROJECT_DIR$/modules/buttonscrolltop/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidenavigation/main.coffee" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/youtubevideo/main.coffee" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/animations/animatefade/main.coffee" afterPath="$PROJECT_DIR$/services/animations/animatefade/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/animations/animatescroll/main.coffee" afterPath="$PROJECT_DIR$/services/animations/animatescroll/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidenavigation/main.jade" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/youtubevideo/main.jade" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/main.less" afterPath="$PROJECT_DIR$/modules/assessments/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidenavigation/main.less" afterPath="$PROJECT_DIR$/modules/sidenavigation/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/youtubevideo/main.less" afterPath="$PROJECT_DIR$/modules/youtubevideo/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.coffee" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.jade" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.less" afterPath="$PROJECT_DIR$/modules/assessments/multiplechoice/multiplechoice.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/popup/popup.less" afterPath="$PROJECT_DIR$/modules/popup/popup.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/popup/popupyoutuvideo/popupyoutuvideo.coffee" afterPath="$PROJECT_DIR$/modules/popup/popupyoutuvideo/popupyoutuvideo.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidebar/sidebar.coffee" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidebar/sidebar.jade" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/sidebar/sidebar.less" afterPath="$PROJECT_DIR$/modules/sidebar/sidebar.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="js-ngmodules.iws" />
@@ -92,19 +148,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/functions.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.75" vertical-offset="161" max-vertical-offset="741">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4187192" vertical-offset="864" max-vertical-offset="2124">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fonts.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fonts.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/fonts.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.31206897" vertical-offset="85" max-vertical-offset="1349">
+            <state line="53" column="23" selection-start="2021" selection-end="2022" vertical-scroll-proportion="-10.555555" vertical-offset="669" max-vertical-offset="1278">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animatebarprogress.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/animations/animatebarprogress/animatebarprogress.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -113,7 +178,7 @@
       <file leaf-file-name="aus_map.svg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeModules/rappar/svgs/aus_map.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100244">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="40986">
               <folding />
             </state>
           </provider>
@@ -122,7 +187,7 @@
       <file leaf-file-name="svgbutton.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodeModules/svgbutton/svgbutton.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="171">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
               <folding />
             </state>
           </provider>
@@ -131,7 +196,7 @@
       <file leaf-file-name="slide.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/carousels/tinycarousel_group/slide/slide.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -184,17 +249,17 @@
         <option value="$PROJECT_DIR$/src/common/js-icon-button/js-icon-button.less" />
         <option value="$PROJECT_DIR$/src/app/js-ng-modules/js-ng-modules.coffee" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/styles/functions.less" />
         <option value="$PROJECT_DIR$/styles/fonts.less" />
+        <option value="$PROJECT_DIR$/styles/functions.less" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="47" />
+    <option name="y" value="-4" />
+    <option name="width" value="1873" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -244,6 +309,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -286,7 +352,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,64 +367,15 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carousels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinycarousel_group" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carousels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tinycarousel_group" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js-ngmodules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../head001-headspace-safeminds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
@@ -368,23 +385,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fonts" />
+      <recent name="$PROJECT_DIR$/modules" />
       <recent name="C:\xampp\htdocs\js-ngmodules\fonts" />
       <recent name="C:\xampp\htdocs\js-ngmodules\modules\carousels" />
       <recent name="C:\xampp\htdocs\js-ngmodules\nodeModules" />
-      <recent name="C:\xampp\htdocs\js-ngmodules\styles" />
-      <recent name="C:\xampp\htdocs\js-ngmodules\modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$/services/animations" />
       <recent name="C:\xampp\htdocs\js-ngmodules\modules" />
       <recent name="C:\xampp\htdocs\js-ngmodules\directives" />
       <recent name="C:\xampp\htdocs\js-ngmodules\services\animations" />
-      <recent name="C:\xampp\htdocs\js-ngmodules\modules\123" />
-      <recent name="C:\xampp\htdocs\js-ngmodules\services" />
     </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -498,28 +522,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="47" y="-4" width="1873" height="1084" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29477197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29392973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14802982" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14794816" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4734446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -559,6 +583,41 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/styles/functions.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/fonts.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeModules/rappar/svgs/aus_map.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="40986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeModules/svgbutton/svgbutton.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/carousels/tinycarousel_group/slide/slide.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="280" />
@@ -574,137 +633,44 @@
         <state line="4" column="7" selection-start="28" selection-end="28" vertical-scroll-proportion="0.13513513" vertical-offset="0" max-vertical-offset="592" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/navigation/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/pagination/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/autofillfix/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/preloader/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1539" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/text/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/captions/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2622">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/timecode/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/pagination/main.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/notab/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/bgimage/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/tntprint/main.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1919">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/appendstyle/appendstyle.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1843">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/assessments/badge/badge.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/click/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/footer/footer.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/helper/helper.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/popup/popup.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.1509433" vertical-offset="114" max-vertical-offset="798">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/sidebar/sidebar.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/youtubevideo/main.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="547">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1919" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nodeModules/rappar/svgs/aus_map.svg">
@@ -728,16 +694,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/functions.less">
+    <entry file="file://$PROJECT_DIR$/styles/fonts.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.75" vertical-offset="161" max-vertical-offset="741">
+        <state line="53" column="23" selection-start="2021" selection-end="2022" vertical-scroll-proportion="-10.555555" vertical-offset="669" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/fonts.less">
+    <entry file="file://$PROJECT_DIR$/services/animations/animatebarprogress/animatebarprogress.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.31206897" vertical-offset="85" max-vertical-offset="1349">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/functions.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4187192" vertical-offset="864" max-vertical-offset="2124">
           <folding />
         </state>
       </provider>

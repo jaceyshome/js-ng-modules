@@ -10,15 +10,20 @@ define [
     service.scrollToElementTop = (customSettings) ->
       defaultSettings ={
         element : undefined
-        runtime: 200
+        duration: 200
         offset: 0
         easing: "linear"
       }
       settings = {}
       angular.extend(settings, defaultSettings, customSettings)
-      $("html, body").animate({
-        scrollTop: settings.element.offset().top + settings.offset
-      }, settings.runtime, settings.easing)
+      $("html, body").velocity(
+        "scroll",
+        {
+          offset: settings.element.offset().top + settings.offset
+          duration: settings.duration
+          easing: settings.easing
+        }
+      )
       undefined
 
     service.scrollToPagePosition = (position, runtime)->

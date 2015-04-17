@@ -1,0 +1,241 @@
+.operation-processing-decision-container{
+  img{
+    width: 100%;
+  }
+  .chart-container{
+    .processing-options-container{
+      .text-currentGoldPrice{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding-left: 10px;
+        font-size: 1.2em;
+        font-family: @fontBold;
+        text-align: left;
+        .current-gold-price-label{
+          font-family: @fontBodyDefaultItalic;
+          color: #5e584a;
+        }
+      }
+      .option-button-holder{
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin-right: 3%;
+        margin-left: 3%;
+        width: 25%;
+        .option-button{
+          display: block;
+          position: relative;
+          .rounded(50%);
+          width: 100%;
+          .transition();
+          .module-behind-shape-holder, .module-behind-inner-shadow-holder, .module-outer-shadow-holder{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom:0;
+            right: 0;
+            margin:auto;
+            padding: 3.81%;
+          }
+          .module-outer-shadow-holder{
+            padding: 3.4%;
+          }
+          .option-behind-shape, .module-outer-shadow, .module-behind-inner-shadow{
+            .rounded(50%);
+            width: 100%;
+            height: 100%;
+          }
+          .module-behind-inner-shadow{
+            &.level1{
+              .setContainerInnerShadow(0,0,3px,rgba(0,0,0,0.3));
+            }
+            &.level2{
+              .setContainerInnerShadow(0,0,20px,rgba(0,0,0,0.23));
+            }
+          }
+          .module-outer-shadow{
+            .transition();
+            .setContainerOuterShadow(0, 0, 0, rgba(255, 255, 255, 1));
+          }
+          .normal-state-cover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin:auto;
+            .transition();
+            .opacity(1);
+          }
+          .option-button-text-holder{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            width: 100%;
+            .translate(-50%, -50%);
+            span{
+              display: block;
+              .setTextShadow(2px, 2px, 2px, rgba(0,0,0,0.23));
+              font-size: 1.286em;
+              letter-spacing: 1.5px;
+            }
+            .optionName{
+              font-size: 2.571em;
+              letter-spacing: 2px;
+            }
+          }
+
+          &.selected{
+            .transition();
+            color: #f1f1f1;
+            .normal-state-cover{
+              .opacity(0);
+            }
+          }
+
+          &.inCorrect{
+            .option-behind-shape{
+              background-color: #b0b0b0;
+            }
+          }
+          &:hover,&:focus{
+            .module-outer-shadow{
+              .transition();
+              &.level1{
+                .setContainerOuterShadow(0, 0, 2px, white);
+              }
+              &.level2{
+                .setContainerOuterShadow(0, 0, 5px, white);
+              }
+              &.level3{
+                .setContainerOuterShadow(0, 0, 20px, white);
+              }
+              &.level4{
+                .setContainerOuterShadow(0, 0, 25px, white);
+              }
+            }
+          }
+        }
+      }
+      .option-price-container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .normal-state-cover-shadow{
+          position: absolute;
+          top: 0;
+          left:0;
+          margin:auto;
+          margin-top: -10.5%;
+        }
+        .option-price-text-holder{
+          position: relative;
+          z-index: 10;
+        }
+        span{
+          display: block;
+          margin-bottom: 3%;
+        }
+        .module-font-colour-operation{
+          margin-top: 7%;
+          font-family: @fontBold;
+        }
+        .option-price-text{
+          color: #616161;
+          font-family: @fontHeader;
+        }
+        .option-result{
+          text-transform: uppercase;
+          font-family: @fontBold;
+          font-size: 1.429em;
+          &.inCorrect{
+            color: #616161;
+          }
+        }
+      }
+    }
+  }
+
+  //------------- responsive style --------------------
+  .operation-processing-scenario-tablet-landscape{
+    .chart-container{
+      .processing-options-container{
+        .text-currentGoldPrice{
+          font-size: 1em;
+        }
+        .option-button-holder{
+          .option-button{
+            .option-button-text-holder{
+              span{
+                font-size: 1em;
+              }
+              .optionName{
+                font-size: 1.571em;
+              }
+            }
+            .module-outer-shadow-holder{
+              padding: 3.3%;
+            }
+          }
+        }
+
+        .option-price-container{
+          .normal-state-cover-shadow{
+            margin-top: -8%;
+          }
+          span{
+            margin-bottom: 2%;
+          }
+          .module-font-colour-operation{
+            margin-top: 5%;
+          }
+          .option-result{
+            text-transform: uppercase;
+            font-family: @fontBold;
+            font-size: 1.25em;
+          }
+        }
+      }
+    }
+  }
+
+  .operation-processing-scenario-tablet-portrait{
+    .chart-container{
+      .processing-options-container{
+        .option-button-holder{
+          .option-button{
+            .module-outer-shadow-holder{
+              padding: 3.81%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .operation-processing-scenario-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .operation-processing-scenario-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .operation-processing-scenario-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .operation-processing-scenario-tablet-portrait;
+  }
+
+}

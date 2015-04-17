@@ -74,7 +74,7 @@ define [
       $scope.backToPosition = ()->
         data = {
           element: Scenario.moreInfoScrollTarget
-          runtime: AnimateScroll.calculateScrollRunTime(Scenario.moreInfoBaseScrollPosition, 0.1)
+          duration: AnimateScroll.calculateScrollRunTime(0, 0.1)
         }
         AnimateScroll.scrollToElementTop(data)
 

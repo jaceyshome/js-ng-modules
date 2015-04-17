@@ -1,0 +1,201 @@
+.drillinginteractive-container{
+  display: block;
+  padding-bottom: 80px;
+  @white: #ffffff;
+  @grey: #e6e5e1;
+  .svg-container{
+    position: relative;
+    border: 4px solid @white;
+    &.image-container{
+      .overlay{
+        &.drills{
+          z-index: 7;
+        }
+      }
+      .text-container{
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        width: 75%;
+        display: table;
+        .text{
+          display: table-cell;
+          width: 25%;
+          text-align: center;
+          font-size: 0.875em;
+        }
+      }
+      .thtTooltip{
+        z-index: 20;
+        &.initial{
+          right: 53%;
+          top: 6.5%;
+          .tipContentBorder{
+            line-height: 3;
+            &:after{
+              top: 38%;
+            }
+          }
+        }
+        &.first{
+          left: 75%;
+          top: 40.79%;
+          &.top{
+            .tipContentBorder{
+              &:after{
+                right: auto;
+                left: 14px;
+              }
+            }
+            .tipContent{
+              &:after{
+                right: auto;
+                left: 16px;
+              }
+            }
+          }
+        }
+        &.second{
+          right: 71%;
+          top: 12.62%;
+          &.bottom{
+            .tipContentBorder{
+              &:after{
+                right: 18px;
+                left: auto;
+              }
+            }
+            .tipContent{
+              &:after{
+                right: 20px;
+                left: auto;
+              }
+            }
+          }
+        }
+        &.third{
+          left: 14%;
+          bottom: 45%;
+        }
+        &.forth{
+          left: 70%;
+          bottom: 15%;
+          &.top{
+            .tipContentBorder{
+              &:after{
+                left: 10%;
+                right: auto;
+                border-left: 7px solid transparent;
+              }
+            }
+            .tipContent{
+              &:after{
+                left: 10%;
+                right: auto;
+              }
+            }
+          }
+        }
+      }
+      .buttons-container{
+        width: 50%;
+        top: 6%;
+        right: auto;
+        left: 50%;
+        .image-button{
+          width: 40%;
+          height: 50px;
+          margin-left: 0;
+          margin-right: 10%;
+          display: inline-block;
+          margin-bottom: 3px;
+          vertical-align: top;
+          position: relative;
+          line-height: 2.5;
+          .drop-shadow(1px, 1px, 1px, 0.45);
+          .selected-mark{
+            margin: -7px 0 0 0;
+            top: 50%;
+            right: -30px;
+          }
+          &.selected{
+            .selected-mark{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/selected_tick.png");
+            }
+          }
+        }
+      }
+    }    
+  }
+  //------------- responsive style --------------------
+  .drillinginteractive-tablet-landscape{
+    .svg-container{
+      &.image-container{
+        .thtTooltip{
+          &.initial{
+            right: 61%;
+            top: 5%;
+            .tipContentBorder{
+              line-height: 1;
+              &:after{
+                top: 28%;
+              }
+            }
+          }
+          &.second{
+            right: 70%;
+          }
+        }
+        .buttons-container{
+          width: 55%;
+          left: 45%;
+          top: 5%;
+          .image-button{
+            padding: 12px;
+            height: auto;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  .drillinginteractive-tablet-portrait{
+    .svg-container{
+      &.image-container{
+        .buttons-container{
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  
+  
+
+  @media only screen and (max-height: 800px){
+    .drillinginteractive-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .drillinginteractive-tablet-landscape;
+  }
+  @media only screen and (max-width: 1000px){
+    .drillinginteractive-tablet-portrait;
+  }
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .drillinginteractive-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .drillinginteractive-tablet-landscape;
+    .drillinginteractive-tablet-portrait;
+  }
+}

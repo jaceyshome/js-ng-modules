@@ -1,0 +1,45 @@
+.block-container.module-content-container.interactive.bg-2nd.geochemistry-interactive-container.interactive-container.scenario-decision-interactive-container(data-topic-marker)
+    .row
+      .col-md-12
+        h2.text-center GEOCHEMISTRY INTERACTIVE
+    .row
+      .col-md-12
+        .text-panel
+          p(data-ng-style="{'margin-bottom':0}")
+            | Geochemists use geological and geophysical data to identify potential areas of mineralisation. The geochemistry team will then divide these smaller areas into grids before they conduct their analysis of the area. By working to a grid, the team builds up a ‘map’ of the area’s geochemistry. Explore the example grid below to reveal the areas of potential mineralisation.
+    .row
+      .col-md-12.canvas-container-wrapper-container
+        div.canvas-container-wrapper.svg-container-wrapper
+          div.canvas-container
+            div.left-column.column.svg-container
+              .thtTooltip.bottom.overlay-tooltip.animate-fade(data-ng-if="showOverlay")
+                .tipContentBorder
+                  .tipContent
+                    | Recommended drilling site
+                    br
+                    | based on geochemistry data.
+              img.overlay.animate-fade(data-ng-if="showOverlay", src="assets/images/exploration/interactives/geochemistryinteractive/overlay.png", data-anim-easing="ease-in-out")
+              .geochemistry-svg-container
+                img.placeholder-image.invisible(data-ng-src="assets/images/exploration/interactives/geochemistryinteractive/overlay.png")
+                .geochemistry-svg-holder(id="geochemistry-interactive-svg-container{{$id}}")
+            div.right-column.column
+              p.top Presence of gold
+              p.top (in parts per billion PPB)
+              ul.range-list
+                li.range(data-ng-repeat="range in settings.ranges", data-ng-class="{selected: range.selected, first: $index == 0, second: $index == 1, third: $index == 2, forth: $index == 3, fifth: $index == 4, sixth: $index == 5}")
+                  .thtTooltip.right(data-ng-if="$index == 0 && showFirstTooltip")
+                    .tipContentBorder
+                      .tipContent
+                        | Select each of the results to see
+                        br
+                        | where they were found on the grid.
+                  a.range-button(href="javascript:void(0);", onclick="return false;", data-ng-click="showRangeDots(range)")
+                    span.sr-only {{range.selected && "deselect" || "select"}}
+                    span {{range.text}}
+                  p.selected-mark
+                    span(data-ng-if = "range.selected") {{range.text}} selected
+
+    .row.reset-button-container.animate-fade(data-ng-if="showOverlay")
+      .col-md-12
+        .button-container.open
+          a.show-next-button.bg-2nd.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET

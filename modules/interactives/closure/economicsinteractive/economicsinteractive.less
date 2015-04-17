@@ -1,0 +1,400 @@
+.closure-economics-interactive-container{
+  @animateDuration: 600ms;
+  @step1AnimationDuration: 1200ms;
+  img{
+    width: 100%;
+  }
+  .chart-container{
+    overflow: hidden;
+    //=========== Animation timing for step delay ================
+    @delayStep: 400ms;
+    //- step 1:
+    @step1_A_RightColumnDownDuration: 1000ms;
+    @step1_B_LabelMoveLeftDelay: @step1_A_RightColumnDownDuration+@delayStep;
+    @step1_C_expenseTextFadeOutDelay: @step1_B_LabelMoveLeftDelay+@delayStep+200ms;
+    @step1_D_expenseBoxExpandDelay: @step1_C_expenseTextFadeOutDelay+(@delayStep*2);
+    @step1_E_duffieldCloseTextFadeInDelay: @step1_D_expenseBoxExpandDelay+(@delayStep*2);
+    @step1_F_DavisGoldMineDelay: @step1_E_duffieldCloseTextFadeInDelay+@delayStep;
+    //- step 2:
+    @step2_A_jolleyGoldMineDurationGlowUp: 400ms;
+    @step2_B_jolleyLossesSlideDownDelay: @step2_A_jolleyGoldMineDurationGlowUp+(@delayStep*2);
+    @step2_C_jolleyLossesTextFadeInDelay: @step2_B_jolleyLossesSlideDownDelay+(@delayStep*2);
+
+    //- step 3;
+    @step3_A_jolleyGoldMineBoxSlideDownDelay: 200ms;
+    @step3_B_jolleyGoldMineBoxSlideDown: 1200ms;
+    @step3_B_jolleyGoldMineTopBoxSlideDown: 900ms;
+    @step3_C_labelMoveLeftDelay: @step3_B_jolleyGoldMineBoxSlideDown+@delayStep;
+    @step3_C_labelMoveLeftDuration: @animateDuration+200ms;
+    @step3_D_jolleyLossesTextBgSlideUpDelay: @step3_C_labelMoveLeftDelay+@delayStep*2+200ms;
+    @step3_E_jolleyLossesTextFadeOutDelay: @step3_D_jolleyLossesTextBgSlideUpDelay+@delayStep*2+200ms;
+
+    //======================== left column ======================
+    .chart-box-mask{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .profit-box-container{
+      padding: 15% 55.2% 0 25.41%;
+      height: 57%;
+      .chart-box-mask{
+        margin-top: 34.6%;
+      }
+      .profit-box{
+        .transition(@animateDuration);
+        position: relative;
+        left: 0;
+        background-color: #CAEB9A;
+        width: 100%;
+        height: 100%;
+        &.step1{
+          .setTransitionDelay(@step1_D_expenseBoxExpandDelay);
+          left: -24%;
+        }
+        &.step2, &.step3{
+          .setTransitionDelay(@step2_B_jolleyLossesSlideDownDelay+400ms);
+          left: -29%;
+        }
+      }
+    }
+    .profit-label-text{
+      img{
+        .transition(@animateDuration);
+        margin-top: 0;
+        &.step2{
+          .setTransitionDelay(@step2_B_jolleyLossesSlideDownDelay);
+          margin-top: 2.3%;
+        }
+        &.step3{
+          .setTransitionDelay(@step3_E_jolleyLossesTextFadeOutDelay);
+        }
+      }
+    }
+    .jolley-lose-container{
+      padding: 15.8% 60.85% 0 25.41%;
+      height: 36%;
+      .chart-box-mask{
+        margin-top: 42.6%;
+      }
+      .jolley-lose-box{
+        .transition(@animateDuration);
+        position: relative;
+        background-color: #FFA22E;
+        .drop-shadow(0,1px,2px,0.4);
+        top: -104%;
+        .opacity(0);
+        width: 100%;
+        height: 100%;
+        img{
+          .opacity(0);
+        }
+        &.step2{
+          .setTransitionDelay(@step2_B_jolleyLossesSlideDownDelay);
+          top: -2px;
+          .opacity(1);
+          img{
+            .transition(@animateDuration);
+            .setTransitionDelay(@step2_C_jolleyLossesTextFadeInDelay);
+            .opacity(1);
+          }
+        }
+        &.step3{
+          .setTransitionDelay(@step3_E_jolleyLossesTextFadeOutDelay);
+          .opacity(0);
+          img{
+            .transition(@animateDuration);
+            .setTransitionDelay(@step3_D_jolleyLossesTextBgSlideUpDelay);
+            .opacity(0);
+          }
+        }
+      }
+    }
+    .davis-gold-mine-container{
+      padding: 29.2% 60.69% 0 25.41%;
+      height: 85.5%;
+      .davis-gold-mine-box{
+        .transition(@animateDuration);
+        position: relative;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        left: 0;
+        background-color: #ebe6d0;
+        width: 100%;
+        height: 100%;
+        top: 2%;
+        &.step1, &.step2, &.step3{
+          .setTransitionDelay(@step1_F_DavisGoldMineDelay);
+          top: 0;
+        }
+      }
+    }
+
+    //======================== middle column ======================
+    .duffield-expense-container{
+      padding: 14.6% 29.69% 0 39.18%;
+      height: 73%;
+      .chart-box-mask{
+        margin-top: 23%;
+      }
+      .duffield-expense-box{
+        .transition(@animateDuration);
+        position: relative;
+        left: 18%;
+        background-color: #FFA22E;
+        width: 100%;
+        height: 100%;
+        &.step1, &.step2, &.step3{
+          .setTransitionDelay(@step1_D_expenseBoxExpandDelay);
+          left: 3%;
+        }
+        &.step2, &.step3{
+          .opacity(0);
+        }
+      }
+    }
+    .duffield-expense-text{
+      .transition(@animateDuration);
+      .opacity(1);
+      &.step1, &.step2, &.step3{
+        .transition(ease-out,@animateDuration);
+        .setTransitionDelay(@step1_C_expenseTextFadeOutDelay);
+        .opacity(0);
+      }
+    }
+
+    .duffield-close-text{
+      .transition(@animateDuration);
+      .opacity(0);
+      &.step1{
+        .transition(ease-out,@animateDuration);
+        .setTransitionDelay(@step1_E_duffieldCloseTextFadeInDelay);
+        .opacity(1);
+      }
+      &.step2{
+        .opacity(0);
+      }
+    }
+
+    .jolley-gold-mine-container{
+      padding: 14.6% 29.69% 0 39.18%;
+      height: 73.3%;
+      .chart-box-mask{
+        margin-top: 22.6%;
+      }
+      .jolley-gold-mine-box{
+        .transition(@animateDuration);
+        position: relative;
+        top: 10%;
+        background-color: #ffffff;
+        border: 1px solid black;
+        border-bottom: none;
+        width: 100%;
+        height: 100%;
+        &.step2{
+          .transition(ease-in,@step2_A_jolleyGoldMineDurationGlowUp);
+          top: 0;
+        }
+        &.step3{
+          .transition(ease-out,@step3_B_jolleyGoldMineBoxSlideDown);
+          .setTransitionDelay(@step3_A_jolleyGoldMineBoxSlideDownDelay);
+          top: 100%;
+        }
+      }
+      .jolley-gold-mine-text-box{
+        .transition(@animateDuration);
+        position: relative;
+        top: 0;
+        &.step3{
+          .transition(ease-out,@step3_B_jolleyGoldMineBoxSlideDown);
+          .setTransitionDelay(@step3_A_jolleyGoldMineBoxSlideDownDelay);
+          top: 100%;
+        }
+      }
+    }
+    .jolley-gold-mine-top-container{
+      padding: 14.6% 29.69% 0 39.2%;
+      height: 77%;
+      .chart-box-mask{
+        margin-top: 16%;
+      }
+      .jolley-gold-mine-top-box{
+        .transition(@animateDuration);
+        position: relative;
+        top: 17%;
+        background-color: #f48a82;
+        border: 1px solid black;
+        border-bottom: none;
+        width: 100%;
+        height: 100%;
+        &.step2{
+          .transition(ease-in,@step2_A_jolleyGoldMineDurationGlowUp+400ms);
+          top: 0;
+        }
+        &.step3{
+          .transition(ease-in,500ms);
+          top: 100%;
+        }
+      }
+    }
+
+    //========================= right column =================
+    .duffield-mine-loss-container{
+      padding: 16% 17% 0 70.18%;
+      height: 38.5%;
+      .duffield-mine-loss-box{
+        .transition(@animateDuration);
+        position: relative;
+        top: 0;
+        border: 1px solid black;
+        border-bottom: none;
+        border-top: none;
+        width: 100%;
+        height: 100%;
+        &.step1, &.step2, &.step3{
+          .transition(ease-in,320ms);
+          top: 100%;
+        }
+        &.step0{
+          .transition(200ms);
+          .setTransitionDelay(300ms);
+          top: 0;
+        }
+      }
+    }
+
+    .duffield-gold-mine-container{
+      padding: 16.1% 17% 0 70.18%;
+      height: 86%;
+      .duffield-gold-mine-box{
+        .transition(@animateDuration);
+        background-color: #f6f1d8;
+        position: relative;
+        top: 0;
+        border: 1px solid black;
+        border-bottom: none;
+        width: 100%;
+        height: 100%;
+        &.step1, &.step2, &.step3{
+          .transition(ease-in-out,@step1_A_RightColumnDownDuration);
+          top: 100%;
+        }
+      }
+    }
+
+    //========================== indicator ======================
+    .curve-indicator-container{
+      padding: 0 15% 26% 25%;
+      height: 100%;
+      width: 100%;
+      .chart-box-mask{
+        margin-top: 34.6%;
+      }
+      .curve-indicator-box{
+        .transition(@animateDuration);
+        position: relative;
+        left: 0;
+        width: 100%;
+        &.step1, &.step2{
+          .setTransitionDelay(@step1_B_LabelMoveLeftDelay);
+          left: -18.6%;
+        }
+        &.step3{
+          .transition(@step3_C_labelMoveLeftDuration);
+          .setTransitionDelay(@step3_C_labelMoveLeftDelay);
+          left: -70%;
+        }
+      }
+    }
+    .tooltips-container{
+      .thtTooltip{
+        .transition(@animateDuration);
+        right: 0;
+        margin-right: 2%;
+        margin-top: 19.2%;
+        &.overlay-tooltip{
+          &.left{
+            .tipContentBorder{
+              &:after{
+                left: -20px;
+                margin-top: -10px;
+              }
+            }
+            .tipContent{
+              font-size: 1.08em;
+            }
+          }
+        }
+        &.step1, &.step2{
+          .setTransitionDelay(@step1_B_LabelMoveLeftDelay);
+          margin-right: 13%;
+        }
+        &.step3{
+          .transition(@animateDuration+200ms);
+          .setTransitionDelay(@step3_C_labelMoveLeftDelay);
+          margin-right: 44%;
+        }
+      }
+    }
+  }
+
+  //------------- responsive style --------------------
+  .planning-economics-interactive-tablet-landscape{
+    .chart-container{
+      .curve-indicator-container{
+        .chart-box-mask{
+          margin-top: 34%;
+        }
+      }
+      .tooltips-container{
+        .thtTooltip{
+          margin-right: 0.5%;
+          &.overlay-tooltip{
+            &.left{
+              .tipContentBorder{
+                &:after{
+                }
+              }
+              .tipContent{
+                font-size: 0.8em;
+              }
+            }
+          }
+          &.step1, &.step2{
+            margin-right: 11%;
+          }
+          &.step3{
+            margin-right: 42.5%;
+          }
+        }
+      }
+
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .planning-economics-interactive-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .planning-economics-interactive-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .planning-economics-interactive-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .planning-economics-interactive-tablet-landscape;
+  }
+}

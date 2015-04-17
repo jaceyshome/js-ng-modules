@@ -1,10 +1,11 @@
 define [
   'angular'
-], ->
+  'bowser'
+], (angular, bowser)->
   module = angular.module 'common.assessments.flipcard', [
     'templates'
   ]
-  module.directive 'assessmentFlipcard', (Structure, Module, Assessment, Helper)->
+  module.directive 'assessmentFlipcard', ($sce, Structure, Module, Assessment, Helper)->
     restrict: "A"
     scope:{
       settings: "="
@@ -19,19 +20,31 @@ define [
 
       init = ->
         $scope.data = Structure.getDataFromKey($scope.settings.data)
-#        console.log "$scope.data", $scope.data
+        $scope.data.badge.handleReview = handleReview
         initCurrentQuestion()
+
+      handleReview = ()->
+        $scope.settings.review = true
+        $scope.settings.currentQuestionIndex = 0
+        setCurrentQuestion()
+        return
 
       initCurrentQuestion = ()->
         unless $scope.settings.currentQuestionIndex
           $scope.settings.currentQuestionIndex = 0
         setCurrentQuestion()
 
+      $scope.trustAsHtml = (html) ->
+        $sce.trustAsHtml html
+
       $scope.handleNext = ()->
-        if checkAllQuestionsCompleted()
-          return handleQuestionCompleted()
-        else
-          return setNextQuestion()
+        return unless $scope.currentQuestion?.completed? is true
+        if $scope.settings.review and $scope.settings.currentQuestionIndex < $scope.data?.questions.length-1
+          setNextQuestion()
+          return
+        $scope.settings.review = false
+        if checkAllQuestionsCompleted() then return handleQuestionCompleted()
+        setNextQuestion()
 
       $scope.selectOption = (option)->
         option.flipped = !option.flipped
@@ -39,10 +52,9 @@ define [
         $scope.currentQuestion.completed = checkAllOptionsCompleted()
 
       $scope.setFlipItemContainerClass = (question,option)->
-        if option.flipped
-          return 'flipped'
-        else
-          return ' '
+        classes = if bowser.msie is true then 'ie' else 'default'
+        classes += ' flipped' if option.flipped
+        return classes
 
       $scope.setCardFrontStyle = (option)->
         if option.front?.image?
@@ -60,6 +72,14 @@ define [
           return {
             'background-color': Helper.colorLuminance(Module.currentModule.color, -0.1)
           }
+
+      $scope.showBadgePanel = ()->
+        if $scope.settings?.review
+          return false
+        if $scope.settings.completed
+          return true
+        else
+          return false
 
       #----------------------------- helpers ----------------------------------
       setNextQuestion = ()->

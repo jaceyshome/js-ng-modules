@@ -10,7 +10,9 @@ define [
     replace:true
     templateUrl: "common/youtubevideo/main"
     link: ($scope, $element, $attrs) ->
-      $scope.videoPlay = false
+      $scope.videoPlayer = null
+      $scope.videoPlayerId = null
+      $scope.showVideo = false
       $scope.currentSize = ''
       videoConfig = null
       videoDefaultConfig =
@@ -20,34 +22,37 @@ define [
           small: 220
         rootPath:
           'https://www.youtube.com/embed/'
-        options: [
-          'autoplay=1'
-          'controls=1'
-          'enablejsapi=1'
-          'modestbranding=1'
-          'rel=0'
-          'showinfo=0'
-          'wmode=opaque'
-          'frameborder=0'
-        ]
+        options:
+          autoplay: 1
+          enablejsapi: 1
+          showinfo: 0
+          modestbranding: 0
+          frameborder: 0
+          rel: 0
+          controls: 1
 
       init = ->
         #video settings can be override by data/structure.yml
         videoConfig = angular.extend(videoDefaultConfig, Structure.data.config.videoConfig)
-        initVideo()
+        generateVideoPlayerId()
         $(window).resize resizeVideo
         updateCurrentSize($element.width())
 
-      initVideo = ->
-        unless $scope.settings.src
-          $scope.settings.src = generateVideoSrc($scope.settings.videoId)
-        return
+      generateVideoPlayerId = ()->
+        $scope.videoPlayerId = $scope.settings.playerId || 'player'
+        $scope.videoPlayerId += $scope.$id
+        $scope.videoPlayerId += $scope.settings.videoId || ''
 
-      generateVideoSrc = (videoId)->
-        paramKey = '&'
-        url = videoConfig.rootPath
-        options = videoConfig.options
-        return url+videoId+'/?'+options.join(paramKey)
+      embedVideo = ->
+        $scope.videoPlayer = new YT.Player $scope.videoPlayerId, {
+          height: '100%'
+          width: '100%'
+          videoId: $scope.settings.videoId
+          playerVars: videoConfig.options
+          events:
+            'onReady': onPlayerReady
+            'onStateChange': onPlayerStateChange
+        }
 
       resizeVideo = ->
         width =  $element.width() + 'px'
@@ -66,22 +71,37 @@ define [
         return $scope.currentSize = 'small'
 
       playVideo = ->
-        $element.find(".videoPlayer").append appendContent()
+        if $scope.videoPlayer
+          $scope.videoPlayer.pauseVideo().seekTo(0).playVideo()
+        else
+          embedVideo()
+        $scope.showVideo = true
         resizeVideo()
         return
 
-      appendContent = ->
-        return "<iframe id='"+$scope.settings.playerId+
-        "' width=\"100%\" height=\"100%\" src="+$scope.settings.src+
-        " allowfullscreen></iframe>"
+      onPlayerReady = (event)->
+        if event and event.target
+          setInterval(updateytplayerInfo, 600)
+          updateytplayerInfo()
+
+      onPlayerStateChange = (event)->
+        if event.data is 1 # playing
+          $scope.showVideo = true unless $scope.showVideo
+        if event.data is 0 # end
+          $scope.showVideo = false
+        $scope.$apply() if !$scope.$root.$$phase?
+
+      updateytplayerInfo = ()->
+        coverOnBeforeEndSeconds = 2
+        if $scope.videoPlayer and $scope.showVideo
+          if $scope.videoPlayer.getDuration() - $scope.videoPlayer.getCurrentTime() < coverOnBeforeEndSeconds
+            $scope.showVideo = false
+            $scope.$apply() if !$scope.$root.$$phase?
 
       $scope.handleClick = ()->
         if $element.width() < videoConfig.sizes.medium
           $scope.$emit('$popupVideo', $scope.settings)
         else
           playVideo()
-          $timeout ()->
-            $scope.videoPlay = true
-          , 500
 
       init()

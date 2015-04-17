@@ -5,10 +5,6 @@ define [
   module.factory 'Helper', ()->
     service = {}
 
-    service.getViewportSize = ()->
-      width : window.innerWidth or document.documentElement.clientWidth or document.body.clientWidth
-      height : window.innerHeight or document.documentElement.clientHeight or document.body.clientHeight
-
     service.colorLuminance = (hex, lum)->
       # validate hex string
       rgb = "#"
@@ -22,6 +18,34 @@ define [
         c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16)
         rgb += ("00"+c).substr(c.length)
       rgb
+
+    service.getViewportSize = ()->
+      width : window.innerWidth or document.documentElement.clientWidth or document.body.clientWidth
+      height : window.innerHeight or document.documentElement.clientHeight or document.body.clientHeight
+
+    service.hex2rgb = (hex)->
+      # Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+      shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
+      hex = hex.replace(shorthandRegex, (m, r, g, b) ->
+        r + r + g + g + b + b
+      )
+      result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+      if result
+        return "rgb("+parseInt(result[1], 16) + "," + parseInt(result[2], 16) + "," + parseInt(result[3], 16)+")"
+      else
+        return null
+
+    service.rbg2hex = (r,g,b)->
+      componentToHex = (c) ->
+        hex = c.toString(16)
+        if hex.length == 1 then '0' + hex else hex
+      return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b)
+
+    service.rgb2rgba = (rgb,alpha)->
+      return null unless rgb
+      alpha = alpha || 1
+      rgba = rgb.replace(/rgb/i, "rgba")
+      return rgba.replace(/\)/i,",#{alpha})")
 
     service.parseUrlString = ()->
       str = window.location.search

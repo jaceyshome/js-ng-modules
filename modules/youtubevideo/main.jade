@@ -1,7 +1,14 @@
 .youtuvideo(data-ng-class="currentSize")
-  div.videoPlayer(data-ng-show="videoPlay")
-  a.animate-fade(tnt-click,data-ng-click="handleClick()", data-ng-hide="videoPlay")
+  div.videoPlayer(id="{{videoPlayerId}}")
+  a(tnt-click, data-ng-click="handleClick()", data-ng-hide="showVideo", data-ng-if="settings.external != true")
     span.sr-only play video
     div.buttonHolder
       span.videoplayer-playbtnicon
+    img.video-bg-overlay.img-responsive.left(src="assets/images/videoplayer_bg_overlay.png")
+    img.video-placeholder-bg.img-responsive.left(src='', data-ng-src="{{settings.thumb}}", alt='{{settings.alt}}')
+  a(data-ng-hide="showVideo", data-ng-href="https://www.youtube.com/watch?v={{settings.videoId}}", target="_blank", data-ng-if="settings.external == true")
+    span.sr-only play video
+    div.buttonHolder
+      span.videoplayer-playbtnicon
+    img.video-bg-overlay.img-responsive.left(src="assets/images/videoplayer_bg_overlay.png")
     img.video-placeholder-bg.img-responsive.left(src='', data-ng-src="{{settings.thumb}}", alt='{{settings.alt}}')

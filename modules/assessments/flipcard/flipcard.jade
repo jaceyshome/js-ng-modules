@@ -1,14 +1,14 @@
-.block-container.module-content-container.assessment(data-topic-marker, id="{{settings.id}}", data-config="{'settings': settings}")
-  div.flipcard(data-ng-if="!settings.completed")
+.block-container.module-content-container.assessment(data-topic-marker, id="{{settings.id}}", data-config="{'settings': settings}",
+data-ng-class="{'showBadge': showBadgePanel()}")
+  div.flipcard(data-ng-class="{'hideQuestion':!showBadgePanel()}")
     .row.assessment-title(data-ng-style="{color:Module.currentModule.color}")
       .col-md-12.text-center
-        span.subtitle quiz {{settings.currentQuestionIndex+1}}
-        h2(data-ng-style="{color:Module.currentModule.color}") {{data.name}}
+        h2(data-ng-style="{color:Module.currentModule.color}", data-ng-bind-html="trustAsHtml(data.name)")
 
-    div(data-ng-repeat="question in data.questions", data-ng-if="question == currentQuestion")
+    div.question-holder(data-ng-repeat="question in data.questions", data-ng-if="question == currentQuestion")
       .row
         .col-md-12
-          p.question-title {{question.title}}
+          p.question-title(data-ng-bind-html="trustAsHtml(question.title)")
       div.row.text-center
         ul.flip-list-container
           li.col-md-3.flip-list(data-ng-repeat="option in question.options",
@@ -31,15 +31,15 @@
                   td
                     span.feedback {{option.back.feedback}}
 
-      .row.assessment-bottom.text-center
-        .col-md-12.text-center.button-holder
-          a.assessment-button-next(tnt-click, data-ng-click="handleNext()",data-ng-show="currentQuestion.completed")
-            span.button-mask-holder
-              span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
-            span.text Next
+    .row.assessment-bottom.text-center
+      .col-md-12.text-center.button-holder
+        a.assessment-button-next(tnt-click, data-ng-click="handleNext()", data-ng-class="{'showing': currentQuestion.completed}")
+          span.button-mask-holder.default
+            span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
+          span.button-mask-holder.activated
+            span.sprite-ui(data-ng-style="{'background-color':Module.currentModule.color}")
+          span.text Next
+      ul.indicator.text-center
+        li(data-ng-repeat="question in data.questions", data-ng-style="Assessment.setIndicatorStyle(settings.currentQuestionIndex, $index)")
 
-        ul.indicator.text-center
-          li(data-ng-repeat="question in data.questions", data-ng-style="Assessment.setIndicatorStyle(settings.currentQuestionIndex, $index)")
-
-
-  div(data-ng-if="settings.completed", data-assessment-badge, data-settings="data.badge")
+    div.assessment-badge-container(data-ng-class="{'showPanel':showBadgePanel()}", data-assessment-badge, data-settings="data.badge")

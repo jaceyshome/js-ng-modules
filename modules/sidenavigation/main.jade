@@ -5,15 +5,14 @@
       span.sprite-ui.ui-close_menu
       span.sprite-ui.ui-close_menu_rollover
     ul.module-list-container
-      li.nav-module-container(data-ng-repeat="moduleKey in data.moduleKeys",
+      li.nav-module-container(data-ng-repeat="moduleKey in data.moduleKeys | filter: '!credits'",
       data-ng-class="setModuleLabelColor(moduleKey)")
         a.module-title(tnt-click, data-ng-click="goTo(moduleKey)"
         data-ng-class="{'current': moduleKey == data.currentModuleKey}") {{data.modules[moduleKey].name}}
           img.badgeImg(data-ng-if="data.modules[moduleKey].badge",
           data-ng-src="{{getModuleBadge(moduleKey)}}",
           alt="badge for {{data.modules[moduleKey].name}}")
-        ul.nav-topics-container.animate-slide(data-ng-show="moduleKey == data.currentModuleKey")
+        ul.nav-topics-container(data-ng-show="moduleKey == data.currentModuleKey")
           li.topic(data-ng-repeat="topic in data.modules[moduleKey].topics")
             a.topic-title(tnt-click, data-ng-click="goToTopic(topic)") {{topic.navName}}
 .sidenavigation-overlay.animate-fade(data-ng-show="showMenu")
-

@@ -1,0 +1,207 @@
+.carousel{
+  position: relative;
+  padding: 0 20px;
+  .carousel-nav-arrow{
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 60px;
+    top: 50%;
+    margin-top: -45px;
+    text-indent: -99em;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    &:hover, &:focus{
+      background-position: 0 -60px;
+    }
+    &.left{
+      left: -15px;
+      background-image: url("@{imageBaseUrl}/carousel-arrow-left.png");
+    }
+    &.right{
+      right: -15px;
+      background-image: url("@{imageBaseUrl}/carousel-arrow-right.png");
+    }
+  }
+  .carousel-indicators{
+    position: relative;
+    padding-left: 0;
+    li{
+      cursor: default;
+      width: 20px;
+      height: 20px;
+      margin: 0 12px 0 0;
+      background-color: white;
+      border-color: @fontDefaultHeaderColor;
+      .transition(0.3s ease-in-out background-color);
+      &.active{
+        background-color: @fontDefaultHeaderColor;
+        border-color: @fontDefaultHeaderColor;
+        width: 20px;
+        height: 20px;
+        margin: 0 12px 0 0;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &>a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .carouselContainer{
+    background-image: url("@{imageBaseUrl}/carousel_bgs.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px 10px;
+  }
+  .carousel-inner{
+    padding-left: 0;
+    
+  }
+  .carousel-slide{
+    //position: relative;
+    margin-top: 0;
+    .text-panel{
+      .transition(0.3s ease-in all);
+      font-size: 0.875em;
+      color: @fontDefaultColor;
+      position: absolute;
+      padding: 6px 45px;
+      padding-bottom: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 110px;
+      max-height: 130px;
+      //background-image: url("@{imageBaseUrl}/60_black_overlay.png");
+      &.open{
+        max-height: 100%;
+      }
+      .carousel-heading{
+        font-family: @fontBodyDefaultBoldItalic;
+        h4{
+          margin-top: 18px;
+        }
+      }
+      .carousel-text-button{
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        margin-left: -22px;
+        overflow: hidden;
+        text-indent: -99em;
+        width: 43px;
+        height: 8px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        &:hover, &:focus{
+          background-position: 0 -8px;
+        }
+      }
+      .short-text{
+        margin-bottom: 17px;
+      }
+      .carousel-open-button{
+        background-image: url("@{imageBaseUrl}/carousle-slide-up.png");
+      }
+      .carousel-close-button{
+        background-image: url("@{imageBaseUrl}/carousle-slide-down.png");
+      }
+    }
+  }
+  /*------------- media queries ----------------*/
+  /*.carousel-max-width-480{
+  }*/
+
+  /*.carousel-tablet-portrait {
+
+  }*/
+
+  .carousel-max-width-1023 {
+    .carousel-slide{
+      .text-panel{
+        &.open{
+          min-height: 100%;
+        }
+      }
+    }
+  }
+
+  /*.carousel-phone-portrait {
+  }
+
+  .carousel-tablet-portrait {
+
+  }*/
+
+  @media only screen and (max-width: 1023px) {
+    .carousel-max-width-1023;
+  }
+
+  /*@media only screen and (max-width: 768px) {
+   .tinycarousel-tablet-portrait;
+  }
+
+  @media only screen and (max-width: 480px) {
+  //    .tinycarousel-max-width-480;
+  }
+
+  @media only screen and (max-width: 400px) {
+  //    .tinycarousel-phone-portrait;
+  }*/
+
+  /* iPad in landscape */
+  /*@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+   
+  }*/
+
+  /*iPad in portrait*/
+  @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait) {
+    .carousel-max-width-1023;
+  }
+
+  // iPhone 5 in landscape
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+    .carousel-max-width-1023;
+  }
+
+  /// iPhone 5 in portrait
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (orientation: portrait) {
+    .carousel-max-width-1023;
+  }
+
+  // iPhone 2G-4S in landscape
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (orientation: landscape) {
+    .carousel-max-width-1023;
+  }
+
+  // iPhone 2G-4S in portrait
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (orientation: portrait) {
+    .carousel-max-width-1023;
+  }
+}
+

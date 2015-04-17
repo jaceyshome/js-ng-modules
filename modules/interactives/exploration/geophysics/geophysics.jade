@@ -1,0 +1,196 @@
+div.geophysics-container.scenario-decision-interactive-container
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    div.text-panel.topContainerFirstElement.animate-left(data-ng-if="screen.id == 0", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.screens[0].text}}
+          .button-container.open
+            a.show-next-button(href="javascript:void(0);", onclick="return false;", data-ng-click="goToMageneticView()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") view magnetic results
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && screen.feedback != true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.screens[1].text}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 0", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[0].magnetic.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.zones[0].magnetic.feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 1", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span {{settings.zones[1].magnetic.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.zones[1].magnetic.feedback}}
+          .button-container.open
+            a.show-next-button(href="javascript:void(0);", onclick="return false;", data-ng-click="goToGravityView()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") view gravity results
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 2", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[2].magnetic.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.zones[2].magnetic.feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 2 && screen.feedback != true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.screens[2].text}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 2 && zone.id == 0 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[2].gravity.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.zones[0].gravity.feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 2 && zone.id == 1 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span {{settings.zones[1].gravity.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this geochemistry interactive")
+            .introduction-text-container
+              p.text-left
+                | {{settings.zones[1].gravity.feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 2 && zone.id == 2 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[2].gravity.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p {{settings.zones[2].gravity.feedback}}
+
+  .row
+    .col-md-12.svg-container-wrapper-container
+      .svg-container-wrapper
+        .svg-container.fade-bg
+          img(data-ng-src="assets/images/interactive_blank_bg.png")
+        .svg-container.animate-fade(data-ng-if="(screen.id == 0) ")
+          div(data-ng-repeat="zone in settings.zones", data-tnt-tooltip, data-tooltip="zone.tooltip")
+          svg.svgMainContainer(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 972 550')
+            g
+              image(overflow="visible", width="972", height="550", xlink:href="assets/images/exploration/interactives/geophysics/earth_background.jpg")
+                title earth image
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[0].hover != true && settings.zones[0].selected != true}")
+              image(data-ng-if="settings.zones[0].hover == false && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc normal image of area 1
+              image(data-ng-if="settings.zones[0].hover == true && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement_hover.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc hover image of area 1
+              image(data-ng-if="settings.zones[0].selected == true", overflow="visible", width="419", height="322", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenemnet_seleted.png", transform="matrix(1 0 0 1 2 159)")
+                desc selected image of area 1
+              //- a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(0)", data-ng-mouseenter="mouseEnter(0)", data-ng-mouseleave="mouseLeave(0)")
+              //-   title Flanagan Tenemnet
+              polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='31.5,188.5 31.5,371.5 226.5,371.5 226.5,454.5 394.5,454.5 394.5,367 356.6,367.5 356,188.5   ')
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[1].hover != true && settings.zones[1].selected != true}")
+              image(data-ng-if="settings.zones[1].hover == false && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement.png", transform="matrix(1 0 0 1 341 59)")
+                desc normal image of area 2
+              image(data-ng-if="settings.zones[1].hover == true && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_hover.png", transform="matrix(1 0 0 1 341 59)")
+                desc hover image of area 2
+              image(data-ng-if="settings.zones[1].selected == true", overflow="visible", width="437", height="447", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_selected.png", transform="matrix(1 0 0 1 315 38)")
+                desc selected image of area 2
+              //- a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(1)", data-ng-mouseenter="mouseEnter(1)", data-ng-mouseleave="mouseLeave(1)")
+              //-   title Hannan Tenemnet
+              polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='598.5,73 598.5,219.5 713.5,219.5 713.5,449.5 469.5,449.5 469.5,368 356.6,367.5 357.3,73.4  ')
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[2].hover != true && settings.zones[2].selected != true}")
+              image(data-ng-if="settings.zones[2].hover == false && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc normal image of area 3
+              image(data-ng-if="settings.zones[2].hover == true && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_hover.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc hover image of area 3
+              image(data-ng-if="settings.zones[2].selected == true", overflow="visible", width="280", height="405", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_seleted.png", transform="matrix(1 0 0 1 686 126)")
+                desc selected image of area 3
+              //- a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(2)", data-ng-mouseenter="mouseEnter(2)", data-ng-mouseleave="mouseLeave(2)")
+              //-   title O’Shea Tenemnet
+              polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='713.5,155.5 713.5,504.5 834.5,504.5 834.5,256 938.5,257.3 938.5,155.5   ')
+
+        .svg-container.animate-fade(data-ng-if="(screen.id == 1)")
+          div(data-ng-repeat="zone in settings.zones", data-tnt-tooltip, data-tooltip="zone.tooltip")
+          svg.svgMainContainer(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 972 550')
+            g
+              image(overflow="visible", width="972", height="550", xlink:href="assets/images/exploration/interactives/geophysics/magnetic_background.jpg")
+                title earth image with magnetic results
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[0].hover != true && settings.zones[0].selected != true}")
+              image(data-ng-if="settings.zones[0].hover == false && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc normal image of area 1
+              image(data-ng-if="settings.zones[0].hover == true && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement_hover.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc hover image of area 1
+              image(data-ng-if="settings.zones[0].selected == true", overflow="visible", width="419", height="322", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenemnet_seleted.png", transform="matrix(1 0 0 1 2 159)")
+                desc selected image of area 1
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(0)", data-ng-mouseenter="mouseEnter(0)", data-ng-mouseleave="mouseLeave(0)")
+                title Flanagan Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='31.5,188.5 31.5,371.5 226.5,371.5 226.5,454.5 394.5,454.5 394.5,367 356.6,367.5 356,188.5   ')
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[1].hover != true && settings.zones[1].selected != true}")
+              image(data-ng-if="settings.zones[1].hover == false && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement.png", transform="matrix(1 0 0 1 341 59)")
+                desc normal image of area 2
+              image(data-ng-if="settings.zones[1].hover == true && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_hover.png", transform="matrix(1 0 0 1 341 59)")
+                desc hover image of area 2
+              image(data-ng-if="settings.zones[1].selected == true", overflow="visible", width="437", height="447", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_selected.png", transform="matrix(1 0 0 1 315 38)")
+                desc selected image of area 2
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(1)", data-ng-mouseenter="mouseEnter(1)", data-ng-mouseleave="mouseLeave(1)")
+                title Hannan Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='598.5,73 598.5,219.5 713.5,219.5 713.5,449.5 469.5,449.5 469.5,368 356.6,367.5 357.3,73.4  ')
+            g(data-ng-class="{animate: screen.id != 0 && settings.zones[2].hover != true && settings.zones[2].selected != true}")
+              image(data-ng-if="settings.zones[2].hover == false && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc normal image of area 3
+              image(data-ng-if="settings.zones[2].hover == true && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_hover.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc hover image of area 3
+              image(data-ng-if="settings.zones[2].selected == true", overflow="visible", width="280", height="405", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_seleted.png", transform="matrix(1 0 0 1 686 126)")
+                desc selected image of area 3
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(2)", data-ng-mouseenter="mouseEnter(2)", data-ng-mouseleave="mouseLeave(2)")
+                title O’Shea Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='713.5,155.5 713.5,504.5 834.5,504.5 834.5,256 938.5,257.3 938.5,155.5   ')
+
+        .svg-container.animate-fade(data-ng-if="screen.id == 2")
+          div(data-ng-repeat="zone in settings.zones", data-tnt-tooltip, data-tooltip="zone.tooltip")
+          svg.svgMainContainer(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 972 550')
+            g
+              image(overflow="visible", width="972", height="550", xlink:href="assets/images/exploration/interactives/geophysics/gravity_background.jpg")
+                title earth image with gravity results
+            g(data-ng-class="{animate: screen.id != 0 && screen.disabled != true && settings.zones[0].hover != true && settings.zones[0].selected != true}")
+              image(data-ng-if="settings.zones[0].hover == false && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc normal image of area 1
+              image(data-ng-if="settings.zones[0].hover == true && settings.zones[0].selected != true", overflow="visible", width="394", height="297", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenement_hover.png", transform="matrix(1 0 0 1 13.5466 174.5404)")
+                desc hover image of area 1
+              image(data-ng-if="settings.zones[0].selected == true", overflow="visible", width="419", height="322", xlink:href="assets/images/exploration/interactives/geophysics/flanagan_tenemnet_seleted.png", transform="matrix(1 0 0 1 2 159)")
+                desc selected image of area 1
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(0)", data-ng-mouseenter="mouseEnter(0)", data-ng-mouseleave="mouseLeave(0)", data-ng-class="{disabled: screen.disabled}")
+                title Flanagan Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='31.5,188.5 31.5,371.5 226.5,371.5 226.5,454.5 394.5,454.5 394.5,367 356.6,367.5 356,188.5   ')
+            g(data-ng-class="{animate: screen.id != 0 && screen.disabled != true && settings.zones[1].hover != true && settings.zones[1].selected != true, disabled: screen.disabled == true}")
+              image(data-ng-if="settings.zones[1].hover == false && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement.png", transform="matrix(1 0 0 1 341 59)")
+                desc normal image of area 2
+              image(data-ng-if="settings.zones[1].hover == true && settings.zones[1].selected != true", overflow="visible", width="391", height="406", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_hover.png", transform="matrix(1 0 0 1 341 59)")
+                desc hover image of area 2
+              image(data-ng-if="settings.zones[1].selected == true", overflow="visible", width="437", height="447", xlink:href="assets/images/exploration/interactives/geophysics/hannan_tenement_selected.png", transform="matrix(1 0 0 1 315 38)")
+                desc selected image of area 2
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(1)", data-ng-mouseenter="mouseEnter(1)", data-ng-mouseleave="mouseLeave(1)", data-ng-class="{disabled: screen.disabled}")
+                title Hannan Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='598.5,73 598.5,219.5 713.5,219.5 713.5,449.5 469.5,449.5 469.5,368 356.6,367.5 357.3,73.4  ')
+            g(data-ng-class="{animate: screen.id != 0 && screen.disabled != true && settings.zones[2].hover != true && settings.zones[2].selected != true}")
+              image(data-ng-if="settings.zones[2].hover == false && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc normal image of area 3
+              image(data-ng-if="settings.zones[2].hover == true && settings.zones[2].selected != true", overflow="visible", width="255", height="381", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_hover.png", transform="matrix(1 0 0 1 698.4597 140.4845)")
+                desc hover image of area 3
+              image(data-ng-if="settings.zones[2].selected == true", overflow="visible", width="280", height="405", xlink:href="assets/images/exploration/interactives/geophysics/oshea_tenement_seleted.png", transform="matrix(1 0 0 1 686 126)")
+                desc selected image of area 3
+              a.area-button(xlink:href="http://www.w3.org", href="javascript:void(0);", onclick="return false;", data-ng-click="select(2)", data-ng-mouseenter="mouseEnter(2)", data-ng-mouseleave="mouseLeave(2)", data-ng-class="{disabled: screen.disabled}")
+                title O’Shea Tenement
+                polygon(fill='#FFFFFF', fill-opacity="0", stroke='#FFFFFF', stroke-opacity="0", stroke-width="3", stroke-miterlimit='10', points='713.5,155.5 713.5,504.5 834.5,504.5 834.5,256 938.5,257.3 938.5,155.5   ')
+
+  .row.reset-button-container.animate-fade(data-ng-if="screen.id == 2 && zone.id == 1 && screen.feedback == true")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET

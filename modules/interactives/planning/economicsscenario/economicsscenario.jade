@@ -1,0 +1,133 @@
+.planning-economics-scenario-container.scenario-decision-interactive-container
+
+  .top-interactive-container(data-ng-style="updateTopInteractiveContainerMinHeight()")
+    //- start text
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="currentStepIndex == 0",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}"
+    )
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.steps[0].text}}
+          .button-container.open
+            a.show-next-button.two-lines(data-tnt-click, data-ng-click="nextStep(1)",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}")
+              span view projected
+              span market prices
+
+    //- step 2 question text
+    .text-panel.animate-left(data-ng-if="currentStepIndex == 1 && !selectedOption", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.steps[1].question}}
+
+    //- step 2 correct feedback
+    .text-panel.animate-left(data-ng-if="selectedOption == settings.steps[1].options[0]", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span correct
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{settings.steps[1].options[0].feedback}}
+
+    //- step 2 incorrect feedback
+    .text-panel.animate-left(data-ng-if="selectedOption == settings.steps[1].options[1]", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span incorrect
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.steps[1].options[1].feedback}}
+
+    //- step 2 options
+    .option-buttons-container.animate-fade(data-ng-if="currentStepIndex == 1 && !settings.completed",
+    data-ng-style="getOptionButtonsContainerStyle()")
+      .row
+        .col-md-12
+          .button-container.open
+            a.show-next-button.left(data-tnt-click, data-ng-click="selectOption(settings.steps[1].options[0])",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") {{settings.steps[1].options[0].btnText}}
+            a.show-next-button.right(data-tnt-click, data-ng-click="selectOption(settings.steps[1].options[1])",
+            data-ng-class="setIncorrectButtonClass(settings.steps[1].options[1])",
+            data-ng-style="setIncorrectButtonStyle(settings.steps[1].options[1])") {{settings.steps[1].options[1].btnText}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.show
+            img(data-ng-src="assets/images/planning/interactives/economics/bg.png")
+
+          .chart.profit-zone-shape-container.animate-fade(data-ng-if="selectedOption == settings.steps[1].options[1]",
+          data-anim-in-delay="600", data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img.profit-zone-shape(data-ng-src="assets/images/planning/scenarios/economics/profit_zone_shape.png", alt="image for profit zone")
+
+          .chart.profit-zone-shape-container.animate-fade(data-ng-if="selectedOption == settings.steps[1].options[0]",
+          data-anim-in-delay="600", data-anim-easing="easeOutCubic", data-anim-duration="600")
+            .correct-option-feedback
+              img.overlay-image(data-ng-src="assets/images/planning/scenarios/economics/profit_zone_shape.png", alt="overlay image")
+
+          .chart
+            img(data-ng-src="assets/images/planning/scenarios/economics/curve_bg.png")
+
+          .chart.step2-indicators-group-container.animate-fade(data-ng-if="currentStepIndex == 1 && !settings.completed",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            .indicators-holder
+              img(data-ng-src="assets/images/planning/scenarios/economics/step2_indicator_grp.png")
+
+          .chart.step2-indicator-container.animate-fade(data-ng-if="currentStepIndex == 1 && settings.completed",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(data-ng-src="assets/images/planning/scenarios/economics/step2_indicator.png")
+
+          .chart.tooltips-container
+            //-  step0 tooltips
+            div.animate-fade(data-ng-if="currentStepIndex == 0",
+            data-anim-easing="easeOutCubic", data-anim-duration="600")
+              .step0-tooltip.st1.thtTooltip.overlay-tooltip.left.animate-fade
+                .tipContentBorder
+                  .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[0].text)")
+              .step0-tooltip.st2.thtTooltip.overlay-tooltip.left
+                .tipContentBorder
+                  .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[1].text)")
+
+            //- step 1 tooltips
+            div.animate-fade(data-ng-if="currentStepIndex == 1 && !settings.completed",
+            data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="2100")
+              .step1-tooltip.st1.thtTooltip.tooltipboxshadow
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[2].text)")
+              .step1-tooltip.st2.thtTooltip.overlay-tooltip.left
+                .tipContentBorder
+                  .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[3].text)")
+              .step1-tooltip.st3.thtTooltip.tooltipboxshadow
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[4].text)")
+
+            //- step 1 correct result tooltips
+            div.animate-fade(data-ng-if="currentStepIndex == 1 && settings.completed",
+            data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600")
+              .step2-tooltip.st1.thtTooltip.overlay-tooltip.left
+                .tipContentBorder
+                  .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[2].text)")
+              .step2-tooltip.st2.thtTooltip.tooltipboxshadow
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[5].text)")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

@@ -1,0 +1,172 @@
+.planning-impact-scenario-container{
+  @animateDuration: 600ms;
+  @step1MarginLeft: 62.8%;
+  @backgroundColor: #eae7da;
+  img{
+    width: 100%;
+  }
+
+  .chart-container{
+    .chart{
+      &.c0{
+        background-color: @backgroundColor;
+      }
+      &.representatives-container{
+        .representative-holder{
+          position: relative;
+          display: inline-block;
+          margin: 5.5% 1.5% 5% 1.5%;
+          width: 21%;
+          .representative-button{
+            .transition();
+            .setContainerOuterShadow(1px, 2px, 2px, rgba(103, 94, 72, 0.19));
+            position: relative;
+            display: block;
+            background-color: #fffef4;
+            border: 2px solid #fffef4;
+            .rounded(6px);
+            margin: 0;
+            padding: 14.68% 11% 4.8% 11%;
+            width: 100%;
+            height: 100%;
+            .representative-images-container{
+              position: relative;
+            }
+            .representative-overlay{
+              .opacity(0);
+            }
+            .representative-avatar{
+              position: absolute;
+              top:0;
+              left:0;
+            }
+            .hover-cover{
+              display: block;
+              z-index: 20;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              .rounded(8px);
+              width: 100%;
+              height: 100%;
+              .transition();
+              .opacity(0);
+              &.inner{
+                .setContainerInnerShadow(0, 0, 15px, rgba(255, 255, 255, 1));
+              }
+              &.outer{
+                margin: auto;
+                margin-left: -2%;
+                margin-top: -2%;
+                width: 104%;
+                height: 104%;
+                text-align: center;
+                border: 1px solid rgba(255,255,255,1);
+                .setContainerOuterShadow(0, 0, 35px, rgba(255, 255, 255, 2));
+              }
+            }
+            &.completed{
+              .setContainerOuterShadow(4px, 7px, 16.56px, rgba(103, 94, 72, 0.4));
+              &.unSelected{
+                .setContainerOuterShadow(1px, 2px, 2px, rgba(103, 94, 72, 0));
+              }
+              &:focus, &:hover{
+                .transition();
+                .setContainerOuterShadow(0, 0, 45px, rgba(255, 255, 255, 1));
+              }
+            }
+            &:focus, &:hover{
+              .transition();
+              .setContainerOuterShadow(0, 0, 40px, rgba(255, 255, 255, 1));
+              .hover-cover{
+                .transition();
+                .opacity(1);
+              }
+            }
+          }
+        }
+      }
+      &.progress-bar-container, &.progress-bar-indicator{
+        .transition(800ms ease-in-out);
+        left: 0;
+        margin-top:0;
+        &.moveUpContainer{
+          margin-top: -7%;
+        }
+      }
+      &.progress-bar-indicator{
+        left: 0;
+        margin-left: 46%;
+      }
+      &.summary-indicator-circle-container{
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background-color: #e4e1d3;
+        margin: 0;
+        padding: 14% 14% 7% 51%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .circle{
+          background-color: @backgroundColor;
+          margin:auto;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          @scaleFrom: 5;
+          @scaleTo: 1;
+          .rounded(50%);
+          .transform(scale(@scaleFrom, @scaleFrom));
+          @animationDelay: 1400ms;
+          -webkit-animation: circleSpreadOut @animateDuration ease-out @animationDelay forwards;
+          animation: circleSpreadOut @animateDuration ease-out @animationDelay forwards;
+          @-webkit-keyframes circleSpreadOut {
+            0%   {.transform(scale(@scaleFrom, @scaleFrom));}
+            100% {.transform(scale(@scaleTo, @scaleTo));}
+          }
+          @keyframes circleSpreadOut {
+            0%   {.transform(scale(@scaleFrom, @scaleFrom));}
+            100% {.transform(scale(@scaleTo, @scaleTo));}
+          }
+        }
+      }
+    }
+  }
+
+  //------------- responsive style --------------------
+  .planning-impact-scenario-tablet-landscape{
+
+  }
+
+  .planning-impact-scenario-tablet-portrait{
+
+  }
+
+  @media only screen and (max-height: 800px){
+    .planning-impact-scenario-tablet-portrait;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .planning-impact-scenario-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .planning-impact-scenario-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .planning-impact-scenario-tablet-portrait;
+  }
+}

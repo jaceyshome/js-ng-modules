@@ -1,0 +1,175 @@
+.scenario-decision-interactive-container.closure-economics-scenario-container
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="screen.id == 0", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.screens[0].text}}
+          .button-container.open
+            a.show-next-button.two-lines(data-tnt-click, data-ng-click="goToScreen(1)", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}")
+              span Review FIFO
+              span workforce option
+
+    .text-panel.animate-left(data-ng-if="screen.id == 1", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.screens[1].text}}
+          .button-container.open
+            a.show-next-button.two-lines(data-tnt-click, data-ng-click="goToScreen(2)", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}")
+              span Review Residential
+              span workforce option
+
+    .text-panel.animate-left(data-ng-if="screen.id == 2", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.screens[2].text}}
+          .button-container.open
+            a.show-next-button(data-tnt-click, data-ng-click="goToScreen(3)", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") Make your decision
+    .text-panel.animate-left(data-ng-if="screen.id == 3", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.screens[3].text}}
+
+    //- Correct option and feedback
+    .text-panel.animate-left(data-ng-if="currentOption.id == 0", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span {{settings.options[0].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{settings.options[0].feedback}}
+
+    //- incorrect option and feedback
+    .text-panel.animate-left(data-ng-if="currentOption.id == 1", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.options[1].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.options[1].feedback}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.animate-fade
+            img(src="assets/images/interactive_blank_bg.png", alt="background image")
+          .chart.animate-fade(data-ng-if="screen.id == 0")
+            img(src="assets/images/planning/scenarios/workforce/screen0.jpg", alt="a truck")
+          .chart.fifo.animate-fade(data-ng-if="screen.id == 1")
+            img(src="assets/images/planning/scenarios/infrastructure/bg_texture.jpg", alt="background texture image")
+            .text-overlay.overlay
+              h3.text-heading {{settings.screens[1].heading}}
+              ul.impacts-content-container
+                li.impact-container.worker
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/fifo_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[0].workerImpacts")
+                      p {{impact.text}}
+                li.impact-container.load
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/load_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[0].loadImpacts")
+                      p {{impact.text}}
+                li.impact-container.money
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/money_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[0].moneyImpacts")
+                      p {{impact.text}}
+                li.impact-container.social
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/social_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[0].socialImpacts")
+                      p {{impact.text}}
+          .chart.local.animate-fade(data-ng-if="screen.id == 2")
+            img(src="assets/images/planning/scenarios/infrastructure/bg_texture.jpg", alt="background texture image")
+            .text-overlay.overlay
+              h3.text-heading {{settings.screens[2].heading}}
+              ul.impacts-content-container
+                li.impact-container.worker
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/local_worker_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[1].workerImpacts")
+                      p {{impact.text}}
+                li.impact-container.load
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/load_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[1].loadImpacts")
+                      p {{impact.text}}
+                li.impact-container.money
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/money_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[1].moneyImpacts")
+                      p {{impact.text}}
+                li.impact-container.social
+                  img.impact-logo(src="assets/images/planning/scenarios/workforce/social_icon.png", alt="image icon for the impact")
+                  img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                  ul.overlay
+                    li(data-ng-repeat="impact in settings.options[1].socialImpacts")
+                      p {{impact.text}}
+          .chart.introduction-container.select-two-image-container.animate-fade(data-ng-if="screen.id == 3 || settings.options[0].selected == true || settings.options[1].selected == true")
+            .introduction-image-holder.left
+              div.hover-container.image-button-hover-shadow
+                p.option-heading(data-ng-if="settings.options[1].selected != true") {{settings.options[1].name}}
+                img(src="assets/images/planning/scenarios/workforce/local.jpg", alt="image for local workforce")
+                div.hover-cover.inner(data-ng-if="settings.options[1].selected != true")
+                a.hover-cover.outer(data-ng-if="settings.options[1].selected != true", tnt-click,data-ng-click="selectOption(settings.options[1])")
+                div.animate-fade.text-overlay.overlay.half-container(data-ng-if="settings.options[1].selected == true")
+                  p.option-heading.incorrect {{settings.options[1].name}}
+                  ul.impacts-content-container
+                    li.impact-container.worker
+                      img.impact-logo(src="assets/images/planning/scenarios/workforce/local_worker_icon_feedback.png", alt="image icon for the impact")
+                      img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                      ul.overlay
+                        li(data-ng-repeat="impact in settings.options[1].feedbackWorkerImpacts")
+                          p {{impact.text}}
+                    li.impact-container.load
+                      img.impact-logo(src="assets/images/planning/scenarios/workforce/local_load_icon_feedback.png", alt="image icon for the impact")
+                      img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                      ul.overlay
+                        li(data-ng-repeat="impact in settings.options[1].feedbackLoadImpacts")
+                          p {{impact.text}}
+                  
+            .introduction-image-holder.right
+              div.hover-container.image-button-hover-shadow
+                p.option-heading(data-ng-if="settings.options[0].selected != true") {{settings.options[0].name}}
+                img(src="assets/images/planning/scenarios/workforce/fifo.jpg", alt="image for FIFO workforce")
+                div.hover-cover.inner(data-ng-if="settings.options[0].selected != true")
+                a.hover-cover.outer(data-ng-if="settings.options[0].selected != true", tnt-click,data-ng-click="selectOption(settings.options[0])")
+                div.animate-fade.text-overlay.overlay.half-container(data-ng-if="settings.options[0].selected == true")
+                  p.option-heading.correct {{settings.options[0].name}}
+                  ul.impacts-content-container
+                    li.impact-container.worker
+                      img.impact-logo(src="assets/images/planning/scenarios/workforce/fifo_icon_correct.png", alt="image icon for the impact")
+                      img.impact-bg(src="assets/images/planning/scenarios/workforce/impact_bg.png", alt="background image for each impact")
+                      ul.overlay
+                        li(data-ng-repeat="impact in settings.options[0].workerImpacts")
+                          p {{impact.text}}
+
+
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed && settings.options[0].selected == true")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

@@ -1,0 +1,274 @@
+.geochemistry-interactive-container{
+  @rangeButtonColor: #e6e5e1;
+  @rightColumnBgColor: #f3f2ee;
+  display: block;
+  padding-bottom: 80px;
+  .text-panel{
+    text-align: center;
+  }
+  .canvas-container{
+    display: table;
+    width: 100%;
+    background-color: @rightColumnBgColor;
+    .drop-shadow(0, 0, 20px, 0.5);
+    border: 4px solid @rangeButtonColor;
+    margin-top: @containerInnerSpace;
+    .column{
+      display: table-cell;
+    }
+    .right-column{
+      width: 34.57%;
+      vertical-align: middle;
+      font-family: @fontBodyDefaultBold;
+      font-size: 0.875em;
+      .top{
+        color: @fontDefaultHeaderColor;
+        text-align: center;
+        margin-bottom: 2.5%;
+        margin-top: 0;
+      }
+
+    }
+    .overlay{
+      position: absolute;
+      z-index: 2;
+    }
+    .range-list{
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 10%;
+      .range{
+        margin: 0;
+        .selected-mark{
+          display: inline-block;
+          vertical-align: middle;
+          width: 19px;
+          height: 15px;
+          text-indent: -99em;
+          overflow: hidden;
+          margin: 5px 0 5px 14px;
+          background-image: none;
+        }
+        &.selected{
+          .range-button{
+            background-color: @colorPageDefault;
+            .box-shadow(none);
+          }
+          .selected-mark{
+            background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/selected_tick.png");
+          }
+        }
+        &.first{
+          margin-bottom: 3%;
+          position: relative;
+          .thtTooltip{
+            right: 90%;
+            .tipContentBorder{
+              &:after{
+                top: 36%;
+              }
+            }
+          }
+          .range-button{
+            &:before{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-0-5.png");
+            }
+          }
+        }
+        &.second{
+          margin-bottom: 3%;
+          .range-button{
+            &:before{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-5-10.png");
+            }
+          }
+        }
+        &.third{
+          margin-bottom: 4%;
+          .range-button{
+            &:before{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-10-20.png");
+            }
+          }
+        }
+        &.forth{
+          margin-bottom: 4%;
+          .range-button{
+            &:before{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-20-50.png");
+            }
+          }
+        }
+        &.fifth{
+          margin-bottom: 5%;
+          .range-button{
+            &:before{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-50-100.png");
+            }
+          }
+        }
+        &.sixth{
+          margin-bottom: 0;
+          .range-button{
+            &:before{
+              width: 20%;
+              height: 68%;
+              left: 4%;
+              top: 20%;
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/dot-range-100-300.png");
+            }
+          }
+        }
+      }
+    }
+    .range-button{
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      text-align: right;
+      background-color: @rangeButtonColor;
+      color: @font2ndColor;
+      padding: 4.9% 12px;
+      width: 54%;
+      .drop-shadow(3px, 3px, 1px, 0.3);
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 6%;
+        width: 16%;
+        height: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .svg-container{
+      position: relative;
+      .box-shadow(none);
+      .overlay{
+        width: 100%;
+        height: 100%;
+      }
+      .thtTooltip{
+        &.overlay-tooltip{
+          left: 58.5%;
+          top: 26%;
+          z-index: 30;
+          margin-left: -122px;
+          margin-top: -56px;
+          .tipContentBorder{
+            &:after{
+              left: 50%;
+              border-right: 16px solid transparent;
+              border-left: 14px solid transparent;
+            }
+          }
+          .tipContent{
+            display: inline-block;
+            &:after{
+              left: 50%;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+      .geochemistry-svg-container{
+        position: relative;
+        .placeholder-image{
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+        .geochemistry-svg-holder{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      svg{
+        background-color: @colorPageDefault;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  //------------- responsive style --------------------
+  .geochemistry-interactive-tablet-landscape{
+    .canvas-container{
+      .range-button{
+        width: 57%;
+      }
+      .svg-container{
+        .thtTooltip{
+          &.overlay-tooltip{
+            left: 60%;
+          }
+        }
+
+      }
+    }
+  }
+  .geochemistry-interactive-tablet-portrait{
+    .canvas-container{
+      .range-button{
+        width: 60%;
+      }
+      .range-list{
+        .range{
+          &.first{
+            .thtTooltip{
+              right: 95%;
+            }
+          }
+          &.sixth{
+            .range-button{
+              &:before{
+                width: 18%;
+                left: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .geochemistry-interactive-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .geochemistry-interactive-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 900px){
+    .geochemistry-interactive-tablet-portrait;
+  }
+
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .geochemistry-interactive-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .geochemistry-interactive-tablet-landscape;
+    .geochemistry-interactive-tablet-portrait;
+  }
+}

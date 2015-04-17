@@ -1,0 +1,8 @@
+.youtuvideo.video-image-button(data-ng-class="currentSize")
+  a.animate-fade(data-ng-href="{{settings.link || 'javascript: void;'}}", target="_blank", title="{{settings.linkTitle}}")
+    span.sr-only play video
+    div.buttonHolder
+      span.videoplayer-playbtnicon
+    img.video-bg-overlay.img-responsive.left(src="assets/images/videoplayer_bg_overlay.png")
+    img.video-placeholder-bg.img-responsive.left(src='', data-ng-src="{{settings.thumb}}", alt='{{settings.alt}}')
+

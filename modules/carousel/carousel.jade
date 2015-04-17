@@ -1,0 +1,31 @@
+.carousel
+  a.carousel-nav-arrow.left(href="javascript:void(0)", onclick="return false;", data-ng-click="goToPreviousSlide()", title="previous slide", data-ng-show="showPreviousButton()")
+    span back
+  .carouselContainer.slide
+    ul.viewportList.carousel-inner
+      li.carousel-slide.item(data-ng-repeat="slide in slides", data-ng-class="{active: slide.active == true, left: slide.left == true, right: slide.right == true, prev: slide.prev == true, next: slide.next == true}")
+        .image-panel
+          img(src="", data-ng-src="{{slide.imgSrc}}", alt="image")
+        .text-panel(data-ng-mouseenter="showMore(slide, $index)", data-ng-mouseleave="hideMore(slide, $index)", data-ng-class="{open: slide.showMore == true, autoHeight: slide.autoHeight == true}")
+          div.carousel-heading(data-ng-bind-html="findSlideHeading(slide)", data-ng-if="slide.heading")
+          div(data-ng-show="slide.showMore != true")
+            a.carousel-text-button.carousel-open-button(href="javascript:void(0)", onclick="return false;", data-ng-click="showMore(slide, $index)") show more of the text
+            p.short-text
+              span {{slide.shortText}}
+              //- span(data-ng-if="slide.shortText.length < 180 || slide.imageSourceFrom") ...
+            //- p(data-ng-if="slide.imageSourceFrom && slide.shortText.length < 150 && slide.paragraphs.length == 1") {{slide.imageSourceFrom}}
+          .long-text(data-ng-show="slide.showMore == true")
+            p(data-ng-repeat="paragraph in slide.paragraphs") {{paragraph.text}}
+            p(data-ng-if="slide.imageSourceFrom", data-ng-bind-html="bindHtmlSoruce(slide.imageSourceFrom)")
+            a.carousel-text-button.carousel-close-button(href="javascript:void(0)", onclick="return false;", data-ng-click="hideMore(slide, $index)") show less of the text
+    ol.carousel-indicators
+      li(data-slide-to="0", class="active")
+        //- FIXME Jake: This is a hack for the init first spot
+        a(href="javascript:void(0)", onclick="return false;", data-ng-click="goToSlide(0)")
+          span.sr-only go to slide {{slides[0].id + 1}}
+      li(data-ng-repeat="slide in slides", data-slide-to="{{$index}}", data-ng-if="$index!=0")
+        a(href="javascript:void(0)", onclick="return false;", data-ng-click="goToSlide($index)")
+            span.sr-only go to slide {{slide.id + 1}}
+
+  a.carousel-nav-arrow.right(href="javascript:void(0)", onclick="return false;", data-ng-click="goToNextSlide($event)", title="next slide", data-ng-show="showNextButton()")
+    span next

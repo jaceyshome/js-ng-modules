@@ -1,0 +1,209 @@
+.scenario-decision-interactive-container.operation-geotechnical-decision-container
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    //- ---------------------- introduction --------------------------
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="currentStepIndex == STEPINDEX.start", data-anim-easing="easeOutCubic",
+    data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.steps[0].text}}
+          .button-container.open
+            a.show-next-button(data-tnt-click, data-ng-click="goToNextStep(STEPINDEX.question1)",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") {{settings.steps[0].buttonText}}
+
+    //- ------------------------- current question text--------------------------
+    .text-panel.animate-left(data-ng-if="currentQuestion && !currentQuestion.selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            .icon-profile-container
+              span.sprite-ui.ui-icon_profile_chief
+            .profile-text-container
+              p.text-left {{currentQuestion.text}}
+
+    //- ------------------------ current question feedback ------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in currentQuestion.options",
+    data-ng-if="option == currentQuestion.selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{option.feedback}}
+          .button-container.open(data-ng-if="option.correct")
+            a.show-next-button(data-tnt-click, data-ng-click="goToNextStep()",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") {{currentQuestion.buttonNext}}
+
+    //- ------------------------ current question buttons container --------------------------
+    .option-buttons-container.animate-fade(data-ng-style="getOptionButtonsContainerStyle()",
+    data-ng-if="currentStepIndex > STEPINDEX.start && currentQuestion && !currentQuestion.completed",
+    data-anim-easing="easeOutCubic", data-anim-in-delay="2200")
+      .row
+        .col-md-12
+          .button-container.open
+            a.show-next-button.left(data-tnt-click, data-ng-click="selectOption(currentQuestion.options[0])",
+            data-ng-class="setQuestionOptionBtnClass(currentQuestion.options[0])",
+            data-ng-style="setQuestionOptionBtnStyle(currentQuestion.options[0])") {{currentQuestion.options[0].btnText}}
+            a.show-next-button.right(data-tnt-click, data-ng-click="selectOption(currentQuestion.options[1])",
+            data-ng-class="setQuestionOptionBtnClass(currentQuestion.options[1])",
+            data-ng-style="setQuestionOptionBtnStyle(currentQuestion.options[1])") {{currentQuestion.options[1].btnText}}
+
+    //- -------------------------------- summary text -------------------------------------------
+    .text-panel.animate-left(data-ng-if="currentStepIndex == STEPINDEX.summary",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left(data-ng-style="{'margin-bottom':'10px'}") {{settings.steps[3].text}}
+
+  //- ----------------------------------------- image containers --------------------------------------------------
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container(data-ng-class="setChartContainerStepClass()")
+          //- fixed frame
+          .chart.c0.invisible
+            img(src="assets/images/interactive_blank_bg.png", alt="invisible image")
+
+          //- ============================= bg layers ============================
+          .chart.geotechnical-chart
+            img(src="assets/images/operation/scenarios/geotechnical/bg/bg.jpg")
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex > STEPINDEX.start",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1500")
+            img(src="assets/images/operation/scenarios/geotechnical/bg/bg_lighter.jpg")
+
+          //- ------------------------------- grey dirty zone ------------------------
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex > STEPINDEX.start",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1500")
+            img(src="assets/images/operation/scenarios/geotechnical/bg/bg_grey_dirty_zone.png")
+
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex > STEPINDEX.start",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1800")
+            img(src="assets/images/operation/scenarios/geotechnical/bg/bg_grey_dirty_zone_label.png")
+
+
+          //- -------------------------------- red zone ----------------------------------
+          .chart.geotechnical-chart
+            img(src="assets/images/operation/scenarios/geotechnical/bg/top_red_zone.png")
+
+
+          //- ========================== fg layers ==============================
+
+          //- ------------------------ south side ---------------------------
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question1 && !currentQuestion.completed",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1200")
+            img(src="assets/images/operation/scenarios/geotechnical/fg/fg_south_steep.png")
+
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex >= STEPINDEX.question1",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="900")
+            img(src="assets/images/operation/scenarios/geotechnical/fg/fg_south_shallow.png")
+
+
+          //- ----------------------- south side answers ----------------------
+          .chart.geotechnical-chart.animate-fade(
+          data-ng-if="isQuestionOptionVisibile(STEPINDEX.question1)",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/operation/scenarios/geotechnical/questions/left_shallow_incorrect.png")
+
+          .chart.geotechnical-chart.animate-fade(
+          data-ng-if="isQuestionOptionVisibile(STEPINDEX.question1, true)",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/operation/scenarios/geotechnical/questions/left_correct_steep_slope.png")
+
+
+          //- ----------------------- north side --------------------------------
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question2 && !currentQuestion.completed",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1500")
+            img(src="assets/images/operation/scenarios/geotechnical/fg/fg_north_steep.png")
+
+          .chart.geotechnical-chart.animate-fade(data-ng-if="currentStepIndex >= STEPINDEX.question2",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1200")
+            img(src="assets/images/operation/scenarios/geotechnical/fg/fg_north_shallow.png")
+
+
+          //- ---------------------------- north side answers ------------------------
+          .chart.geotechnical-chart.animate-fade(
+          data-ng-if="isQuestionOptionVisibile(STEPINDEX.question2)",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/operation/scenarios/geotechnical/questions/right_incorrect_steep_slope.png")
+
+          .chart.geotechnical-chart.animate-fade(
+          data-ng-if="isQuestionOptionVisibile(STEPINDEX.question2, true)",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/operation/scenarios/geotechnical/questions/right_correct_shallow_slope.png")
+
+
+          //- ------------------------------- fixed labels ---------------------------------
+          .chart
+            img(src="assets/images/operation/scenarios/geotechnical/fg/fixed_labels_layer.png")
+
+
+          //- =================================== summary page ==========================================
+          .chart.summary-cover-image.animate-fade(data-ng-if="settings.completed", data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/operation/scenarios/geotechnical/summary.jpg")
+
+          //- ================================== tooltips layers =========================================
+
+          //-  question 1 tooltip
+          .chart.tooltips-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question1 && !currentQuestion.selectedOption",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="2200")
+            .question1-tooltip.tt1.thtTooltip.overlay-tooltip.bottom.animate-fade
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[1].question.tooltips[0])")
+            .question1-tooltip.tt2.thtTooltip.overlay-tooltip.bottom
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[1].question.tooltips[1])")
+
+          //- question 1 incorrect option tooltip
+          .chart.tooltips-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question1 && currentQuestion.selectedOption && !currentQuestion.selectedOption.correct",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="300")
+            .question1-tooltip.tt3.thtTooltip.overlay-tooltip.bottom
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[1].question.incorrectOptionTooltip)")
+
+          //- question 2 tooltip
+          .chart.tooltips-container.question2-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question2 && !currentQuestion.selectedOption",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="2200")
+            .question2-tooltip.tt1.thtTooltip.overlay-tooltip.bottom.animate-fade
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[2].question.tooltips[0])")
+            .question2-tooltip.tt2.thtTooltip.overlay-tooltip.bottom
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[2].question.tooltips[1])")
+
+          //- question 2 incorrect option tooltip
+          .chart.tooltips-container.question2-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.question2 && currentQuestion.selectedOption &&!currentQuestion.selectedOption.correct",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="300")
+            .question2-tooltip.tt3.thtTooltip.overlay-tooltip.bottom
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[2].question.incorrectOptionTooltip)")
+
+          //- summary tooltip
+          .chart.tooltips-container.summary-tooltip1-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600")
+            .summary-tooltip.thtTooltip.overlay-tooltip.bottom.animate-fade
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[3].tooltips[0])")
+          .chart.tooltips-container.summary-tooltip2-container.animate-fade(data-ng-if="currentStepIndex == STEPINDEX.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600")
+            .summary-tooltip.thtTooltip.overlay-tooltip.bottom
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.steps[3].tooltips[1])")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

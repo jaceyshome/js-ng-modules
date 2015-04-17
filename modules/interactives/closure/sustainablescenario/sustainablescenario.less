@@ -1,0 +1,160 @@
+.closure-sustainable-decision-container{
+  @animationDuration: 800ms;
+  .top-interactive-container{
+    .text-panel{
+      z-index: 10;
+    }
+  }
+
+  .option-buttons-container{
+    position: absolute;
+    z-index: 20;
+    margin: auto;
+    width: 100%;
+    .transition(padding-top 400ms ease-in-out);
+    .button-container{
+      .show-next-button{
+        margin-bottom: 0;
+        &:first-child{
+          margin-right: 2%;
+        }
+        &:last-child{
+          margin-left:  2%;
+        }
+      }
+    }
+  }
+
+  .option-button-container{
+    .show-next-button{
+      margin-right: 1%;
+      margin-left: 1%;
+    }
+  }
+
+  svg{
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg-container-wrapper-container{
+    .svg-container-wrapper{
+      .image-container{
+        //==================== main body  =======================
+        .chart-container{
+          overflow: hidden;
+          .bg-world-map-container{
+            .opacity(1);
+            top: 0;
+            left: 0;
+            img{
+              width: 103%;
+            }
+          }
+
+          .site-map-container{
+            // default state
+            .transition(1200ms ease-in-out);
+            .opacity(1);
+            .site-map-container-inner{
+              position: relative;
+              .transition();
+              .opacity(1);
+              .structure-image{
+                position: relative;
+              }
+              .site-map-image{
+                position: absolute;
+                top: 0;
+                left: 0;
+                .transition();
+                &.default{
+                  .opacity(1);
+                }
+                &.completed{
+                  .opacity(0);
+                }
+              }
+            }
+            &.siteA{
+              padding: 14% 70% 0 5%;
+            }
+            &.siteB{
+              padding: 32.5% 0 0 66%;
+            }
+            &.siteC{
+              padding: 32.5% 2% 0 74%;
+            }
+            &.zoomIn{
+              padding: 0 0 0 0;
+            }
+            &.hideContainer{
+              .site-map-container-inner{
+                .opacity(0);
+              }
+            }
+            &.selected{
+              .site-map-container-inner{
+                .site-map-image{
+                  &.default{
+                    .opacity(0);
+                  }
+                  &.completed{
+                    .opacity(1);
+                  }
+                }
+              }
+            }
+          }
+
+        }
+        //----------------------- end main body ----------------------
+      }
+    }
+  }
+
+  //================== responsive style ======================
+  .operation-waste-scenario-tablet-landscape{
+    .svg-container-wrapper-container{
+      .svg-container-wrapper{
+        .image-container{
+          .tooltips-container{
+            .chart-tooltip1{
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .operation-waste-scenario-tablet-portrait{
+
+  }
+
+  @media only screen and (max-height: 800px){
+    .operation-waste-scenario-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .operation-waste-scenario-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .operation-waste-scenario-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .operation-waste-scenario-tablet-portrait;
+  }
+
+}

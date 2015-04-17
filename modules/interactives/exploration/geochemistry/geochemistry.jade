@@ -1,0 +1,64 @@
+div.scenario-decision-interactive-container.geochemistry-container
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    div.text-panel.topContainerFirstElement.animate-left(data-ng-if="screen.id == 0", data-anim-easing="easeOutCubic", data-anim-duration="600",data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-container
+            p {{settings.screens[0].text}}
+          .button-container.open
+            a.show-next-button.two-lines(data-tnt-click,data-ng-click="goToChemistryView()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}")
+              span view geochemistry
+              span results
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && screen.feedback != true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          p {{settings.screens[1].text}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 0 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[0].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.zones[0].feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 1 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span {{settings.zones[1].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this geochemistry scenario")
+            .introduction-text-container
+              p.text-left
+                | {{settings.zones[1].feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 2 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[2].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.zones[2].feedback}}
+    div.text-panel.animate-left(data-ng-if="screen.id == 1 && zone.id == 3 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[3].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.zones[3].feedback}}
+  .row
+    .col-md-12.canvas-container-wrapper-container
+      div.canvas-container-wrapper.svg-container-wrapper
+        div.canvas-container
+          .thtTooltip.overlay-tooltip(data-ng-repeat="tooltip in settings.tooltips", data-ng-if="screen.id == 0", data-ng-class="{'left': tooltip.left == true, 'right': tooltip.right == true, 'top': tooltip.top == true, 'bottom': tooltip.bottom == true, first: $index == 0, second: $index == 1, third: $index == 2}")
+            .tipContentBorder
+              .tipContent {{tooltip.text}}
+          div.svg-container
+            img.placeholder-image.invisible(data-ng-src="assets/images/interactive_blank_bg.png")
+            div.geochemistry-svg-container(id="geochemistry-svg-container{{$id}}")
+
+  .row.reset-button-container.animate-fade(data-ng-if="screen.id == 1 && zone.id == 1 && screen.feedback == true", data-anim-out-delay="600")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET

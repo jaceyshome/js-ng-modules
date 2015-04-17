@@ -57,8 +57,9 @@
           content: ' ';
           display: block;
           position: absolute;
-          color: #000000;
+          top: 0;
           left: -20px;
+          color: #000000;
         }
         &.selected{
           &.correct{
@@ -74,6 +75,8 @@
       }
       .option-holder{
         position: relative;
+        display: table;
+        width: 100%;
       }
       .option-add-on{
         position: relative;
@@ -81,16 +84,19 @@
           content: ' ';
           display: block;
           position: absolute;
+          top: 0;
+          left: 0;
           width: @addonSide;
           height: @addonSide;
           border: 3px solid @borderDefaultColor;
           line-height: @addonSide;
-          background-color: @colorPageDefault;
+          background-color:@colorQuizBg;
         }
       }
       .option-text{
-        margin:0;
-        display: block;
+        //margin:0;
+        //display: block;
+        display: table-cell;
         line-height: @addonSide;
         padding-left: 30px+@addonSide;
       }
@@ -103,7 +109,7 @@
         }
         .option-add-on{
           &:before{
-            border-width: 5px;
+            border-width: 9px;
           }
         }
         input, label{
@@ -122,7 +128,7 @@
         }
         .option-add-on{
           &:before{
-            border-width: 5px;
+            border-width: 9px;
             border-color: @borderDefaultColor;
           }
         }
@@ -133,12 +139,15 @@
     }
   }
   .tryagain-text{
-    position: absolute;
-    margin: auto;
+    display: table-cell;
+    width: 6em;
+    vertical-align: middle;
+    //position: absolute;
+    //margin: auto;
     line-height: @addonSide;
     color:#FFFFFF;
-    left: 50%;
-    margin-left: -45px;
+    //left: 50%;
+    //margin-left: -45px;
   }
   .feedback-text{
     padding-left: 15%;
@@ -158,6 +167,9 @@
 
   //------------- responsive style --------------------
   .multiplechoice-tablet-portrait{
+    .question-holder{
+      min-height: 410px;
+    }
     .tryagain-text{
       right: 0;
       left: inherit;

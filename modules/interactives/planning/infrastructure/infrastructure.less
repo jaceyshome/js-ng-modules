@@ -1,0 +1,261 @@
+.infrastructure-decision-container{
+  img{
+    width:100%;
+  }
+
+  .selection-interface-container{
+    .introduction-text-container{
+      margin: auto;
+      margin-top: 3.5%;
+      margin-bottom: 3.5%;
+      padding: 10px;
+      width: 19em;
+      .transition();
+      .opacity(1);
+      &.invisible{
+        .transition();
+        .opacity(0);
+      }
+    }
+
+    .selection-options-container{
+      .select-question-option-btn{
+        display: inline-block;
+        position: relative;
+        margin-right: 5%;
+        width: 26%;
+        color: @font2ndColor;
+        vertical-align: top;
+        .setContainerOuterShadow(1px, 0, 10px, rgba(83, 31, 31, 0.2));
+        &:last-child{
+          margin-right: 0;
+        }
+        &:hover,&:focus{
+          color: @font2ndColor;
+          text-decoration: none;
+          .hover-img-border{
+            .transition(@animationDurationDefault);
+            .opacity(1);
+          }
+        }
+        .option-question-name{
+          position: absolute;
+          top: 61%;
+          width: 100%;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        .question-correct-option-text{
+          position: absolute;
+          top: 70%;
+          padding: 0 5%;
+          width: 100%;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: @fontBodyDefault;
+          font-size: 1.071em;
+        }
+        .completed-image-holder{
+          position: absolute;
+          padding: 6%;
+          width:100%;
+          img{
+            width: 100%;
+          }
+        }
+        .hover-img-border{
+          .transition(@animationDurationDefault);
+          .opacity(0);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 1px solid white;
+          &.inner{
+            .setContainerInnerShadow(0, 0, 25px, rgba(255, 255, 255, 2));
+          }
+          &.outer{
+            .setContainerOuterShadow(0, 0, 25px, rgba(255, 255, 255, 2));
+          }
+        }
+        .ui-green_tick{
+          display: block;
+          position: absolute;
+          bottom: 3%;
+          left: 50%;
+          margin: auto;
+          margin-left: -11px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  .current-options-container{
+    .answer-option-container{
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+      margin: 3%;
+      width: 25%;
+    }
+    .answer-option-btn{
+      display: block;
+      width: 100%;
+      color: @font2ndColor;
+      text-transform: uppercase;
+      font-size: 1.071em;
+      font-family: @fontBodyDefault;
+      .transition();
+      .setContainerOuterShadow(0, 0, 5px, rgba(255, 255, 255, 1));
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover,&:focus{
+        color: @font2ndColor;
+        text-decoration: none;
+        .transition();
+        .setContainerOuterShadow(0, 0, 20px, rgba(255, 255, 255, 2));
+      }
+      .answer-bg-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .correct-option-image-overlay{
+        .setContainerInnerShadow(0,0,15px,rgba(10, 137, 0, 1));
+        background-color: rgba(10, 137, 0, 0.05);
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .answer-bg-image-overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width:  100%;
+        height: 100%;
+        border: 2px solid white;
+        .setContainerInnerShadow(0,0,15px,rgba(255,255,255,0.9));
+      }
+      .answer-option-text-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        padding:10px;
+        width: 100%;
+        font-size: 1.429em;
+        .translate(-50%, -50%);
+      }
+      &.incorrect{
+        .answer-bg-image-overlay{
+          .setContainerInnerShadow(0,0,15px,rgba(154, 154, 154, 0.90));
+        }
+      }
+    }
+
+    .bars-container{
+      position: absolute;
+      margin-top: 5%;
+      padding: 0;
+      text-align: left;
+      line-height: 1;
+      font-size: 0.857em;
+      .bar-container{
+        margin-top: 9%;
+        margin-bottom: 0;
+      }
+      .bar-label{
+        margin: 0;
+        padding-left: 1px;
+        text-transform: uppercase;
+      }
+      .bar-value-container{
+        position: relative;
+        .bar-value-holder{
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: 1.2% 1.3%;
+          background-color: white;
+          .invisible-overlay{
+            .opacity(0);
+          }
+          &.value-progress{
+            width: 0;
+            &.level0{
+              background-color: #9ee146;
+            }
+            &.level1{
+              background-color: #ebd732;
+            }
+            &.level2{
+              background-color: #f35e5e;
+            }
+            &.level3{
+              background-color: #eaad6a;
+            }
+          }
+        }
+        .bar-value-overlay{
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  //------------- responsive style --------------------
+  .infrastructure-scenario-decision-tablet-landscape{
+    .selection-interface-container{
+      .selection-options-container{
+        .select-question-option-btn{
+          .question-correct-option-text{
+            font-size: 0.875em;
+          }
+        }
+      }
+    }
+    .current-options-container{
+      .answer-option-btn{
+        .answer-option-text-container{
+          font-size: 1em;
+        }
+      }
+      .bars-container{
+
+      }
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .infrastructure-scenario-decision-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .infrastructure-scenario-decision-tablet-landscape;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .infrastructure-scenario-decision-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .infrastructure-scenario-decision-tablet-landscape;
+  }
+}

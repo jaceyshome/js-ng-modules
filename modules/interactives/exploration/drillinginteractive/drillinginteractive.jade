@@ -1,0 +1,37 @@
+.block-container.module-content-container.interactive.bg-2nd.drillinginteractive-container.scenario-decision-interactive-container.interactive-container(data-topic-marker)
+  .row
+    .col-md-12
+      h2.text-center DRILLING INTERACTIVE
+  .row
+    .col-md-12
+      .text-panel
+        p.text-center {{settings.screens[0].text}}
+  .row
+    .col-md-12.svg-container-wrapper-container
+      .svg-container-wrapper
+        .svg-container.image-container
+          .thtTooltip.overlay-tooltip.initial.right(data-ng-show="screen.feedback != true", data-ng-class="{'fade-in': showOverlay && animatingOverlay}")
+            .tipContentBorder
+              .tipContent(data-ng-bind-html="trustAsHtml(settings.screens[0].tooltip.text)")
+          .thtTooltip.overlay-tooltip(data-ng-repeat="option in settings.options", data-ng-show="(screen.feedback == true && option.selected == true && currentOption.id == option.id)", data-ng-class="{'left': option.tooltip.left == true, 'right': option.tooltip.right == true, 'top': option.tooltip.top == true, 'bottom': option.tooltip.bottom == true, first: $index == 0, second: $index == 1, third: $index == 2, forth: $index == 3}")
+            .tipContentBorder
+              .tipContent(data-ng-bind-html="trustAsHtml(option.tooltip.text)")
+          div.text-container
+            p.first.text Drill core 4
+            p.second.text Drill core 3
+            p.third.text Drill core 2
+            p.fifth.text Drill core 1
+          div.buttons-container
+            a.image-button(data-ng-repeat="option in settings.options", href="javascript:void(0);", onclick="return false;", data-ng-click="select($index)", data-ng-class="{first: $index == 0, second: $index == 1, third: $index == 2, selected: option.selected == true}")
+              span.text {{option.text}}
+              span.selected-mark
+                span(data-ng-show="option.selected") selected
+          img.bg-image(src="assets/images/exploration/interactives/drillinginteractive/bg.jpg")
+          img.overlay.soil-surface(src="assets/images/exploration/interactives/drillinginteractive/soil_surface.png")
+          img.overlay.drills(src="assets/images/exploration/interactives/drillinginteractive/drills.png")
+          img.overlay.animate-with-opacity.animate-fade(data-ng-if="option.selected", data-ng-repeat="option in settings.options", src="", data-ng-src="{{rootImageSrc+option.src}}", data-ng-style="{'z-index':option.zindex}")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.bg-2nd.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET

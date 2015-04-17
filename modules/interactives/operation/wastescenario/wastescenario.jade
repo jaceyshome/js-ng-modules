@@ -1,0 +1,146 @@
+.scenario-decision-interactive-container.operation-waste-decision-container
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    //- -------------------------- introduction -------------------------
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.introduction}}
+          .button-container.open.option-button-container
+            a.show-next-button.s-button(data-ng-repeat="option in settings.options", data-ng-click="setCurrentOption(option)",
+            data-ng-mouseenter="settings.hoverOption = option", data-ng-mouseleave="settings.hoverOption = null",
+            data-ng-focus="settings.hoverOption = option", data-ng-blur="settings.hoverOption = null"
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") Review {{option.name}}
+
+    //- ------------------------- the current option text --------------------------------
+    .text-panel.animate-left(data-ng-if="currentOption && !currentOption.selected", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center
+              b {{currentOption.name}} :
+              =' '
+              span {{currentOption.text}}
+
+
+    //- ---------------------- option feedback ------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in settings.options",
+    data-ng-if="option == currentOption && option.selected && !settings.completed", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+       span.sr-only feedback:
+       span {{option.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed(data-ng-if="option.correct")
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{option.feedback}}
+          .introduction-text-body(data-ng-if="!option.correct", data-ng-style="")
+            p.text-center {{option.feedback}}
+
+    //FIXME: duplicate code
+    //- ------------------------- completed step --------------------------------
+    .text-panel.animate-left(data-ng-repeat="option in settings.options",
+    data-ng-if="option == currentOption && option.selected && settings.completed", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row(data-ng-style="{'margin-bottom': '6px'}")
+        .col-md-12
+          .introduction-text-holder.completed(data-ng-if="option.correct")
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{option.feedback}}
+
+    //- ------------------------ current option buttons container --------------------------
+    .option-buttons-container.animate-fade(data-ng-style="getOptionButtonsContainerStyle()",
+    data-ng-if="currentOption && !settings.completed", data-anim-easing="easeOutCubic")
+      .row
+        .col-md-12
+          .button-container.open
+            a.show-next-button(data-ng-click="answerCurrentOption()",
+            data-ng-class="setCurrentOptionBtnClass()",
+            data-ng-style="setCurrentOptionBtnStyle()") SELECT {{currentOption.name}}
+            a.show-next-button(data-ng-click="goBackToFirstScreen()",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") REVIEW OTHER SITES
+
+  //- ----------------------------- image containers ---------------------------------------
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- fixed frame
+          .chart.c0.invisible
+            img(src="assets/images/interactive_blank_bg.png", alt="invisible image")
+
+          //- ============================= bg layer ==========================
+          .chart.option-layer(data-ng-class="setZoomInOptionClass()")
+            img(src="assets/images/operation/scenarios/waste/bg.jpg", alt="bg image")
+
+            //- ========================= sites pluse layers ======================
+            img.option-pluse-effect(data-ng-repeat="option in settings.options",
+            data-ng-if="!option.selected && !option.completed"
+            data-ng-src="{{option.hoverImage}}")
+
+            //- ========================= sites selected layers =====================
+            img.animate-fade(data-ng-repeat="option in settings.options",
+            data-ng-show="option.selected && !option.completed",
+            data-anim-easing="easeOutCubic", data-anim-duration="600",
+            data-ng-src="{{option.selectedImage}}")
+
+            //- ========================= sites completed layers =====================
+            img.animate-fade(data-ng-repeat="option in settings.options",
+            data-ng-show="option.completedImage && option.completed",
+            data-anim-easing="easeOutCubic", data-anim-duration="600",
+            data-ng-src="{{option.completedImage}}")
+
+            //- ========================= sites hover layers ======================
+            img.hover-container-image(data-ng-repeat="option in settings.options",
+            data-ng-class="{'show':option == settings.hoverOption}",
+            data-anim-easing="easeOutCubic", data-anim-duration="600",
+            data-ng-src="{{option.hoverImage}}")
+
+            //- ========================= svg buttons layer ========================
+            .svgMainContainer(id="svgButtonLayerContainer")
+
+          //- =================================== tooltips layer ================================
+          .chart.tooltips-container
+            .chart-tooltip1.thtTooltip.overlay-tooltip.right.animate-fade(
+              data-ng-if="!currentOption",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1500"
+            )
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[0])")
+
+            .chart-tooltip2.thtTooltip.overlay-tooltip.left.animate-fade(
+              data-ng-if="currentOption == settings.options[0] && currentOption.selected",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="1200"
+            )
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(settings.tooltips[1])")
+
+          //- =============================== disable overlay ======================================
+          .chart(data-ng-if="settings.completed && !currentQuestion")
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()",
+        class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+        data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

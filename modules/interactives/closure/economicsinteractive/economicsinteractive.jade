@@ -1,0 +1,110 @@
+.block-container.module-content-container.interactive.closure-economics-interactive-container.scenario-decision-interactive-container.interactive-container(data-topic-marker)
+  .row
+    .col-md-12
+      h2.text-center(data-ng-style="{'color': Module.currentModule.color}") {{dataset.title}}
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    .text-panel.animate-left(
+    data-ng-repeat="step in dataset.steps",
+    data-ng-class="{'topContainerFirstElement': $index==0}"
+    data-ng-if="$index == currentStepIndex",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}"
+    )
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{step.text}}
+          .button-container.open(data-ng-if="step.btnText")
+            a.show-next-button.bg-2nd(data-tnt-click, data-ng-click="nextStep($index+1)",
+            data-ng-class="{'two-lines':currentStepIndex==1}"
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}",
+            data-ng-bind-html="bindHtmlSoruce(step.btnText)")
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.show
+            img(data-ng-src="assets/images/planning/interactives/economics/bg.png")
+
+          //-================= left column =========================
+          .chart.profit-box-container
+            .chart-box-mask
+              .profit-box(data-ng-class="getCurrentStepClass()")
+
+          .chart.profit-label-text
+            img(src="assets/images/closure/interactives/economics/11.09_profit.png",
+            data-ng-class="getCurrentStepClass()")
+
+          .chart.davis-gold-mine-container
+            .chart-box-mask
+              .davis-gold-mine-box(data-ng-class="getCurrentStepClass()")
+
+          .chart.davis-gold-mine-text
+            img(src="assets/images/closure/interactives/economics/11.09_davis_gold_mine_text.png")
+
+          .chart.jolley-lose-container
+            .chart-box-mask
+              .jolley-lose-box(data-ng-class="getCurrentStepClass()")
+                img(src="assets/images/closure/interactives/economics/11.09_jolley_loss_orange.png")
+
+          //-================= middle column ======================
+          .chart.jolley-gold-mine-top-container
+            .chart-box-mask
+              .jolley-gold-mine-top-box(data-ng-class="getCurrentStepClass()")
+
+          .chart.duffield-expense-container
+            .chart-box-mask
+              .duffield-expense-box(data-ng-class="getCurrentStepClass()")
+
+          .chart.duffield-expense-text(data-ng-class="getCurrentStepClass()")
+            img(src="assets/images/closure/interactives/economics/11.09_duffield_expenses.png")
+
+          .chart.duffield-close-text(data-ng-class="getCurrentStepClass()")
+            img(src="assets/images/closure/interactives/economics/11.09_duffield_close.png")
+
+          .chart.jolley-gold-mine-container
+            .chart-box-mask
+              .jolley-gold-mine-box(data-ng-class="getCurrentStepClass()")
+
+          .chart.jolley-gold-mine-container
+            .chart-box-mask
+              .jolley-gold-mine-text-box(data-ng-class="getCurrentStepClass()")
+                img(src="assets/images/closure/interactives/economics/11.09_jolley_mine_text.png")
+
+          //-===================== right column ==================
+          .chart.duffield-gold-mine-container
+            .chart-box-mask
+              .duffield-gold-mine-box(data-ng-class="getCurrentStepClass()")
+                img(src="assets/images/closure/interactives/economics/11.09_duffield_mine_box.png")
+
+          .chart.duffield-mine-loss-container
+            .chart-box-mask
+              .duffield-mine-loss-box(data-ng-class="getCurrentStepClass()")
+                img(src="assets/images/closure/interactives/economics/11.09_duffield_mine_loss_red.png")
+
+          //-=================== chart units =====================
+          .chart.fg-layer
+            img(data-ng-src="assets/images/closure/interactives/economics/fg_layer.png")
+
+          .chart.curve-indicator-container
+            .chart-box-mask
+              .curve-indicator-box(data-ng-class="getCurrentStepClass()")
+                img(data-ng-src="assets/images/closure/interactives/economics/yellow_indicator.png")
+
+          //-=============== tooltip ================
+          .chart.tooltips-container
+            .thtTooltip.overlay-tooltip.left(data-ng-class="getCurrentStepClass()")
+              .tipContentBorder
+                .tipContent(data-ng-bind-html="bindHtmlSoruce(dataset.tooltipText)")
+
+  .row.reset-button-container.animate-fade(data-ng-if="currentStepIndex + 1 == dataset.steps.length")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()",
+        class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

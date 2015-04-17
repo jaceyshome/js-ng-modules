@@ -3,15 +3,34 @@
   @borderDefaultColor: #676767;
   @bgDefaultColor: #767574;
   @cardPadding: 20px;
+  @flipCardPanelMinHeight: 775px;
+  position: relative;
+  overflow: hidden;
+  min-height: @flipCardPanelMinHeight;
+  &.hideQuestion{
+    min-height: @badgePanelMinHeight;
+  }
   .assessment-title{
     h2{
       margin-bottom: 0;
     }
   }
   .question-title{
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    min-height: 72px;
     line-height: 1.5;
     text-align: center;
+  }
+  .question-holder{
+    position: relative;
+  }
+  .assessment-bottom{
+    margin-top: -5px;
+  }
+  .assessment-badge-container{
+    top: @flipCardPanelMinHeight*2;
+    z-index: 3;
   }
   .flip-list-container{
     margin:auto;
@@ -20,54 +39,39 @@
   }
   .flip-list{
     position: relative;
-    perspective: 800;
-    .transform(translate3d(0, 0, 0));
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    &.flipped{
-      z-index: 2;
-      .flipper{
-        .transform(rotateY(180deg));
-      }
-    }
     .flipper{
-      display: block;
       position: relative;
+      display: block;
       width: 100%;
       min-height: @cardSide;
-      transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      .transition(0.3s ease-out);
       .face{
         tr{
           .cover-bg;
         }
-        text-align: center;
         position: absolute;
-        width: 100%;
-        height: @cardSide;
-        min-height: @cardSide;
         border: 2px solid @borderDefaultColor;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         table-layout: fixed;
+        width: 100%;
+        min-height: @cardSide;
+        height: @cardSide;
+        text-align: center;
         .inner-shadow(0,0,15px,0.4);
         .text-title{
           text-transform: uppercase;
           font-size: 1.125em;
         }
         &.front{
-          z-index: 2;
-          .transform(rotateY(0deg));
           .text-title{
             color: #000000;
-            text-transform: uppercase;
             height:4.7em;
             min-height: 4.7em;
             text-align: center;
+            text-transform: uppercase;
             &.hasImage{
               background-color: rgba(255,255,255,0.8);
             }
@@ -80,8 +84,6 @@
           }
         }
         &.back{
-          z-index: 1;
-          .transform(rotateY(180deg));
           background-color: @bgDefaultColor;
           color: @fontDefaultColor;
           text-align: center;
@@ -95,24 +97,79 @@
           }
           .feedback{
             display: block;
-            text-align: center;
-            font-size: 0.875em;
-            font-family: @fontLightItalic;
             padding-left: @cardPadding;
             padding-right: @cardPadding;
+            text-align: center;
             line-height: 1.5;
+            font-size: 0.875em;
+            font-family: @fontLightItalic;
           }
           .text-title{
             font-size: 1.375em;
             text-transform: uppercase;
             .textBorder{
               display: block;
+              margin: auto;
+              margin-top: 10px;
               width: 60px;
               height: 1px;
               background-color: @borderDefaultColor;
-              margin: auto;
-              margin-top: 10px;
               .drop-shadow(0,1px,5px,0.2);
+            }
+          }
+        }
+      }
+    }
+
+//================ Default browser ================
+    &.default{
+      perspective: 800;
+      .transform(translate3d(0, 0, 0));
+      .flipper{
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        .transition(0.3s ease-out);
+        .face{
+          &.front{
+            z-index: 2;
+            .transform(rotateY(0deg));
+          }
+          &.back{
+            z-index: 1;
+            .transform(rotateY(180deg));
+          }
+        }
+      }
+      &.flipped{
+        z-index: 2;
+        .flipper{
+          .transform(rotateY(180deg));
+        }
+      }
+    }
+//===================== It is for IE =================
+    &.ie{
+      overflow: hidden;
+      .flipper{
+        .face{
+          &.front{
+            z-index: 1;
+          }
+          &.back{
+            z-index: 2;
+            .transition(0.3s ease-out);
+            margin-top: 100%;
+          }
+        }
+      }
+      &.flipped{
+        .flipper{
+          .face{
+            &.back{
+              .transition(0.3s ease-out);
+              margin-top: 0;
             }
           }
         }
@@ -158,6 +215,32 @@
 
   .tablet-portrait-flipcard{
     .setMediaStyle(25%,200px, 6px,10px, 0.95em);
+    .flip-list-container{
+      .flip-list{
+        .flipper{
+          .face{
+            &.front{
+              .text-title{
+                .content{
+                  font-size: 0.875em;
+                  padding-left: 6px;
+                  padding-right: 6px;
+                }
+              }
+            } 
+            &.back{
+              .title-container{
+                height: 4em;
+              }
+              .feedback{
+                padding-left: 6px;
+                padding-right: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .less-than-850-flipcard{
@@ -211,5 +294,4 @@
   and (orientation : landscape) {
     .tablet-landscape-flipcard;
   }
-
 }

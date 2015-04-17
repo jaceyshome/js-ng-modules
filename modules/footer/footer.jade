@@ -1,18 +1,18 @@
 .footer
   .row
     ul.footer-container.links
-      li: a.footer-link(href="", target="_blank") About
-      li: a.footer-link(href="", target="_blank") Privacy policy
+      li: a.footer-link(href="http://international.curtin.edu.au/about/", target="_blank", title="Open this in a new window") About
+      li: a.footer-link(href="http://rim.curtin.edu.au/privacy/", target="_blank", title="Open this in a new window") Privacy policy
       li: a.footer-link(href="", target="_blank") Terms
-      li: a.footer-link(href="", target="_blank") Credits
+      li: a.footer-link(href="javascript:void(0)", onclick="return false;", data-ng-click="goToCredits()", title="Open this in a new window") Credits
     ul.footer-container.buttons
       li
-        a.footer-button.twitter(href="", target="_blank")
+        a.footer-button.twitter(href="https://twitter.com/curtinuni", target="_blank")
           span.sr-only Twitter
           span.sprite-ui.ui-twitter
           span.sprite-ui.ui-twitter_hover
       li
-        a.footer-button.facebook(href="", target="_blank")
+        a.footer-button.facebook(href="https://www.facebook.com/curtinuniversity", target="_blank")
           span.sr-only Facebook
           span.sprite-ui.ui-facebook
           span.sprite-ui.ui-facebook_hover
@@ -21,4 +21,6 @@
         span.sr-only Powered by Curtin University
         span.sr-only Curtin University is a trademark of Curtin University of Technology
         .logo-holder
-          img(data-ng-src="assets/images/curtain_footer_logo_bw.png", alt="footer logo")
+          a(href="http://curtin.edu.au", target="_blank")
+            span.sr-only Curtin University home page
+            img(data-ng-src="assets/images/curtin_footer_logo.jpg", alt="curtin logo, open Curtin University home page in a new window")

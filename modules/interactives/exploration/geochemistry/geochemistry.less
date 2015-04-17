@@ -1,0 +1,75 @@
+.geochemistry-container{
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .canvas-container{
+    position: relative;
+    @borderColor: #ffffff;
+    .thtTooltip{
+      z-index: 2;
+      &.first{
+        right: 63%;
+        top: 78%;
+      }
+      &.second{
+        right: 52%;
+        top: 35%;
+      }
+      &.third{
+        right: 40%;
+        top: 62%;
+      }
+    }
+    .image-container{
+      position: relative;
+      .background-image{
+        width: 100%;
+      }
+      .location-image{
+        position: absolute;
+        .transition(opacity 600ms ease-in-out);
+        &.fade-in{
+          .opacity(1);
+        }
+        &.fade-out{
+          position: absolute;
+          top: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          .opacity(0.2);
+        }
+        &.locationA{
+          left: 43.26%;
+          top: 14.34%;
+        }
+        &.locationB{
+          left: 54.05%;
+          top: 40.81%;
+        }
+      }
+    }
+    .svg-container{
+      position: relative;
+      border: 4px solid @borderColor;
+      svg{
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+      }
+      .placeholder-image{
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      .geochemistry-svg-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

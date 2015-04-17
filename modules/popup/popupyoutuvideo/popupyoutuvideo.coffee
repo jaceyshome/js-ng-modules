@@ -42,9 +42,10 @@ define [
         $timeout playVideo, 10
 
       setupVideo = ->
-        unless $scope.video.src
+        $scope.video.src = generateVideoSrc($scope.video)
+        ###unless $scope.video.src
           $scope.video.src = generateVideoSrc($scope.video)
-        return
+        return###
 
       generateVideoSrc = (video)->
         paramKey = '&'
@@ -63,8 +64,9 @@ define [
         " allowfullscreen></iframe>"
 
       resizeVideo = ->
+        borderSide = 5
         width =  $element.find(".videoPlayer").width()
-        height = (width/417)*233
+        height = (width/1920)*1080 + borderSide*2
         $element.find(".videoPlayer").css height: height+'px'
         return
 

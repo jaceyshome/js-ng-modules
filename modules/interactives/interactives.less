@@ -1,0 +1,425 @@
+@import "exploration/geophysics/geophysics";
+@import "exploration/geochemistryinteractive/geochemistryinteractive";
+@import "exploration/geochemistry/geochemistry";
+@import "exploration/drillingdecision/drillingdecision";
+@import "exploration/drillinginteractive/drillinginteractive";
+
+@import "planning/infrastructure/infrastructure";
+@import "planning/workforce/workforce";
+@import "planning/workforceinteractive/workforceinteractive";
+@import "planning/economicsinteractive/economicsinteractive";
+@import "planning/economicsscenario/economicsscenario";
+@import "planning/impactscenario/impactscenario";
+
+@import "operation/processinginteractive/processinginteractive";
+@import "operation/processingscenario/processingscenario";
+@import "operation/geotechnicalscenario/geotechnicalscenario";
+@import "operation/wastescenario/wastescenario";
+
+@import "closure/economicsinteractive/economicsinteractive";
+@import "closure/sustainablescenario/sustainablescenario";
+@import "closure/economicsscenario/economicsscenario";
+@import "closure/chartscenario/chartscenario";
+
+.scenario-decision-interactive-container{
+  h2{
+    margin-bottom: @containerInnerSpace;
+  }
+
+  .icon-profile-container{
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .profile-text-container{
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+  }
+
+  .drop-shadow-text-panel{
+    font-size: 0.857em;
+    background-color: white;
+    border: 2px solid @colorTooltipBorder;
+    color: @font3rdColor;
+    .drop-shadow(3px, 3px, 3px, 0.3);
+  }
+  .interactive-completed-badge{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    .badge-bg-shape{
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      img{
+        width:100%;
+      }
+    }
+    .introduction-text-container{
+      .transition(600ms);
+    }
+  }
+  .top-interactive-container{
+    position: relative;
+    min-height: 160px;
+    .transition(min-height 600ms ease-in-out);
+    .text-panel{
+      position: absolute;
+      width:100%;
+      margin:auto;
+      p{
+        margin-top: 5px;
+      }
+      .feedback{
+        text-transform: uppercase;
+        color:@fontDefaultColor;
+        text-align: center;
+        padding: 12px 0;
+        font-family: @fontBodyDefaultBold;
+        &.incorrect{
+          background-color: @colorDisabled;
+        }
+      }
+    }
+  }
+  .introduction-text-holder{
+    .introduction-icon-container{
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .introduction-text-container{
+      display: inline-block;
+      width: 80%;
+      vertical-align: top;
+    }
+    &.completed{
+      margin-bottom: 5px;
+      .introduction-icon-container{
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+      .introduction-text-container{
+        vertical-align: middle;
+        p{
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .button-container{
+    text-align: center;
+    height: 0;
+    -webkit-transition: height 0.4s ease-in-out, visibility 0.1s ease-out 0.5s;
+    -moz-transition: height 0.4s ease-in-out, visibility 0.1s ease-out 0.5s;
+    -o-transition: height 0.4s ease-in-out, visibility 0.1s ease-out 0.5s;
+    -ms-transition: height 0.4s ease-in-out, visibility 0.1s ease-out 0.5s;
+    transition: height 0.4s ease-in-out, visibility 0.1s ease-out 0.5s;
+    //.transition(height 0.4s ease-in-out, visibility 0.1s ease-out 0.4s);
+    &.open{
+      height: 70px;
+      .show-next-button{
+        visibility: visible;
+      }
+    }
+    .show-next-button{
+      display: inline-block;
+      vertical-align: top;
+      visibility: hidden;
+      padding: 13px 0;
+      color:@font2ndColor;
+      margin-bottom: 38px;
+      text-transform: uppercase;
+      font-size: 0.875em;
+      .transition(@animationDurationDefault);
+      background-color: @colorQuizBg;
+      border: 2px solid @colorDisabled;
+      width: 240px;
+      .drop-shadow(0,0,3px,0.4);
+      &.l-button{
+        width: 260px;
+      }
+      &.s-button{
+        width: 190px;
+      }
+      &.xs-button{
+        width: 160px;
+      }
+      &.two-lines{
+        line-height: 1.2;
+        font-size: 0.8em;
+        padding: 8px 0;
+        span{
+          display: block;
+        }
+      }
+      &.reset-btn{
+        width: 7.5em;
+      }
+      &.bg-2nd{
+        background-color: @colorPage2nd;
+      }
+      &.bg-scenario{
+        background-color: @colorScenarioPanelBg;
+      }
+      &:hover,&:focus{
+        text-decoration: none;
+        background-color: @colorDisabled;
+        color:@fontDefaultColor;
+      }
+      &.button-disabled{
+        background-color: @colorDisabled;
+        color: #e3e2e2;
+        &:hover,&:focus{
+          text-decoration: none;
+          background-color: @colorDisabled;
+          color: #e3e2e2;
+          cursor: default;
+        }
+      }
+    }
+  }
+  .reset-button-container{
+    margin-top: 25px;
+    height: 0;
+    .button-container{
+      &.open{
+        height: auto;
+      }
+      .show-next-button{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .svg-container-wrapper-container{
+    .svg-container-wrapper{
+      .image-container{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .svg-container{
+    .drop-shadow(0, 0, 20px, 0.5);
+    .transition(opacity 600ms ease-in-out);
+    font-size: 0.875em;
+    font-family: @fontBodyDefaultBold;
+    &.fade-in{
+      .opacity(1);
+    }
+    &.fade-out{
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      .opacity(0.2);
+    }
+  }
+  .image-container{
+    position: relative;
+    @grey: #e6e5e1;
+    @white: #ffffff; 
+    .overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      .transition(opacity 500ms ease-in-out);
+      &.fade-in{
+        .opacity(1);
+      }
+      &.fade-out{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        .opacity(0);
+      }
+    }
+    .soil-surface{
+      z-index: 10;
+    }
+    .buttons-container{
+      position: absolute;
+      width: 20%;
+      z-index: 12;
+      right: 5%;
+      top: 46%;
+      .image-button{
+        display:  table;
+        .drop-shadow(3px, 3px, 3px, 0.3);
+        width: 100%;
+        background-color: @grey;
+        margin-bottom: 8%;
+        padding: 6px 12px;
+        .image{
+          display: table-cell;
+          width: 21%;
+          vertical-align: middle;
+          img{
+            width: 100%;
+          }
+        }
+        .text{
+          width: 79%;
+          display: table-cell;
+          vertical-align: middle;
+          color: @font2ndColor;
+        }
+        &:hover, &:focus{
+          text-decoration: none;
+        }
+        .selected-mark{
+          display: block;
+          position: absolute;
+          right: -25px;
+          width: 19px;
+          height: 15px;
+          text-indent: -99em;
+          overflow: hidden;
+          margin: 5px 0 5px 14px;
+          background-image: none;
+          background-repeat: no-repeat;
+        }
+        &.selected{
+          background-color: @white;
+          .box-shadow(none);
+          .selected-mark{
+            background-image: url("@{imageBaseUrl}/exploration/interactives/drillingdecision/incorrect_cross.png");
+          }
+          &.second{
+            .selected-mark{
+              background-image: url("@{imageBaseUrl}/exploration/interactives/geochemistryinteractive/selected_tick.png");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .image-button-hover-shadow{
+    .hover-cover{
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      .transition();
+      &.inner{
+        .setContainerInnerShadow(0, 0, 1px, rgba(255, 255, 255, 1));
+      }
+      &.outer{
+        .setContainerOuterShadow(0, 0, 1px, rgba(255, 255, 255, 1));
+      }
+    }
+    &:hover,&:focus{
+      .hover-cover{
+        .transition();
+        &.inner{
+          .setContainerInnerShadow(0, 0, 25px, rgba(255, 255, 255, 1));
+        }
+        &.outer{
+          .setContainerOuterShadow(0, 0, 25px, rgba(255, 255, 255, 1));
+        }
+      }
+    }
+  }
+
+  .chart-interactive-container{
+    .svg-container-wrapper{
+      float:none;
+    }
+    .chart-container{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border: 4px solid white;
+      .chart{
+        display:block;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        &.c0{
+          margin: 0;
+          position: relative;
+          top: 0;
+        }
+        .description{
+          font-size: 0.875em;
+        }
+      }
+      .highlight-arrows{
+        display: block;
+      }
+      .select-two-image-container{
+        .introduction-image-holder{
+          display: inline-block;
+          width: 50%;
+          &.left{
+            border-right: 2px solid white;
+          }
+          &.right{
+            border-left: 2px solid white;
+          }
+          .hover-container{
+            display: block;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  .last-scenario-bottom-space{
+    //-HACK Jake: It is the extra space for last scenario
+    min-height: 45px;
+  }
+  //------------- responsive style --------------------
+  .scenario-decision-small-laptop-height{
+    .svg-container-wrapper{
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+  .scenario-decision-tablet-landscape{
+    .svg-container-wrapper{
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+  .scenario-decision-tablet-portrait{}
+
+  @media only screen and (max-height: 800px){
+    .scenario-decision-small-laptop-height;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .scenario-decision-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 900px){
+    .scenario-decision-tablet-portrait;
+  }
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .scenario-decision-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .scenario-decision-tablet-landscape;
+//    .scenario-decision-tablet-portrait;
+  }
+}
+@import "stepcharts/stepcharts";

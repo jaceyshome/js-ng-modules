@@ -32,6 +32,10 @@ define [
           $scope.settings.currentQuestionIndex = 0
         setCurrentQuestion()
 
+
+      $scope.trustAsHtml = (html) ->
+        $sce.trustAsHtml html
+
       $scope.selectedOption = (question, option)->
         question.currentOption = option
         option.selected = true
@@ -49,10 +53,7 @@ define [
 
       $scope.handleOptionStyleResult = (question, option)->
         if question.options[question.selectedIndex] is option
-          if option.correct
-            return {'background-color' : Module.currentModule.color}
-          else
-            return {'background-color' : '#777674'}
+          return Module.getQuestionOptionFeedbackBgStyle(option)
         else
           return undefined
 
@@ -95,6 +96,7 @@ define [
           return false
 
       $scope.handleNext = ()->
+        return unless $scope.currentQuestion?.completed? is true
         if $scope.settings.review and $scope.settings.currentQuestionIndex < $scope.data?.questions.length-1
           setNextQuestion()
           return
@@ -103,6 +105,25 @@ define [
         setNextQuestion()
 
       #----------------------------- helpers ----------------------------------
+      shuffle = (array) ->
+        return unless array
+        currentIndex = array.length
+        temporaryValue = undefined
+        randomIndex = undefined
+
+        # While there remain elements to shuffle...
+        while 0 isnt currentIndex
+
+          # Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex)
+          currentIndex -= 1
+
+          # And swap it with the current element.
+          temporaryValue = array[currentIndex]
+          array[currentIndex] = array[randomIndex]
+          array[randomIndex] = temporaryValue
+        array
+
       setNextQuestion = ()->
         $scope.settings.currentQuestionIndex++
         setCurrentQuestion()
@@ -111,6 +132,10 @@ define [
         return unless $scope.data?.questions?
         index = $scope.settings.currentQuestionIndex
         $scope.currentQuestion = $scope.data.questions[index]
+        return unless $scope.currentQuestion.options
+        if $scope.settings.type == "multiplechoice" && $scope.currentQuestion.shuffle != true
+          $scope.currentQuestion.options = shuffle $scope.currentQuestion.options
+          $scope.currentQuestion.shuffle = true
 
       checkAllCompleted = ()->
         for question in $scope.data.questions

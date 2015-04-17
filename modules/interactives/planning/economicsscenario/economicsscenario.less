@@ -1,0 +1,287 @@
+.planning-economics-scenario-container{
+  @animateDuration: 600ms;
+  @step1MarginLeft: 62.8%;
+
+  img{
+    width: 100%;
+  }
+  .option-buttons-container{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    .transition(600ms ease-in-out);
+    .button-container{
+      .show-next-button{
+        &:first-child{
+          margin-right: 2%;
+        }
+        &:last-child{
+          margin-left:  2%;
+        }
+      }
+    }
+  }
+  .chart-container{
+    overflow: hidden;
+    .indicators-holder{
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      margin-left: 1.5%;
+    }
+    .step2-indicators-group-container{
+      top:      0;
+      left:     0;
+      bottom:   0;
+      right:    0;
+      padding:  13% 40.5% 26% 24.9%;
+      height:   100%;
+      width:    100%;
+      .indicators-holder{
+        img{
+          @marginLeftFrom: -203%;
+          @marginLeftTo: -1.8%;
+          margin-left: @marginLeftFrom;
+          -webkit-animation:  indicatorsGroupImageLeftIn 800ms ease-out 600ms forwards;
+          animation:          indicatorsGroupImageLeftIn 800ms ease-out 600ms forwards;
+          @-webkit-keyframes indicatorsGroupImageLeftIn {
+            from  {margin-left: @marginLeftFrom;}
+            to    {margin-left: @marginLeftTo;}
+          }
+          @keyframes indicatorsGroupImageLeftIn {
+            from  {margin-left: @marginLeftFrom;}
+            to    {margin-left: @marginLeftTo;}
+          }
+        }
+      }
+    }
+    .profit-zone-shape-container{
+      padding:  13.5% 58.27% 26% 25.4%;
+      height:   100%;
+      width:    100%;
+      .profit-zone-shape{
+        .drop-shadow(1px, 1px, 2px, 0.42);
+      }
+      .correct-option-feedback{
+        .opacity(0.4);
+        background-color:   #9fe047;
+        -webkit-animation:  bgGlow 800ms ease-out 100ms infinite alternate;
+        animation:          bgGlow 800ms ease-out 100ms infinite alternate;
+        @-webkit-keyframes bgGlow {
+          from  {.opacity(0.4);}
+          to    {.opacity(1);}
+        }
+        @keyframes bgGlow {
+          from  {.opacity(0.4);}
+          to    {.opacity(1);}
+        }
+        .overlay-image{
+          .opacity(0);
+        }
+      }
+    }
+
+    .tooltips-container{
+      .tipContent{
+        font-size:  1em;
+      }
+      .tooltipboxshadow{
+        border:       2px solid @colorTooltipBorder;
+        .tipContent{
+          font-size:  0.8em;
+          &:after{
+            display:  none;
+          }
+        }
+      }
+
+      .step0-tooltip, .step1-tooltip, .step2-tooltip{
+        left: 0;
+        text-align: left;
+        &.thtTooltip{
+          &.overlay-tooltip{
+            &.left{
+              .tipContentBorder{
+                &:after{
+                  left:       -20px;
+                  margin-top: -10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .step0-tooltip{
+        margin-left:  46%;
+        &.st1{
+          margin-top: 19.6%;
+        }
+        &.st2{
+          margin-top: 33.2%;
+        }
+      }
+      .step1-tooltip{
+        margin-left: @step1MarginLeft;
+        &.st1{
+          margin-top: 12.1%;
+        }
+        &.st2{
+          margin-top: 17.1%;
+          -webkit-animation:  moveLeft @animateDuration ease-out 3s forwards;
+          animation:          moveLeft @animateDuration ease-out 3s forwards;
+          @step1MarginLeftTo: 61%;
+          @-webkit-keyframes moveLeft {
+            from {margin-left: @step1MarginLeft;}
+            to {margin-left: @step1MarginLeftTo;}
+          }
+          @keyframes moveLeft {
+            from {margin-left: @step1MarginLeft;}
+            to {margin-left: @step1MarginLeftTo;}
+          }
+        }
+        &.st3{
+          margin-top: 22.1%;
+        }
+      }
+      .step2-tooltip{
+        margin-left:  0;
+        margin-right: 14.75%;
+        left:         auto;
+        right:        0;
+        &.st1{
+          margin-top: 11.9%;
+        }
+        &.st2{
+          margin-top: 26.5%;
+        }
+      }
+    }
+  }
+
+  //- animations for landscape view - fixed for lesslint bug: recoverable syntax errors
+  @step1MarginLeftLandscape: 54.5%;
+  @step1MarginLeftTo: 53.1%;
+  @-webkit-keyframes step1TooltipGroupsMoveLeftLandscape {
+    from {margin-left: @step1MarginLeftLandscape;}
+    to {margin-left: @step1MarginLeftTo;}
+  }
+  @keyframes step1TooltipGroupsMoveLeftLandscape {
+    from {margin-left: @step1MarginLeftLandscape;}
+    to {margin-left: @step1MarginLeftTo;}
+  }
+
+  @indicatorsHolderLandScapeMarginLeftFrom: -203%;
+  @indicatorsHolderLandScapeMarginLeftTo: -50.8%;
+  @-webkit-keyframes indicatorsGroupImageLeftInLandscape {
+    from  {margin-left: @indicatorsHolderLandScapeMarginLeftFrom;}
+    to    {margin-left: @indicatorsHolderLandScapeMarginLeftTo;}
+  }
+  @keyframes indicatorsGroupImageLeftInLandscape {
+    from  {margin-left: @indicatorsHolderLandScapeMarginLeftFrom;}
+    to    {margin-left: @indicatorsHolderLandScapeMarginLeftTo;}
+  }
+
+  //------------- responsive style --------------------
+  .planning-economics-scenario-tablet-landscape{
+    .chart-container{
+      .step2-indicators-group-container{
+        .indicators-holder{
+          img{
+            margin-left: @indicatorsHolderLandScapeMarginLeftFrom;
+            -webkit-animation:  indicatorsGroupImageLeftInLandscape 800ms ease-out 600ms forwards;
+            animation:          indicatorsGroupImageLeftInLandscape 800ms ease-out 600ms forwards;
+          }
+        }
+      }
+
+      .tooltips-container{
+
+        .step1-tooltip{
+          margin-left: @step1MarginLeftLandscape;
+          &.st1{
+            margin-top: 11.3%;
+          }
+          &.st2{
+            margin-top: 16.5%;
+            -webkit-animation:  step1TooltipGroupsMoveLeftLandscape @animateDuration ease-out 3s forwards;
+            animation:          step1TooltipGroupsMoveLeftLandscape @animateDuration ease-out 3s forwards;
+          }
+          &.st3{
+            margin-top: 21.7%;
+          }
+        }
+        .step2-tooltip{
+          margin-left:  0;
+          margin-right: 7.75%;
+          left:         auto;
+          right:        0;
+          &.st1{
+            margin-top: 11.6%;
+          }
+          &.st2{
+            margin-top: 26.1%;
+          }
+        }
+      }
+    }
+  }
+
+  .planning-economics-scenario-tablet-portrait{
+    .chart-container{
+      .tooltips-container{
+        .step1-tooltip{
+          &.st1{
+            margin-top: 11.7%;
+          }
+          &.st2{
+            margin-top: 16.8%;
+          }
+          &.st3{
+            margin-top: 21.7%;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 800px){
+    .planning-economics-scenario-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 1024px){
+    .planning-economics-scenario-tablet-landscape;
+  }
+
+  @media only screen and (max-width: 766px){
+    .chart-container{
+      .tooltips-container{
+        .tipContent{
+          font-size:  0.8em;
+        }
+        .tooltipboxshadow{
+          .tipContent{
+            font-size:  0.65em;
+          }
+        }
+      }
+    }
+  }
+
+
+  // iPad in landscape
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .planning-economics-scenario-tablet-landscape;
+  }
+
+  // iPad in portrait
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .planning-economics-scenario-tablet-landscape;
+  }
+
+}

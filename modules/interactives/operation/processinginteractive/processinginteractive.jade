@@ -1,0 +1,182 @@
+.block-container.module-content-container.interactive.scenario-decision-interactive-container.interactive-container.operation-processing-interactive-container(data-topic-marker)
+  .row
+    .col-md-12
+      h2.text-center(data-ng-style="{'color': Module.currentModule.color}") {{dataset.title}}
+
+  //- introduction text
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentQuestion",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{dataset.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{dataset.introduction}}
+
+    .text-panel.animate-left(data-ng-repeat="question in dataset.questions",
+    data-ng-if="currentQuestion == question", data-key="{{dataset.dataKey}}"
+    data-anim-easing="easeOutCubic", data-anim-duration="600")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p
+              b {{question.name}}:
+              =' '
+              span {{question.overview.text}}
+
+  //- case studies buttons
+  .row.questions-button-container
+    .row
+      .col-md-12
+        .button-container.open
+          a.show-next-button.s-button(data-ng-repeat="question in dataset.questions",
+          data-tnt-click, data-ng-click="selectQuestion(question)",
+          data-ng-class="getQuestionButtonClass(question)",
+          data-ng-style="getQuestionButtonStyle(question)") {{question.name}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg overlay
+          .chart.c0.show
+            img(src="assets/images/interactive_blank_bg.png")
+
+          //- ======================   background layers ================================
+          .chart(data-ng-if="currentQuestion != dataset.questions[2]")
+            img(src="assets/images/operation/interactives/processing/default_bg.jpg")
+          .chart(data-ng-if="currentQuestion == dataset.questions[2]")
+            img(src="assets/images/operation/interactives/processing/q3_bg.jpg")
+
+          //- ====================== introduction images container ======================
+          .chart.introduction-container.three-image-buttons-container.animate-fade(
+          data-ng-if="!currentQuestion", data-anim-easing="easeOutCubic", data-anim-duration="600")
+            .introduction-image-holder(data-ng-repeat="question in dataset.questions")
+              a.hover-container.image-button-hover-shadow(tnt-click,data-ng-click="selectQuestion(question)")
+                span.sr-only {{question.name}}
+                img(data-ng-src="{{question.overview.image}}", alt="image for {{question.name}}")
+                div.hover-cover.inner
+                div.hover-cover.outer
+
+
+          //- ====================== question one  ============================
+          //- ---------- main container images layer ------------
+          .chart.question-progress-images-container
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.animate-fade(data-ng-if="currentQuestion == dataset.questions[0]",
+            data-ng-repeat="progressImage in currentQuestion.progressImages track by $index",
+            data-anim-easing="easeOutCubic", data-anim-duration="800", data-anim-in-delay="{{1200+$index*220}}"
+            data-ng-src="{{progressImage}}")
+
+          //- -------- animation arrows layer ---------------
+          .chart.question-progress-anim-arrows-container.animate-fade(
+            data-ng-if="currentQuestion == dataset.questions[0]",
+          )
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.arrow-image(data-ng-src="{{arrowImage}}"
+            data-ng-repeat="arrowImage in currentQuestion.topArrowImages track by $index",
+            data-ng-class="{'spark': currentQuestion.topAnimateArrow.index === $index}")
+
+          //- -------- side panel  --------------
+          .chart.question-container.question1
+            .side-panel-container
+              div.animate-fade(data-ng-if="currentQuestion == dataset.questions[0]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600",
+              data-progress-bars-panel, data-progresses="currentQuestion.progresses", data-progress-delay="1200")
+              .key-facts-panel.animate-fade(data-ng-if="currentQuestion == dataset.questions[0]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="900")
+                h4 KEY FACTS
+                .key-facts-text-panel
+                  p(data-ng-repeat="keyfact in currentQuestion.keyfacts track by $index") {{keyfact}}
+
+
+          //- ====================== question two  ============================
+          //- ---------- main container images layer ------------
+          .chart.question-progress-images-container
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.animate-fade(data-ng-if="currentQuestion == dataset.questions[1]",
+            data-ng-repeat="progressImage in currentQuestion.progressImages track by $index",
+            data-anim-easing="easeOutCubic", data-anim-duration="800", data-anim-in-delay="{{1200+$index*220}}"
+            data-ng-src="{{progressImage}}")
+
+          //- -------- animation arrows layer ---------------
+          .chart.question-progress-anim-arrows-container.animate-fade(
+          data-ng-if="currentQuestion == dataset.questions[1]",
+          )
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.arrow-image(data-ng-src="{{arrowImage}}"
+            data-ng-repeat="arrowImage in currentQuestion.topArrowImages track by $index",
+            data-ng-class="{'spark': currentQuestion.topAnimateArrow.index === $index}")
+
+          .chart.question-progress-anim-arrows-container.animate-fade(
+          data-ng-if="currentQuestion == dataset.questions[1]",
+          )
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.arrow-image(data-ng-src="{{arrowImage}}"
+            data-ng-repeat="arrowImage in currentQuestion.bottomArrowImages track by $index",
+            data-ng-class="{'spark': currentQuestion.bottomAnimateArrow.index === $index}")
+
+          //- -------- side panel  --------------
+          .chart.question-container.question2
+            .side-panel-container
+              div.animate-fade(data-ng-if="currentQuestion == dataset.questions[1]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600",
+              data-progress-bars-panel, data-progresses="currentQuestion.progresses", data-progress-delay="1200")
+              .key-facts-panel.animate-fade(data-ng-if="currentQuestion == dataset.questions[1]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="900")
+                h4 KEY FACTS
+                .key-facts-text-panel
+                  p(data-ng-repeat="keyfact in currentQuestion.keyfacts track by $index") {{keyfact}}
+
+
+          //- ====================== question three  ============================
+          //- ---------- main container images layer ------------
+          .chart.question-progress-images-container
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.animate-fade(data-ng-if="currentQuestion == dataset.questions[2]",
+            data-ng-repeat="progressImage in currentQuestion.progressImages track by $index",
+            data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="{{1200+$index*220}}"
+            data-ng-src="{{progressImage}}")
+
+          //- -------- animation arrows layer ---------------
+          .chart.question-progress-anim-arrows-container.animate-fade(
+          data-ng-if="currentQuestion == dataset.questions[2]",
+          )
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.arrow-image(data-ng-src="{{arrowImage}}"
+            data-ng-repeat="arrowImage in currentQuestion.topArrowImages track by $index",
+            data-ng-class="{'spark': currentQuestion.topAnimateArrow.index === $index}")
+
+          .chart.question-progress-anim-arrows-container.animate-fade(
+          data-ng-if="currentQuestion == dataset.questions[2]",
+          )
+            img.structure-image(src="assets/images/interactive_blank_bg.png")
+            img.arrow-image(data-ng-src="{{arrowImage}}"
+            data-ng-repeat="arrowImage in currentQuestion.bottomArrowImages track by $index",
+            data-ng-class="{'spark': currentQuestion.bottomAnimateArrow.index === $index}")
+
+          //- -------- side panel  --------------
+          .chart.question-container.question3
+            .side-panel-container
+
+              .question3-progress-panel.top.animate-fade(data-ng-if="currentQuestion == dataset.questions[2]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="600")
+                h4 {{currentQuestion.progressGroups[0].name}}
+                div(data-progress-bars-panel, data-progresses="currentQuestion.progressGroups[0].progresses",
+                data-progress-delay="1200")
+
+              .question3-progress-panel.bottom.animate-fade(data-ng-if="currentQuestion == dataset.questions[2]",
+              data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="900"
+              )
+                h4 {{currentQuestion.progressGroups[1].name}}
+                div(data-progress-bars-panel, data-progresses="currentQuestion.progressGroups[1].progresses",
+                data-progress-delay="1200")
+
+
+
+  .row.reset-button-container.animate-fade(data-ng-if="dataset.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

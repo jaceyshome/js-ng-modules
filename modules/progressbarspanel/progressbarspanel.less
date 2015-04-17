@@ -1,0 +1,67 @@
+.progress-bars-panel{
+  padding: 0;
+  text-align: left;
+  line-height: 1;
+  .bar-container{
+    margin-top: 9%;
+    margin-bottom: 0;
+  }
+  .bar-label{
+    margin: 0;
+    padding-left: 1px;
+    font-size: 0.857em;
+  }
+  .bar-value-container{
+    position: relative;
+    .bar-value-holder{
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 1.2% 1.3%;
+      background-color: white;
+      .invisible-overlay{
+        .opacity(0);
+      }
+      &.value-progress{
+        width: 0;
+        &.level0{
+          background-color: #9ee146;
+        }
+        &.level1{
+          background-color: #ebd732;
+        }
+        &.level2{
+          background-color: #f35e5e;
+        }
+        &.level3{
+          background-color: #eaad6a;
+        }
+        &.colourful{
+          .colorful-content{
+            height: 100%;
+            display: inline-block;
+            &.colourLevel0{
+              background-color: #ebd732;
+              width: 10%;
+            }
+            &.colourLevel1{
+              background-color: #ecad63;
+              width: 10%;
+            }
+            &.colourLevel2{
+              background-color: #f35e5e;
+              width: 10%;
+            }
+          }
+        }
+      }
+    }
+    .bar-value-overlay{
+      z-index: 2;
+      position: relative;
+    }
+  }
+}

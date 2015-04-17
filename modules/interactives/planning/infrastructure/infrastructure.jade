@@ -1,0 +1,110 @@
+.infrastructure-decision-container.scenario-decision-interactive-container
+
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+    //- introduction
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="!currentQuestion && !settings.completed", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center(data-ng-bind-html="bindHtmlSoruce(settings.questionText)")
+
+    //- question text
+    .text-panel.animate-left(
+    data-ng-if="currentQuestion && !currentQuestion.selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}"
+    )
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{currentQuestion.text}}
+
+    //- question feedback
+    .text-panel.animate-left(data-ng-repeat="option in currentQuestion.options",
+    data-ng-if="option == currentQuestion.selectedOption",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="Module.getQuestionOptionFeedbackBgStyle(option)")
+        span.sr-only feedback:
+        span {{option.correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{option.feedback}}
+          .button-container.open(data-ng-if="option.correct")
+            a.show-next-button.s-button(data-tnt-click,data-ng-click="backToFirstScreen()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") Continue
+
+    //-completed text
+    .text-panel.animate-left(data-ng-if="!currentQuestion && settings.completed", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{settings.completedText}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg
+          .chart.c0.invisible
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+          .chart
+            img(data-ng-src="assets/images/planning/scenarios/infrastructure/bg_texture.jpg")
+
+          //- questions selection container
+          .chart.selection-interface-container.animate-fade(data-ng-if="!currentQuestion", data-anim-easing="easeOutCubic")
+            .introduction-text-container.drop-shadow-text-panel(data-ng-class="{'invisible': isStarted}")
+              span Select any option to begin.
+            .selection-options-container
+              a.select-question-option-btn(data-ng-repeat="question in settings.questions",
+              data-tnt-click, data-ng-click="selectQuestion(question)")
+                p.option-question-name {{question.name}}
+                span.sr-only(data-ng-if="question.completed") completed
+                p.question-correct-option-text(data-ng-if="question.completed", data-ng-bind-html="bindHtmlSoruce(question.correctOption.name)")
+                .completed-image-holder(data-ng-if="question.completed")
+                  img(data-ng-src="{{question.completedImage}}", alt="completed image")
+                div.hover-img-border.inner
+                div.hover-img-border.outer
+                img.bg-overlay(data-ng-src="{{question.bgOverlayImage}}", alt="background overlay image")
+                span.sprite-ui.ui-green_tick.animate-fade(data-ng-if="question.completed")
+
+          //- options selection container
+          .chart.current-options-container.animate-fade(data-ng-if="currentQuestion",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            .answer-option-container(data-ng-repeat="option in currentQuestion.options")
+              a.answer-option-btn(data-tnt-click, data-ng-click="selectOption(option)",
+                data-ng-class="setAnswerBtnClass(option)")
+                img(data-ng-src="{{option.image}}", alt="image for {{option.name}}")
+                img.answer-bg-image(src="assets/images/planning/scenarios/infrastructure/option_bg_overlay.png", alt="overlay image for {{option.name}}")
+                .correct-option-image-overlay.animate-fade(data-ng-if="option.selected && option.correct")
+                .answer-bg-image-overlay(data-ng-style="setOptionOverlayStyle(option)")
+                .answer-option-text-container
+                  span.option-text(data-ng-bind-html="bindHtmlSoruce(option.name)")
+              ul.bars-container
+                li.bar-container(data-ng-repeat="conditionLabel in settings.conditionsLabels")
+                  p.bar-label
+                   | {{option.conditions[$index].specialLabel && option.conditions[$index].specialLabel || conditionLabel}}
+                  .bar-value-container
+                    .bar-value-holder
+                      img.invisible-overlay(data-ng-src="assets/images/measure_bar_invisible_overlay.png", alt="overlay for bar")
+                    .bar-value-holder.value-progress(data-ng-class="getBarLevelClass(option, $index)", data-animate-bar-progress,
+                    data-anim-easing="easeOutCubic", data-anim-duration="600",
+                    data-anim-delay="600", data-anim-width="getBarProgressWidth(option, $index)")
+                      img.invisible-overlay(data-ng-src="assets/images/measure_bar_invisible_overlay.png", alt="overlay for bar")
+                    img.bar-value-overlay(data-ng-src="assets/images/measure_bar_overlay.png", alt="overlay for bar")
+                    span.sr-only {{option.conditions[$index]}}
+
+          .chart(data-ng-if="settings.completed && !currentQuestion")
+            img(data-ng-src="assets/images/interactive_blank_bg.png")
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed && !currentQuestion")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

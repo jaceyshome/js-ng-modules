@@ -1,0 +1,73 @@
+div.drillingdecision-container.scenario-decision-interactive-container
+  .top-interactive-container(data-ng-style="getTopContainerMinHeight()")
+
+    div.text-panel.topContainerFirstElement.animate-left(data-ng-if="screen.id == 0 && screen.feedback != true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          p(data-ng-bind-html="trustAsHtml(settings.screens[0].text)")
+
+    div.text-panel.animate-left(data-ng-if="screen.id == 0 && zone.id == 0 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[0].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.zones[0].feedback}}
+
+    div.text-panel.animate-left(data-ng-if="screen.id == 0 && zone.id == 1 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':Module.currentModule.color}")
+        span.sr-only feedback:
+        span {{settings.zones[1].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+                .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                  img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this drilling scenario")
+            .introduction-text-container
+              p.text-left {{settings.zones[1].feedback}}
+
+    div.text-panel.animate-left(data-ng-if="screen.id == 0 && zone.id == 2 && screen.feedback == true", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      p.feedback(data-ng-style="{'background-color':'#777674'}")
+        span.sr-only feedback:
+        span {{settings.zones[2].correct && "correct" || "incorrect"}}
+      .row
+        .col-md-12
+          p {{settings.zones[2].feedback}}
+
+  .row
+    .col-md-12.svg-container-wrapper-container
+      .svg-container-wrapper
+        .svg-container.image-container
+          div.text-container
+            p.text(data-ng-repeat="location in settings.locations") {{location.text}}
+          div.buttons-container
+            a.image-button(data-ng-repeat="zone in settings.zones", href="javascript:void(0);", onclick="return false;", data-ng-click="select($index)", data-ng-class="{first: $index == 0, second: $index == 1, third: $index == 2, selected: zone.selected == true, 'fade-out': !(zone.selected || selectedZoneId != 1)}")
+              span.sr-only {{zone.screenReaderText}}
+              span.image
+                img(src="", data-ng-src="assets/images/exploration/interactives/drillingdecision/{{zone.selected && zone.buttonSelectedSrc || zone.buttonNormalSrc}}")
+              span.text {{zone.buttonText}}
+              span.selected-mark
+                  span(data-ng-if="zone.selected") selected
+          //-Hack Jake: use for reloading to set the container width
+          img(data-ng-src="assets/images/interactive_blank_bg.png", data-ng-style="{'z-index':'-1'}")
+          img.overlay.bg-image(src="assets/images/exploration/interactives/drillingdecision/bg.jpg")
+          img.overlay.soil-surface(src="assets/images/exploration/interactives/drillingdecision/soil_surface.png")
+          img.overlay.layer1.animate-fade(data-ng-if="settings.zones[1].selected != true", src="assets/images/exploration/interactives/drillingdecision/a.png")
+          img.overlay.layer2(src="assets/images/exploration/interactives/drillingdecision/b.png")
+          img.overlay.layer3.animate-fade(data-ng-if="settings.zones[1].selected != true",src="assets/images/exploration/interactives/drillingdecision/c.png")
+          img.overlay.animate-fade(data-ng-if="settings.zones[0].selected == true", src="assets/images/exploration/interactives/drillingdecision/a_selected.png")
+          img.overlay.animate-fade(data-ng-if="settings.zones[1].selected == true",src="assets/images/exploration/interactives/drillingdecision/b_selected.png")
+          img.overlay.degree.animate-fade(src="assets/images/exploration/interactives/drillingdecision/60_degree.png", data-ng-if="settings.zones[1].selected == true")
+          img.overlay.animate-fade(data-ng-if="settings.zones[2].selected == true",src="assets/images/exploration/interactives/drillingdecision/c_selected.png")
+          a.image-button-on-bg(data-ng-repeat="zone in settings.zones", href="javascript:void(0);", onclick="return false;", data-ng-click="select($index)", data-ng-style="{'left': zone.button.position.x, 'top': zone.button.position.y}", data-ng-class="{first: $index == 0, second: $index == 1, third: $index == 2, selected: zone.selected == true, 'fade-out': !(zone.selected || selectedZoneId != 1)}")
+              span.sr-only {{zone.screenReaderText}} with {{zone.buttonText}}
+              span.image
+                img(src="", data-ng-src="assets/images/exploration/interactives/drillingdecision/{{zone.selected && zone.buttonSelectedSrc || zone.buttonNormalSrc}}", alt="{{zone.buttonText}}")
+
+  .row.reset-button-container.animate-fade(data-ng-if="screen.id == 0 && zone.id == 1 && screen.feedback == true")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space

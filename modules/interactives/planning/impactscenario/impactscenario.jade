@@ -1,0 +1,96 @@
+.planning-impact-scenario-container.scenario-decision-interactive-container
+
+  .top-interactive-container(data-ng-style="updateTopInteractiveContainerMinHeight()")
+    //- Introduction Step
+    .text-panel.topContainerFirstElement.animate-left(data-ng-if="currentStep == settings.introduction",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}"
+    )
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center {{settings.introduction.text}}
+
+    //- Representatives Step
+    .text-panel.animate-left(data-ng-repeat="representative in settings.representatives",
+    data-ng-if="representative == currentRepresentative && currentStep == settings.representatives",
+    data-anim-in-delay="10", data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-body
+            p.text-center
+              b {{representative.name}}:
+              =' '
+              span {{representative.text}}
+          .button-container.open(data-ng-if="allRespresentativeCompleted")
+            a.show-next-button(data-tnt-click, data-ng-click="goToSummary()",
+            class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}",
+            data-ng-style="{'border-color':Module.currentModule.color}") View final decision
+
+    //- Summary Step
+    .text-panel.animate-left(data-ng-if="currentStep == settings.summary", data-anim-in-delay="10",
+    data-anim-easing="easeOutCubic", data-anim-duration="600", data-key="{{settings.dataKey}}")
+      .row
+        .col-md-12
+          .introduction-text-holder.completed
+            .introduction-icon-container.badge-container.interactive-completed-badge
+              .badge-bg-shape(data-ng-style="{background:Module.currentModule.color}")
+                img(data-ng-src="assets/images/exploration/assessments/badge_default.png", alt="completed badge image for this scenario decision")
+            .introduction-text-container
+              p.text-left
+                | {{settings.summary.text}}
+
+  //- image containers
+  .row.svg-container-wrapper-container.chart-interactive-container
+    .col-md-12.svg-container-wrapper
+      .svg-container.image-container
+        .chart-container
+          //- bg layer
+          .chart.c0.show
+            img(src="assets/images/interactive_blank_bg.png", alt="blank image")
+
+          //- summary page layer
+          .chart.summary-indicator-circle-container.animate-fade(data-ng-if="currentStep == settings.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            div.circle
+
+          .chart.summary-label-container.animate-fade(data-ng-if="currentStep == settings.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600", data-anim-in-delay="800")
+            span.sr-only Hannan Mine Social license to operate: GRANTED
+            img(data-ng-src="assets/images/planning/scenarios/impact/summary_label.png", alt="Hannan Mine Social license to operate: GRANTED")
+
+          //- progress bar components layers
+          .chart.progress-bar-container(data-ng-class="{'moveUpContainer': currentStep == settings.summary}")
+            img(src="assets/images/planning/scenarios/impact/progress_bar.png", alt="image for progress bar")
+
+          .chart.progress-bar-bottom-label.animate-fade(data-ng-if="currentStep != settings.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            img(src="assets/images/planning/scenarios/impact/bottom_label.png", alt="image for bottom label")
+
+          .chart.progress-bar-indicator(data-ng-style="setIndicatorStylePos()",
+          data-ng-class="{'moveUpContainer': currentStep == settings.summary}")
+            img(src="assets/images/planning/scenarios/impact/indicator.png", alt="image for bar indicator")
+
+          //- four representatives layers
+          .chart.representatives-container.animate-fade(data-ng-if="currentStep != settings.summary",
+          data-anim-easing="easeOutCubic", data-anim-duration="600")
+            .representative-holder(data-ng-repeat="representative in settings.representatives")
+              a.representative-button(data-tnt-click, data-ng-click="selectRepresentative(representative)",
+              data-ng-style="setRepresentativeButtonStyle(representative)",
+              data-ng-class="setRepresentativeButtonClass(representative)")
+                span.sr-only {{representative.name}}
+                div.representative-images-container
+                  img.representative-overlay(data-ng-src="{{representative.avatarCompleted}}", alt="overlay image")
+                  img.representative-avatar.animate-fade(data-ng-if="checkRepresentativeAvatarNormalState(representative)",
+                  data-ng-src="{{representative.avatar}}", alt="images for {{representative.name}} normal stated")
+                  img.representative-avatar.animate-fade(data-ng-if="checkRepresentativeAvatarCompletedState(representative)",
+                  data-ng-src="{{representative.avatarCompleted}}", alt="images for {{representative.name}} completed state")
+                div.hover-cover.inner
+                div.hover-cover.outer
+
+
+  .row.reset-button-container.animate-fade(data-ng-if="settings.completed")
+    .col-md-12
+      .button-container.open
+        a.show-next-button.reset-btn(data-tnt-click, data-ng-click="reset()", class="{{Structure.appendStyles.interactiveHoverButtonStyles[Structure.data.currentModuleKey]}}", data-ng-style="{'border-color':Module.currentModule.color}") RESET
+
+  .row.last-scenario-bottom-space
