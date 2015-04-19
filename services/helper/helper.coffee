@@ -47,7 +47,7 @@ define [
       rgba = rgb.replace(/rgb/i, "rgba")
       return rgba.replace(/\)/i,",#{alpha})")
 
-    service.parseUrlString = ()->
+    service.getUrlQueryParams = ()->
       str = window.location.search
       params = {}
       str.replace new RegExp("([^?=&]+)(=([^&]*))?", "g"), ($0, $1, $2, $3) ->
