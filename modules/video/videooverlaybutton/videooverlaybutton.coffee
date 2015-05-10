@@ -9,7 +9,7 @@ define [
     'common.video'
     'common.animatespark'
   ]
-  module.directive 'tntVideoOverlayButton', (Video, $timeout)->
+  module.directive 'videoOverlayButton', (Video, $timeout)->
     restrict: "A"
     scope: {}
     templateUrl: "common/videooverlaybutton/main"

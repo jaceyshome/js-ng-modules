@@ -11,7 +11,7 @@ define [
     'common.scenario.service'
     'ngAnimate'
   ]
-  module.directive 'tntButtonScrolltop', (AnimateScroll, Scenario)->
+  module.directive 'buttonScrolltop', (AnimateScroll, Scenario)->
     restrict: "A"
     scope: {
       fromPosition:"="

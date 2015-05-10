@@ -1,8 +1,8 @@
 define [
   'angular'
   ], ->
-  module = angular.module 'common.click', []
-  module.directive 'tntClick', ($rootScope)->
+  module = angular.module 'common.btnclick', []
+  module.directive 'btnClick', ($rootScope)->
     restrict:"A"
     link:($scope, element, attrs) ->
       element.attr "onclick", "return false;"

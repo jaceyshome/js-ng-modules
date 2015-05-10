@@ -15,7 +15,7 @@ define [
     'common.video'
     'common.scenario'
   ]
-  module.directive 'tntVideoContainer', (Video, Scenario)->
+  module.directive 'videoContainer', (Video, Scenario)->
     restrict:"A"
     scope:
       control:"="

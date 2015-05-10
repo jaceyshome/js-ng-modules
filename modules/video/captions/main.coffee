@@ -3,7 +3,7 @@ define [
   'angular_sanitize'
   ], ->
   module = angular.module 'common.captions', ['templates', 'ngSanitize']
-  module.directive 'tntCaptions', ($http, $sanitize)->
+  module.directive 'videoCaptions', ($http, $sanitize)->
     restrict:"A"
     scope:
       src:"="

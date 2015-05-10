@@ -2,9 +2,9 @@ define [
   'angular'
   'jquery'
 ], ->
-  module = angular.module 'common.tntprint.directive', [
+  module = angular.module 'common.ngprint', [
   ]
-  module.directive 'tntPrint', ()->
+  module.directive 'ngPrint', ()->
     restrict: "A"
     scope: {
       selectedElement: "="

@@ -2,18 +2,15 @@ ul.progress-bars-panel
   li.bar-container(data-ng-repeat="progress in progresses")
     p.bar-label(data-ng-bind-html="bindHtmlSoruce(progress.label)")
     .bar-value-container
-      .bar-value-holder
-        img.invisible-overlay(data-ng-src="assets/images/measure_bar_invisible_overlay.png")
+      .bar-value-holder.base
+        .base-inner
+        img.invisible(data-ng-src="assets/images/measure_bar_overlay.png")
       .bar-value-holder.value-progress(data-animate-bar-progress,
       data-anim-easing="easeOutCubic", data-anim-duration="600",
       data-anim-delay="progressDelay", data-anim-width="getProgressWidth(progress.level.width)",
       class="{{progress.level.name}}")
-        //- --------------------- normal progress bar -------------------------
-        img.invisible-overlay(data-ng-if="progress.level.name != 'colourful'",
-        data-ng-src="assets/images/measure_bar_invisible_overlay.png")
-
         //- --------------------- three colour progress bar ------------------------
         .colorful-content(data-ng-if="progress.level.name == 'colourful'", class="colourLevel{{$index}}"
         data-ng-repeat="levelValue in progress.level.values track by $index",
         data-ng-style="getProgressStyleWidth(levelValue)")
-      img.bar-value-overlay(data-ng-src="assets/images/measure_bar_overlay.png")
+      img.bar-value-cover(data-ng-src="assets/images/measure_bar_overlay.png")

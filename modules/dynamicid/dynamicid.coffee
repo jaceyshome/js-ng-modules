@@ -1,10 +1,10 @@
 define [
   'angular'
 ], ->
-  module = angular.module 'common.topicmarker', [
+  module = angular.module 'common.dynamicid', [
     'templates'
   ]
-  module.directive 'topicMarker', (Module, Structure, $timeout, Helper)->
+  module.directive 'dynamicid', (Module, Structure, $timeout, Helper)->
     restrict: "A"
     scope:{
       config:"="

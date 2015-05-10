@@ -16,7 +16,7 @@ define [
     'common.animatefade'
     'common.videooverlaybutton'
   ]
-  module.directive 'tntVideoControls', (Video, Scenario) ->
+  module.directive 'videoControls', (Video, Scenario) ->
     restrict:"A"
     scope:
       control:"="

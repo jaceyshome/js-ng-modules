@@ -2,7 +2,7 @@ define [
   'angular'
 ], ->
   module = angular.module 'common.notab', []
-  module.directive 'tntNoTab', ()->
+  module.directive 'NoTab', ()->
     restrict: "A"
     link: ($scope, $element, $attrs) ->
       init = ()->

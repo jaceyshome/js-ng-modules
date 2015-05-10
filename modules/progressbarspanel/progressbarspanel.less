@@ -9,6 +9,7 @@
   .bar-label{
     margin: 0;
     padding-left: 1px;
+    line-height: 1.5;
     font-size: 0.857em;
   }
   .bar-value-container{
@@ -20,12 +21,34 @@
       left: 0;
       bottom: 0;
       right: 0;
-      margin: 1.2% 1.3%;
-      background-color: white;
+      font-size: 0.1em;
       .invisible-overlay{
         .opacity(0);
+        width: 100%;
+        height: auto;
+      }
+      &.base{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+        }
+        .base-inner{
+          background-color: #FFFFFF;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
       &.value-progress{
+        position: absolute;
         width: 0;
         &.level0{
           background-color: #9ee146;
@@ -59,9 +82,15 @@
         }
       }
     }
-    .bar-value-overlay{
+    .bar-value-cover{
       z-index: 2;
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
     }
   }
+
 }
+
